@@ -4,6 +4,7 @@ import './header.scss'
 
 const Header = (props) => (
   <header>
+    <div className='process-bar'></div>
     <div className='container'>
       <h1 className='logo'>
         <Link to="/"><img src={`http://placeimg.com/120/50/any`} alt="logo" /></Link>
