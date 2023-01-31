@@ -1,17 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './header.scss'
 
 const Header = (props) => (
   <header>
-    <h1>logo</h1>
-    <nav>
+    <div className='container'>
+      <h1 className='logo'>
+        <Link to="/"><img src={`http://placeimg.com/120/50/any`} alt="logo" /></Link>
+      </h1>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Project</li>
-        <li>Contact</li>
+          <li>
+            <Link to="/">About</Link>
+          </li>
+          <li>
+            <Link to="/Portfolio">Project</Link>  
+          </li>
+          <li>
+            <Link to="/Contact">Contact</Link>  
+          </li>
       </ul>
-    </nav>
+    </div>
   </header>
+
 );
 
 export default Header;
