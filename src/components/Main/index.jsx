@@ -1,6 +1,9 @@
 import React from 'react';
 import './Main.scss';
 
+import Instagram from '../Instagram';
+import ListCards from '../ListCards';
+
 const Main = (props) => (
 	<div className='main'>
 			<div className="container">
@@ -8,35 +11,16 @@ const Main = (props) => (
 				<h3 className='title'>
 					Who Am I ?
 				</h3>
-				<div className='profile-wrap'>
-					<div className='thumb'>
-						<img src={`http://placeimg.com/600/700/any`} alt="민정이 사진" />
-					</div>
-					<div className='contents'>
-						<div className="utils">
-							<div className="sns">
-								<i>insta</i>
-								<i>kakao</i>
-							</div>
-							<div className='ux'>
-								<div className="dm">메신저보내기</div>
-								<i className='like'>like</i>
-							</div>					
-						</div>
-					</div>
-					<p className='introduce'>
-						AboutPage page입니다
-					</p>
-				</div>
+				<Instagram />
+				<h4 className='tag-title'>
+					<span>My Tags</span>
+				</h4>
+				<ListCards />
+				<p className='text'>
+					<em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br />
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!
+				</p>
 			</div>
-			<p className='m-size-title'>My Tags</p>
-			<ul>
-				<li><a href="#"><img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" /></a></li>
-				<li><a href="#"><img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" /></a></li>
-				<li><a href="#"><img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" /></a></li>
-				<li><a href="#"><img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" /></a></li>
-			</ul>
-	
 	</div>
 );
 
