@@ -18,7 +18,7 @@ const Instagram = (props) => (
             <i className='instagram'><FontAwesomeIcon icon={faInstagram} /><span className='ir-hidden'>인스타그램</span></i>
           </a>
           <a href='#'>
-            <i className='kakao'><FontAwesomeIcon icon={faInstagram} /><span className='ir-hidden'>카카오톡</span></i>
+            <i className='kakao'><img src={require('../../assets/images/icons/ico-kakao.png')} alt='test' /><span className='ir-hidden'>카카오톡</span></i>
           </a>
         </div>
         <div className='ux'>
