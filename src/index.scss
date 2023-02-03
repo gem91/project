@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Caveat:wght@400;600&family=El+Messiri:wght@700&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@400;700&display=swap');
+/*
+#두꺼운 강약체
+font-family: 'Abril Fatface', cursive;
+# 연필체
+font-family: 'Amatic SC', cursive;
+#기울기체
+font-family: 'Caveat', cursive;
+# 굴곡 곡선체(두꺼움)
+font-family: 'El Messiri', sans-serif;
+# 돋음체(가독성 굳)
+font-family: 'Noto Sans KR', sans-serif;
+
+font-family: 'Nanum Brush Script', cursive;
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +21,7 @@
 }
 body {
   font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
   font-weight: normal;
