@@ -6,25 +6,23 @@ header{
   backdrop-filter: blur(5px);
   border-bottom: 1px solid #ccc;
   background: linear-gradient(90deg, #ffffff00 0%, #ffffff50 10%, #ffffff50 90%, #ffffff00 100%);
- .process-bar{
+ .processBar{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1005;
-    width: 100%;
+    width: 0%;
     height: 5px;
-    background-color: #8d96ff;
+    background-color: #b674ab;
+    transition: .7s ease-in-out;
   }
   .container{
-   
     display: flex;
-    padding: 0 80px;
+    padding: 0 25px;
     margin: 0 auto;
     width: 100%;
     max-width: 1280px;
-    .logo{
-      width: 20%;
-    }
+  
     ul{
       width: 80%;
       display: flex;
@@ -45,3 +43,4 @@ header{
     }
   }
 }
+
