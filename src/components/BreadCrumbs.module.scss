@@ -1,0 +1,18 @@
+.subject{
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  font-size: 1.4rem;
+  // letter-spacing: -.5px;
+  font-family: 'Noto Sans KR', sans-serif;
+  &::before{
+    content: '*';
+    position: absolute;
+    top: 16px;
+    left: 27px;
+    width: 100%;
+    height: 10px;
+    color: cornflowerblue;
+    background-color: #ffc40057;
+  }
+}
