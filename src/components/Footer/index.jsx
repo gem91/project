@@ -5,7 +5,6 @@ import styles from './Footer.module.scss'
 
 const Footer = () => {
   const thisYear = new Date().getFullYear()  
-  console.log(thisYear);
 
   return (
     <footer className={styles.footer}>

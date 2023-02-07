@@ -2,14 +2,14 @@
   .container{
     margin: 0 auto;
     max-width: 1280px;
-    .title{
+    .bigTitle{
       margin-top: 100px;
       text-align: center;
       font-size: 4rem;
       letter-spacing: 5px;
       font-family: 'Caveat', cursive;
     }
-    .tag-title{
+    .tagTitle{
       position: relative;
       margin: 200px auto 0;
       padding-left: 68px;
@@ -51,13 +51,31 @@
       }
     }
 
-    .company-logo{
+    .companyLogo{
       margin-top: 200px;
       ul{
         overflow-x: auto;
         width: 100%;
         display: flex;
-        background-color: rgb(223, 163, 163);
+        background-color: #dfa3a3;
+      }
+    }
+    .tabs{
+      margin-top: 50px;
+      .tabMenu{
+        display: flex;
+        li{
+          padding: 8px 20px;
+          margin-right: 5px;
+          background-color: #ddd;
+          &.clicked{
+            background-color: #dfa3a3;
+          }
+        }
+      }
+      .tabContents{
+        border-top: 2px solid #333;
+        border-bottom: 2px solid #333;
       }
     }
   }

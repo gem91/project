@@ -8,8 +8,6 @@ const Header = (props) => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    console.log(setProcessBar);
-    
   }, []); // useEffect
   const handleScroll = () => {
     let currY = window.scrollY     // 현재 스크롤 위치값
