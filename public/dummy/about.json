@@ -16,26 +16,30 @@
     "tStory" : "https://chlolisher.tistory.com/"
   },
   "skill" : [
-    { "language" : {
+    { "subject" : "Language",
+      "type" : {
       "HTML" : 95,
       "css" : 80,
       "scss" : 60
       }
     },
     {
-      "frond" : {
+      "subject" : "Front",
+      "type" : {
         "js" : 70,
         "react" : 60,
         "vue" : 60
       }
     },
     {
-      "deployment" : {
+      "subject" : "Deployment",
+      "type" : {
         
       }
     },
     {
-      "design" : {
+      "subject" : "Design",
+      "type" : {
         "photoshop" : 100,
         "illust" : 80,
         "figma" : 60
