@@ -22,6 +22,10 @@ font-family: 'Nanum Brush Script', cursive;
 body {
   font-size: 16px;
   font-family: 'Noto Sans KR', sans-serif;
+  -ms-overflow-style: none; // scroll 숨기기
+}
+::-webkit-scrollbar {
+  display: none;
 }
 h1, h2, h3, h4, h5, h6{
   font-weight: normal;
@@ -49,4 +53,15 @@ ul,
 ol {
   padding-left: 0;
   list-style: none;
+}
+
+p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
+  background: #b674ab;
+  color: #fff;
+}
+
+.ir-hidden{
+  display: inline-block;
+  font-size: 0;
+  text-indent: -1000px;
 }
