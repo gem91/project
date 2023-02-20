@@ -8,19 +8,27 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 // import TabContent from '../../components/Tabs/TabContent';
 
 const Main = (props) => {
-	const skills = [ "Lang", "Front", "Design" ]
-	const skillData =  { 
-		type: "lang",
-		data: {
-			html : 90,
-			css : 90,
-			scss : 90
-		}
-	}
+	const skillData = [
+		{
+			type: "Lang",
+			subject : [
+				{ skill : 'html', num : 90 }, { skill: "css", num : 90 }, { skill: "scss", num : 90 }
+			]
+		},
+		{
+			type: "Front",
+			subject : [
+				{ skill : 'js', num : 90 }, { skill: "react", num : 90 }, { skill: "vue", num : 90 }
+			]
+		},
+		{
+			type: "Design",
+			subject : [
+				{ skill : 'photoshop', num : 90 }, { skill: "Illust", num : 90 }, { skill: "Zeplin", num : 90 }
+			]
+		},
+	]
 
-	Object.values(skillData).forEach(test => {
-		console.log(test);
-	})
 	const [currentTab, setCurrentTab] = useState(0);
 	const handleTabMenu = (idx) => {
     setCurrentTab(idx)
@@ -35,12 +43,12 @@ const Main = (props) => {
 				<Instagram />
 				<div className={styles.tabs}>
 					<ul className={styles.tabMenu}>
-						{ skills.map((skill, idx) => (
+						{ skillData.map(({type}, idx) => (
 							<li key={idx} 
 								className={currentTab === idx ? styles.clicked :  ''}
 								onClick={() => {handleTabMenu(idx)}}
 							>
-								<button type='button'>{skill}</button>
+								<button type='button'>{type}</button>
 							</li>
 							))
 						}
@@ -48,10 +56,21 @@ const Main = (props) => {
 
 					<div className={styles.tabContents}>
 						<ul>
-							{ Object.values(skillData).forEach( value => (
-								<li key={value}>{value[0]}</li>
-								)) 
-							}
+							{ skillData.map(({type, subject},idx) => (
+								<li>
+									<ul className={styles.skillBox}>
+										{
+											subject.map(({skill, num}) => (
+												<li className={styles.graph}>
+													<span className={styles.skillType}>{skill}</span>
+													<div className={styles.line}></div>
+													<span className={styles.score}>{num}<em>%</em></span>
+												</li>
+											))
+										}
+									</ul>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>
@@ -60,6 +79,9 @@ const Main = (props) => {
 					<h4>Which Companies I Worked With</h4>
 					<ul>
 						<li><img src={require('../../assets/images/logo/hyundai.png')} alt='test' /></li>
+						<li><img src={require('../../assets/images/logo/kia-b.png')} alt='test' /></li>
+						<li><img src={require('../../assets/images/logo/kids.png')} alt='test' /></li>
+						<li><img src={require('../../assets/images/logo/kiehls.png')} alt='test' /></li>
 						<li><img src={require('../../assets/images/logo/kia-b.png')} alt='test' /></li>
 						<li><img src={require('../../assets/images/logo/kids.png')} alt='test' /></li>
 						<li><img src={require('../../assets/images/logo/kiehls.png')} alt='test' /></li>
