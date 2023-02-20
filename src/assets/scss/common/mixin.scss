@@ -1,0 +1,82 @@
+
+// 사이즈 확인
+// $desktop-l-width	: 1600px;
+// $desktop-l-width	: 1200px;
+// $tablet-l-width		: 1024px;
+// $tablet-s-width		: 768px;
+// $mob-l-width		: 640px;
+
+
+// only PC
+@mixin pc-gnb {
+	@media screen and (min-width: #{$tablet-s-width + 1}) {
+		@content;
+	}
+}
+
+// only PC 
+// min-width: 768 + 1
+@mixin pc {
+	@media screen and (min-width: #{$tablet-s-width + 1}) {
+		@content;
+	}
+}
+// only PC
+@mixin pc-only {
+	@media screen and (min-width: #{$tablet-l-width + 1}) {
+		@content;
+	}
+}
+
+
+// **** Add 2020-01-17 younjin
+
+// 태블릿
+@mixin tab {
+	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+// 모바일
+// max-width: 768
+@mixin mob {
+	@media screen and (max-width: #{$tablet-s-width}) {
+		@content;
+	}
+}
+
+// TODO - 디자인가이드에 정의된 폰트룰(A,B,C...)대로 적용된 글꼴설정 
+@mixin fontCall($fontRule, $color:#000) {
+  font-family: map-get($fontRule, name);
+  font-size: map-get($fontRule, size);
+  font-weight: map-get($fontRule, weight);
+  line-height: map-get($fontRule, linegap);
+  letter-spacing: (map-get($fontRule, spacing) / 1000) * 16px;
+}
+
+
+// Media Query 분기
+// Usage
+// @include breakpoint(large) {
+//   div {
+//      font-size: 2rem;
+//      line-height: 1.4;
+//   }
+// }
+@mixin breakPoint($point) {
+  @if $point == large {
+     @media only screen and (min-width: 1024px) {
+        @content;
+     }
+  } 
+  @else if $point == desktop {
+     @media only screen and (min-width: 1023px) {
+        @content;
+     }
+  } 
+  @else if $point == tablet {
+     @media only screen and (min-width: 640px) {
+        @content;
+     }
+  }
+}
