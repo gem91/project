@@ -4,6 +4,7 @@ import styles from './Main.module.scss';
 import Instagram from '../../components/Instagram';
 import ListCards from '../../components/ListCards';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import Slider from '../../components/Slider';
 // import TabMenu from '../../components/Tabs/TabMenu';
 // import TabContent from '../../components/Tabs/TabContent';
 
@@ -26,6 +27,39 @@ const Main = (props) => {
 			subject : [
 				{ skill : 'photoshop', num : 90 }, { skill: "Illust", num : 90 }, { skill: "Zeplin", num : 90 }
 			]
+		},
+	]
+
+	const companyLogos = [
+		{
+			id: 0,
+			company : '현대모터스',
+			imgURL: require('../../assets/images/logo/hyundai.png')
+		},
+		{
+			id: 1,
+			company : '기아',
+			imgURL: require('../../assets/images/logo/kia-b.png')
+		},
+		{
+			id: 2,
+			company : '키즈현대',
+			imgURL: require('../../assets/images/logo/kids.png')
+		},
+		{
+			id: 3,
+			company : '키즈현대',
+			imgURL: require('../../assets/images/logo/young.png')
+		},
+		{
+			id: 4,
+			company : '키엘',
+			imgURL: require('../../assets/images/logo/kiehls.png')
+		},
+		{
+			id: 5,
+			company : '미디어PR',
+			imgURL: require('../../assets/images/logo/media-pr.png')
 		},
 	]
 
@@ -77,17 +111,8 @@ const Main = (props) => {
 					
 				<div className={styles.companyLogo}>
 					<h4>Which Companies I Worked With</h4>
-					<ul>
-						<li><img src={require('../../assets/images/logo/hyundai.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kia-b.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kids.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kiehls.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kia-b.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kids.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/kiehls.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/media-pr.png')} alt='test' /></li>
-						<li><img src={require('../../assets/images/logo/young.png')} alt='test' /></li>
-					</ul>
+					<Slider imageData={companyLogos}></Slider>
+				
 				</div>
 				<h4 className={styles.tagTitle}>
 					<span>My Tags</span>
