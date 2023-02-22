@@ -46,13 +46,20 @@
           left: 12px;
           width: 92%;
           height: 14px;
-          background-color: #ff3b0047;
+          background-color: #82a75e50;
         }
       }
     }
 
     .companyLogo{
       margin-top: 200px;
+      h4{
+        // font-family: 'El Messiri', sans-serif;
+        // font-family: 'Caveat', cursive;
+        padding: 50px 0;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 2rem;
+      }
       ul{
         overflow-x: scroll;
         width: 100%;
@@ -72,8 +79,7 @@
       }
     }
     .tabs{
-      width: 70%;
-      margin: 50px auto 0;
+      margin: 200px auto 0;
     }
   }
 }

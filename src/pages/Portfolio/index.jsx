@@ -1,12 +1,14 @@
 import React from 'react';
+import styles from './Portfolio.module.scss';
 import BreadCrumbs from '../../components/BreadCrumbs';
 
 const Portfolio = (props) => (
-    <div>
-      <BreadCrumbs text={'Project'}></BreadCrumbs>
-      <p className="title">
-        project 페이지
-      </p>
+    <div className={styles.portfolio}>
+      <div class={styles.container}>
+         <BreadCrumbs text={'Project'}></BreadCrumbs>
+        <p className="title">
+        </p>
+      </div>
     </div>
   );
 

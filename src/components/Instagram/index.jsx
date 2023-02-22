@@ -14,15 +14,16 @@ const Instagram = (props) => (
     <div className={styles.contents}>
       <div className={styles.utils}>
         <div className={styles.sns}>
-          <a href='#'>
-            <i className={styles.instagram}><FontAwesomeIcon icon={faInstagram} /><span className='ir-hidden'>인스타그램</span></i>
-          </a>
-          <a href='#'>
-            <i className={styles.kakao}><img src={require('../../assets/images/icons/ico-kakao.png')} alt='test' /><span className='ir-hidden'>카카오톡</span></i>
-          </a>
+          <Link to="/secret"><i className={styles.instagram}><FontAwesomeIcon icon={faInstagram} /><span className='ir-hidden'>인스타그램</span></i></Link>
+          <Link to="https://open.kakao.com/o/sxXcRZ2e" target='_blank'>
+             <i className={styles.kakao}><img src={require('../../assets/images/icons/ico-kakao.png')} alt='test' /><span className='ir-hidden'>카카오톡</span></i>
+          </Link>
+          {/* <a href='https://open.kakao.com/o/sxXcRZ2e'>
+           
+          </a> */}
         </div>
         <div className={styles.ux}>
-        <Link to='/Contact'>
+        <Link to='/contact'>
           <i className={styles.message}><FontAwesomeIcon icon={faEnvelope} /><span className='ir-hidden'>연락하기</span></i>
         </Link>
         <button type="button">

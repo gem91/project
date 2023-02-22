@@ -65,3 +65,14 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
   font-size: 0;
   text-indent: -1000px;
 }
+
+.swiper{
+  .swiper-wrapper{
+    padding: 25px 0;
+  }
+  .swiper-scrollbar{
+    .swiper-scrollbar-drag {
+      background-color: #bc9b8f;
+    }
+  }
+}

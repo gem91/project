@@ -32,16 +32,16 @@ const Header = (props) => {
     <header>
     <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div>
     <div className={styles.container}>
-     <Logo src={'./'} />
+     <Logo src={'/'} />
       <ul>
           <li>
             <Link to="/">About</Link>
           </li>
           <li>
-            <Link to="/Portfolio">Project</Link>  
+            <Link to="/portfolio">Project</Link>  
           </li>
           <li>
-            <Link to="/Contact">Contact</Link>  
+            <Link to="/contact">Contact</Link>  
           </li>
       </ul>
     </div>

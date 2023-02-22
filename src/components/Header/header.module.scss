@@ -13,7 +13,7 @@ header{
     z-index: 1005;
     width: 0%;
     height: 5px;
-    background-color: #b674ab;
+    background-color: #82a75e;
     transition: .7s ease-in-out;
   }
   .container{
@@ -34,10 +34,11 @@ header{
           font-size: 1.3rem;
           font-weight: bold;
           font-family: 'Caveat', cursive;
+          color: #c7a6a6;
           letter-spacing: 1px;
           transition: .3s ease-in;
           &:hover{
-           color: red;
+            color: #8b6b6b;
           }
         }
       }

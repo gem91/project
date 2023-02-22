@@ -17,9 +17,6 @@ import { Mousewheel, Scrollbar, Autoplay } from "swiper";
         // }}
 const SliderEffects = ({imageData}) => {
   
-  useEffect(() => {
-   console.log(imageData);
-  }, []);
   return (
     <>
     { imageData && 
@@ -29,7 +26,7 @@ const SliderEffects = ({imageData}) => {
         freeMode={true}
         mousewheel={true}
         scrollbar={{
-        hide: true,
+        hide: false,
         }}
         autoplay={{
           delay: 1500,
@@ -45,7 +42,7 @@ const SliderEffects = ({imageData}) => {
               <span className={styles.imgThumb}>
                 <img src={imgURL} alt={`${company} 로고이미지`} />
               </span>
-          </SwiperSlide>
+            </SwiperSlide>
           ))
         }
       </Swiper> 
