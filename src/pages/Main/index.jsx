@@ -6,9 +6,6 @@ import ListCards from '../../components/ListCards';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
-import FlowText from '../../components/FlowText';
-// import TabMenu from '../../components/Tabs/TabMenu';
-// import TabContent from '../../components/Tabs/TabContent';
 
 const Main = (props) => {
 	const tabMenuList = [
@@ -18,19 +15,19 @@ const Main = (props) => {
 		{
 			type: "Lang",
 			subject : [
-				{ skill : 'html', num : 90 }, { skill: "css", num : 90 }, { skill: "scss", num : 90 }
+				{ skill : 'html', num : 30 }, { skill: "css", num : 90 }, { skill: "scss", num : 90 }
 			]
 		},
 		{
 			type: "Front",
 			subject : [
-				{ skill : 'js', num : 90 }, { skill: "react", num : 90 }, { skill: "vue", num : 90 }
+				{ skill : 'js', num : 90 }, { skill: "react", num : 60 }, { skill: "vue", num : 90 }
 			]
 		},
 		{
 			type: "Design",
 			subject : [
-				{ skill : 'photoshop', num : 90 }, { skill: "Illust", num : 90 }, { skill: "Zeplin", num : 90 }
+				{ skill : 'photoshop', num : 90 }, { skill: "Illust", num : 80 }, { skill: "Zeplin", num : 90 }
 			]
 		},
 	]
@@ -73,23 +70,12 @@ const Main = (props) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.container}>
-				<BreadCrumbs text={'About'}></BreadCrumbs>
 				<h3 className={styles.bigTitle}>
 					Who Am I ?
 				</h3>
-			
 				<Instagram />
 
-				<div className={styles.tabs}>
-					<TabComponent tabMenuList={tabMenuList} tabData={skillData}></TabComponent>
-				</div>
-					
-				<div className={styles.companyLogo}>
-					<h4>Which Companies I Worked With</h4>
-					<SliderEffects imageData={companyLogos}></SliderEffects>
-					x
-				</div>
-				
+				<BreadCrumbs text={'About'}></BreadCrumbs>
 				<h4 className={styles.tagTitle}>
 					<span>My Tags</span>
 				</h4>
@@ -98,6 +84,16 @@ const Main = (props) => {
 					<em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br />
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!
 				</p>
+				<div className={styles.tabs}>
+					<TabComponent tabMenuList={tabMenuList} tabData={skillData}></TabComponent>
+				</div>
+					
+				<div className={styles.companyLogo}>
+					<h4>Which Companies I Worked With..!</h4>
+					<SliderEffects imageData={companyLogos}></SliderEffects>
+				</div>
+				
+			
 			</div>
 		</div>
 	)

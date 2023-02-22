@@ -4,17 +4,22 @@
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: #c7a6a6;
+  background-color: #82a75e;
   .track{
     white-space: nowrap;
     will-change: transform;
     animation: marquee 18s linear infinite;
+   
     p{
       font-family: 'Noto Sans KR', sans-serif;
-      line-height: 2.5;
-      font-size: 2.5rem;
-      color: #efd7d7;
-        font-weight: 300;
+      line-height: 2.3;
+      font-size: 1rem;
+      color: #b7cba3;
+      letter-spacing: 2px;
+      transition: .4s ease-in-out;
+      &:hover {
+        color: #d5e1c9;
+      }
     }
    }
  }
