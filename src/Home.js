@@ -6,11 +6,13 @@ import NotFound from './pages/NotFound';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import FlowText from './components/FlowText';
 
 function Home() {
   return (
     <>
       <div className={styles.wrap}>
+        <FlowText></FlowText>
         <BrowserRouter>
           <Header />
           <Routes>
