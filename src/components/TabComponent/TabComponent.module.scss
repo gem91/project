@@ -3,20 +3,21 @@
     border-bottom: 4px solid #f5edf2;
 
     li.tabList {
-      padding: 8px 20px;
       margin-right: 5px;
-      background-color: #ddd;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-
       &.clicked {
-        background-color: #b674ab;
         button{
           color: #fff;
+          background-color: #82a75e;
         }
       }
       button{
+        padding: 18px 30px;
         color: #ababab;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        background-color: #ddd;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
         transition: .5s ease-in-out;
       }
     }
@@ -24,42 +25,50 @@
 
   .tabContents {
     .tabBox {
-      margin-top: 10px;
-      // border-top: 1px solid #ddcfcf;
-      // border-bottom: 2px solid #666;
+      margin-top: 50px;
+      &.isActive{
+        li{
+          display: flex;
+        }
+      }
       li{
         display: flex;
         align-items: center;
         justify-content: flex-start;
         margin: 0 auto;
-        width: 90%;
-        padding: 15px 5%;
+        width: 70%;
+        padding: 20px 5%;
         border-bottom: 1px solid #ddd;
         &:last-child{
           border-bottom: 0;
         }
           .skillType {
+            position: relative;
+            display: inline;
             margin-right: 15px;
-            width: 70px;
-            font-size: .7rem;
-            letter-spacing: -.4px;
+            min-width: 110px;
+            font-size: 1rem;
+            letter-spacing: .8px;
             text-align: right;
-            font-size: .8rem;
           }
       
           .line {
-            width: 50%;
-            height: 4px;
-            background-color: #b674ab;
+            width: 0%;
+            height: 8px;
+            border-radius: 10px;
+            // border-top-left-radius: 5px;
+            // border-bottom-right-radius: 5px;
+            background-color: #82a75e;
+            transition: .5s ease-in-out;
           }
         
           .score {
-            font-size: .8rem;
+            font-size: .9rem;
             margin-left: 15px;
             letter-spacing: -.4px;
           
           em {
-            font-size: .6rem;
+            font-size: .7rem;
           }
         }
       }
