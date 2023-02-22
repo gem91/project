@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import styles from './slider.module.scss';
 
 // Import Swiper React components
@@ -15,13 +15,14 @@ import { Mousewheel, Scrollbar, Autoplay } from "swiper";
         //   delay: 1500,
         //   disableOnInteraction: false,
         // }}
-const Slider = ({imageData}) => {
+const SliderEffects = ({imageData}) => {
   
   useEffect(() => {
    console.log(imageData);
   }, []);
   return (
     <>
+    { imageData && 
       <Swiper
         slidesPerView={4}
         spaceBetween={15}
@@ -44,12 +45,20 @@ const Slider = ({imageData}) => {
               <span className={styles.imgThumb}>
                 <img src={imgURL} alt={`${company} 로고이미지`} />
               </span>
-           </SwiperSlide>
+          </SwiperSlide>
           ))
         }
-    </Swiper>
+      </Swiper> 
+    }
+    { !imageData && 
+        <Swiper>
+          <SwiperSlide>
+             <span>test222222</span>
+          </SwiperSlide>
+      </Swiper> 
+    }
     </>
   )
 };
 
-export default Slider;
+export default SliderEffects;
