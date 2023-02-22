@@ -4,11 +4,16 @@ import styles from './Main.module.scss';
 import Instagram from '../../components/Instagram';
 import ListCards from '../../components/ListCards';
 import BreadCrumbs from '../../components/BreadCrumbs';
-import Slider from '../../components/Slider';
+import TabComponent from '../../components/TabComponent';
+import SliderEffects from '../../components/SliderEffect';
+import FlowText from '../../components/FlowText';
 // import TabMenu from '../../components/Tabs/TabMenu';
 // import TabContent from '../../components/Tabs/TabContent';
 
 const Main = (props) => {
+	const tabMenuList = [
+		{ menuName: "Lang" }, { menuName: "Front" }, { menuName: "Design" }
+	]
 	const skillData = [
 		{
 			type: "Lang",
@@ -29,7 +34,6 @@ const Main = (props) => {
 			]
 		},
 	]
-
 	const companyLogos = [
 		{
 			id: 0,
@@ -63,10 +67,9 @@ const Main = (props) => {
 		},
 	]
 
-	const [currentTab, setCurrentTab] = useState(0);
-	const handleTabMenu = (idx) => {
-    setCurrentTab(idx)
-  }
+
+
+
 	return (
 		<div className={styles.main}>
 			<div className={styles.container}>
@@ -74,46 +77,19 @@ const Main = (props) => {
 				<h3 className={styles.bigTitle}>
 					Who Am I ?
 				</h3>
+			
 				<Instagram />
-				<div className={styles.tabs}>
-					<ul className={styles.tabMenu}>
-						{ skillData.map(({type}, idx) => (
-							<li key={idx} 
-								className={currentTab === idx ? styles.clicked :  ''}
-								onClick={() => {handleTabMenu(idx)}}
-							>
-								<button type='button'>{type}</button>
-							</li>
-							))
-						}
-					</ul>
 
-					<div className={styles.tabContents}>
-						<ul>
-							{ skillData.map(({type, subject},idx) => (
-								<li>
-									<ul className={styles.skillBox}>
-										{
-											subject.map(({skill, num}) => (
-												<li className={styles.graph}>
-													<span className={styles.skillType}>{skill}</span>
-													<div className={styles.line}></div>
-													<span className={styles.score}>{num}<em>%</em></span>
-												</li>
-											))
-										}
-									</ul>
-								</li>
-							))}
-						</ul>
-					</div>
+				<div className={styles.tabs}>
+					<TabComponent tabMenuList={tabMenuList} tabData={skillData}></TabComponent>
 				</div>
 					
 				<div className={styles.companyLogo}>
 					<h4>Which Companies I Worked With</h4>
-					<Slider imageData={companyLogos}></Slider>
-				
+					<SliderEffects imageData={companyLogos}></SliderEffects>
+					x
 				</div>
+				
 				<h4 className={styles.tagTitle}>
 					<span>My Tags</span>
 				</h4>
