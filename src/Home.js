@@ -18,7 +18,7 @@ function Home() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Main />}></Route>
+            <Route path="/" exact element={<Main />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/secret" element={<Secret/>}></Route>
