@@ -35,14 +35,8 @@
             width: 100%;
             display: flex;
             justify-content: flex-end;
-            .btnSend{
-              display: block;
-              margin-top: 10px;
-              width: 20%;
-              padding: 10px 0;
-              text-align: center;
-              color: #fff;
-              background-color: #c7a6a6;
+            button{
+              margin-left: 5px;
             }
           }
         }

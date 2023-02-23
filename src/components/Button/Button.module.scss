@@ -1,0 +1,22 @@
+.defaultButton{
+  display: block;
+  margin-top: 10px;
+  width: 120%;
+  padding: 10px 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #c7a6a6;
+  transition: .5s ease-in-out;
+  &.basic {
+    background-color: #c7a6a6;
+    &:hover {
+      background-color: #82a75e;
+    }
+  }
+  &.cancel{
+    background-color: #984242;
+    &:hover{
+      background-color: #db3d3d;
+    }
+  }
+}

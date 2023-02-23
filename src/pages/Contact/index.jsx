@@ -1,5 +1,6 @@
 import React from 'react';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import DefaultButton from '../../components/Button/DefaultButton';
 import Instagram from '../../components/Instagram';
 
 import styles from './Contact.module.scss'
@@ -19,7 +20,9 @@ const Contact = () => {
               <input className={styles.formEmail} type="email" placeholder='abc@gmail.com' />
               <textarea className={styles.formContext} cols="50" rows="10"></textarea>
               <div className={styles.btnArea}>
-                <button className={styles.btnSend} type='button'>Send</button>
+                <DefaultButton type={'Re-Write'} role={'cancel'} />
+                <DefaultButton type={'Send'} role={'basic'} />
+                {/* <button className={styles.btnSend} type='button'>Send</button> */}
               </div>
             </form>       
           </div>
