@@ -1,39 +1,47 @@
 import React from 'react';
-import './ListCards.scss'
+import styles from './ListCards.module.scss'
 
 const ListCards = (props) => (
-  <ul className='list-cards'>
+  <ul className={styles.listCards}>
     <li>
-      <span className='thumb'>
-        <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
-      </span>
-      <p className='list-title'>
+      <div className={styles.imgBox}>
+        <span className={styles.thumb}>
+          <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
+        </span>
+      </div>
+      <p className={styles.listTitle}>
         Challenge
       </p>
     </li>
     <li>
-      <span className='thumb'>
-        <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
-      </span>
-      <p className='list-title'>
-      Consistent
+      <div className={styles.imgBox}>
+        <span className={styles.thumb}>
+          <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
+        </span>
+      </div>
+      <p className={styles.listTitle}>
+        Consistent
       </p>
     </li>
     <li>
-      <span className='thumb'>
-        <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
-      </span>
-      <p className='list-title'>
-      Propulsive
-      </p>
+      <div className={styles.imgBox}>
+        <span className={styles.thumb}>
+          <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
+        </span>
+      </div>
+        <p className={styles.listTitle}>
+        Propulsive
+        </p>
     </li>
     <li>
-      <span className='thumb'>
-        <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
-      </span>
-      <p className='list-title'>
-      Inquisitive
-      </p>
+      <div className={styles.imgBox}>
+        <span className={styles.thumb}>
+          <img src={`http://placeimg.com/300/350/any`} alt="민정이 사진" />
+        </span>
+      </div>
+        <p className={styles.listTitle}>
+        Inquisitive
+        </p>
     </li>
   </ul>
  

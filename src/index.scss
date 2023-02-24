@@ -72,7 +72,7 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
   }
   .swiper-scrollbar{
     .swiper-scrollbar-drag {
-      background-color: #bc9b8f;
+      background: linear-gradient(90deg, #bc9b8f00 0%, #bc9b8f 10%, #bc9b8f 90%, #bc9b8f00 100%);
     }
   }
 }

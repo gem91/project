@@ -1,0 +1,68 @@
+.listCards{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  li{
+    width: calc(25% - 10px);
+    &:last-child{
+      margin-right: 0;
+    }
+    .imgBox{
+      position: relative;
+      padding: 5px;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: transparent;
+      transition: .5s ease-in-out;
+      &:hover{
+        // box-shadow: 0 20px 35px #00000030;
+        background-color: #be8f8f;
+        &:before{
+          background: conic-gradient(#7ae810 20deg, transparent 120deg);
+          animation: spin 3s infinite linear;
+        }
+        .thumb {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        width: 150%;
+        height: 150%;
+        background: transparent;
+        transition: .8s ease-in-out;
+      }
+      .thumb {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 300px;
+        height: 350px;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: .5s ease-in-out;
+        }
+      }
+    }
+    .listTitle {
+      margin-top: 8px;
+      font-size: 1.5rem;
+      color: #333;
+      font-family: 'Abril Fatface', cursive;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg)
+  }
+}
