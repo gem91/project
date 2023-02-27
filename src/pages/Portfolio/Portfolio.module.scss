@@ -3,87 +3,62 @@
   .container{
     margin: 0 auto;
     max-width: 1280px;
-    .projectWrap{
-      margin-top: 100px;
-      .cardWrap {
+    .blogWrap{
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+      background-color: #fff;
+      .mainImg {
         position: relative;
-        margin: 0 auto;
+        width: 300px;
+        height: 100%;
         border-radius: 10px;
-        color: #303336;
-        background-color: #fff;
-        box-shadow: 0 40px 40px -20px #8b6b6b40;
+        overflow: hidden;
+        background-color: #f6f6f6;
     
-        .cardCont {
-          position: relative;
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      
+      .blogContent {
+        position: relative;
+        width: calc(100% - 300px);
+        height: auto;
+        padding-left: 35px;
+
+        .btnWrap {
+          position: absolute;
+          right: 0;
           display: flex;
-          width: 100%;
-          height: 100%;
-          padding: 50px;
-    
-          .contentLeft {
-            position: relative;
-            width: 300px;
-            height: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: #f6f6f6;
-    
-            img {
-              width: inherit;
-              height: inherit;
-              object-fit: cover;
-              object-position: center;
-            }
+          border-radius: 10px;
+          a{
+            display: block;
+            margin-left: 6px;
+            padding: 10px 30px;
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: .8rem;
+            color: #fff;
+            background-color: #c7a6a6;
+            transition: .5s ease-in-out;
           }
-    
-          .contentRight {
-            position: relative;
-            width: calc(100% - 300px);
-            height: auto;
-            padding-left: 35px;
-    
-            .button {
-              position: absolute;
-              right: 0;
-              border-radius: 10px;
-    
-            }
-    
-            .textBox {
-              .title {
-                font-size: 2rem;
-              }
-    
-              p {
-                width: 80%;
-                font-size: .9rem;
-              }
-            }
-    
-            .miniImgs {
-              position: absolute;
-              display: flex;
-              bottom: 0;
-              height: 105px;
-    
-              img {
-                width: 105px;
-                height: 105px;
-                border-radius: 10px;
-                object-fit: cover;
-                object-position: center;
-                cursor: pointer;
-                transition: 300ms;
-    
-                &:nth-child(2) {
-                  margin: 0 10px;
-                }
-    
-                &:hover {
-                  opacity: .75;
-                }
-              }
-            }
+        }
+
+        .textBox {
+          .title {
+            font-size: 2rem;
+          }
+
+          p {
+            width: 80%;
+            font-size: .9rem;
           }
         }
       }
@@ -92,37 +67,45 @@
 }
 
 
-  // .main-card {
-  //       position: relative;
-  //       width: 100%;
-  //       height: auto;
-  //       margin: 80px 20px;
-  //   }
+.imgLists {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  height: 105px;
 
-  //   .main-card .card-content {
-  //       flex-direction: column;
-  //   }
+  li{
+    img {
+      width: 105px;
+      height: 105px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+      transition: 300ms;
 
-  //   .main-card .content-left {
-  //       width: 100%;
-  //       height: 300px;
-  //   }
+      &:nth-child(2) {
+        margin: 0 10px;
+      }
 
-  //   .main-card .content-right {
-  //       width: 100%;
-  //       height: auto;
-  //       padding: 175px 0 0;
-  //   }
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+}
 
-  //   .main-card .tag {
-  //       left: 0;
-  //       transform: translateX(0);
-  //   }
-
-  //   .main-card .mini-imgs {
-  //       position: absolute;
-  //       display: flex;
-  //       top: 0;
-  //       margin-top: 35px;
-  //       height: 105px;
-  //   }
+@media screen and (max-width: 768px) {
+  .blogWrap {
+    flex-direction: column;
+    .mainImg {
+      width: 100%;
+      height: 300px;
+    }
+    .blogContent {
+      width: 100%;
+      height: auto;
+      padding: 175px 0 0;
+      
+    }
+  }
+}

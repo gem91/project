@@ -1,10 +1,10 @@
 .defaultButton{
   display: block;
-  margin-top: 10px;
-  width: 120%;
   padding: 10px 30px;
   text-align: center;
   color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: .8rem;
   background-color: #c7a6a6;
   transition: .5s ease-in-out;
   &.basic {
