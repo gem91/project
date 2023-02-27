@@ -33,7 +33,7 @@ const Portfolio = (props) => {
   return (
     <div className={styles.portfolio}>
       <div className={styles.container}>
-         {/* <BreadCrumbs text={'Project'}></BreadCrumbs> */}
+         <BreadCrumbs text={'Project'}></BreadCrumbs>
          <div className={styles.blogWrap}>
             <div className={styles.mainImg}>
               <img ref={fullImgRef} src={mainImg} alt={mainAlt} />
