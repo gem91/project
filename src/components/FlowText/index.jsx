@@ -3,6 +3,7 @@ import styles from './FlowText.module.scss';
 
 const FlowText = (props) => {
   return (
+    <>
     <div className={styles.animatedTitle}>
       <div className={styles.track}>
         <p className={styles.content}>
@@ -13,6 +14,20 @@ const FlowText = (props) => {
         </p>
       </div>
     </div>
+
+    <div className={styles.marquee}>
+      <div className={styles.track}>
+        <span className={styles.textR}>Nicolas.
+          <span className={styles.green}>Nicolas.</span>
+          </span>
+        <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span></span>
+        <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span></span>
+        <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span>
+          
+        </span>
+      </div>
+    </div>
+    </>
   )
 };
 
