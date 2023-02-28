@@ -9,9 +9,6 @@ import SliderEffects from '../../components/SliderEffect';
 import WideFlow from '../../components/FlowText/WideFlow';
 
 const Main = (props) => {
-	const tabMenuList = [
-		{ menuName: "Lang" }, { menuName: "Front" }, { menuName: "Design" }
-	]
 	const skillData = [
 		{
 			type: "Lang",
@@ -88,7 +85,7 @@ const Main = (props) => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!
 				</p>
 				<div className={styles.tabs}>
-					<TabComponent tabMenuList={tabMenuList} tabData={skillData}></TabComponent>
+					<TabComponent tabData={skillData}></TabComponent>
 				</div>
 					
 				<div className={styles.companyLogo}>

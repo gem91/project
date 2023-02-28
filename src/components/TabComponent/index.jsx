@@ -1,7 +1,7 @@
 import React, { useRef , useState } from 'react';
 import styles from './TabComponent.module.scss';
 
-const TabComponent = ({tabMenuList, tabData}) => {
+const TabComponent = ({tabData}) => {
 
     // useEffect(()=>{
     //   console.log(test());
@@ -16,11 +16,11 @@ const TabComponent = ({tabMenuList, tabData}) => {
       <>
         {/* tabMenu 영역 */}
       	<ul className={styles.tabMenu}>
-          { tabMenuList.map(({menuName}, idx) => (
+          { tabData.map(({type}, idx) => (
             <li key={idx} 
               className={currentTab === idx ? `${styles.tabList} ${styles.clicked}` :  `${styles.tabList}`}
             >
-              <button type='button' onClick={(e) => {handleTabMenu(e, idx)}}>{menuName}</button>
+              <button type='button' onClick={(e) => {handleTabMenu(e, idx)}}>{type}</button>
             </li>
             ))
           }
