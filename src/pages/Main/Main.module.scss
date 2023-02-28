@@ -2,13 +2,18 @@
   .container{
     margin: 0 auto;
     max-width: 1280px;
-    .bigTitle{
-      margin-top: 100px;
-      text-align: center;
-      font-size: 4rem;
-      letter-spacing: 5px;
-      font-family: 'Caveat', cursive;
+    .profile{
+      position: relative;
+      z-index: 1;
+      .bigTitle {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 4rem;
+        letter-spacing: 5px;
+        font-family: 'Caveat', cursive;
+      }
     }
+
     .tagTitle{
       position: relative;
       margin: 200px auto 0;

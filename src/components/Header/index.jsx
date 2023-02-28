@@ -30,22 +30,22 @@ const Header = (props) => {
   }
   return (
     <header>
-    <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div>
-    <div className={styles.container}>
-     <Logo src={'/'} />
-      <ul>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Project</Link>  
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>  
-          </li>
-      </ul>
-    </div>
-  </header>
+      <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div>
+      <div className={styles.container}>
+        <Logo src={'/'} />
+        <ul>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Project</Link>  
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>  
+            </li>
+        </ul>
+      </div>
+    </header>
   )
 };
 

@@ -6,6 +6,7 @@ import ListCards from '../../components/ListCards';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
+import WideFlow from '../../components/FlowText/WideFlow';
 
 const Main = (props) => {
 	const tabMenuList = [
@@ -15,7 +16,7 @@ const Main = (props) => {
 		{
 			type: "Lang",
 			subject : [
-				{ skill : 'html', num : 30 }, { skill: "css", num : 90 }, { skill: "scss", num : 90 }
+				{ skill : 'html', num : 30 }, { skill: "css", num : 50 }, { skill: "scss", num : 100 }
 			]
 		},
 		{
@@ -70,12 +71,14 @@ const Main = (props) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.container}>
-				<h3 className={styles.bigTitle}>
-					Who Am I ?
-				</h3>
-				<Instagram />
-
 				<BreadCrumbs text={'About'}></BreadCrumbs>
+				<div className={styles.profile}>
+					<h3 className={styles.bigTitle}>
+						Who Am I ?
+					</h3>
+					<Instagram />
+				</div>
+				<WideFlow></WideFlow>
 				<h4 className={styles.tagTitle}>
 					<span>My Tags</span>
 				</h4>
