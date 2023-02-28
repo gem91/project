@@ -1,7 +1,7 @@
   .tabMenu {
     display: flex;
-    border-bottom: 4px solid #f5edf2;
-
+    border-bottom: 4px solid #bc9b8f;
+    border-bottom-left-radius: 12px;
     li.tabList {
       margin-right: 5px;
       &.clicked {
