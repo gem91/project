@@ -35,7 +35,7 @@ const TabComponent = ({tabData}) => {
               { subject.map(({skill, num}) => (
                 <li key={skill}>
                   <span className={styles.skillType}>{skill}</span>
-                  <div className={styles.line} style={{width: `${num}%`}}></div>
+                  <div className={styles.line} style={{width: `calc(${num}% - 123px)`}}></div>
                   <span className={styles.score}>{num}<em>%</em></span>
                 </li>
               ))}
