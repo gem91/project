@@ -11,7 +11,7 @@
     position: absolute;
     top: 23px;
     left: 30px;
-    width: 130px;
+    width: 77%;
     height: 5px;
     background-color: #82a75e50;
     transform: rotate(5deg);
@@ -25,4 +25,11 @@
   //     height: 90px;
   //     background-color: #f1b7b766;
   // }
+}
+
+
+@media screen and (max-width: 768px) {
+  .subject{
+    padding-left: 20px;
+  }
 }

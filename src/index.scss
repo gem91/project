@@ -69,13 +69,55 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
   text-indent: -1000px;
 }
 
+
+
 .swiper{
   .swiper-wrapper{
     padding: 25px 0;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 35px;
+    height: 40px;
+    font-size: 25px;
+  }
+  .swiper-button-prev{
+    &:after{
+      color: #bbb;
+      transition: .5s ease-in-out;
+    }
+    &:hover{
+      &:after{
+        color: #b674ab;
+      }
+    }
+  }
+  .swiper-button-next{
+    &::after{
+      color: #bbb;
+      transition: .5s ease-in-out;
+    }
+    &:hover{
+      &:after{
+        color: #b674ab;
+      }
+    }
   }
   .swiper-scrollbar{
     .swiper-scrollbar-drag {
       background: linear-gradient(90deg, #bc9b8f00 0%, #bc9b8f 10%, #bc9b8f 90%, #bc9b8f00 100%);
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pc-br{
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .m-br{
+    display: block;
   }
 }

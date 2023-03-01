@@ -34,8 +34,18 @@ const BlogCard = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, setTitle
   return (
     <div className={styles.imgLists}>
       <Swiper
-       navigation={true}
-        slidesPerView={4}
+        breakpoints= {{
+          678: { 
+            slidesPerView: 1, 
+          },
+          960: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+        navigation={true}
         spaceBetween={10}
         mousewheel={true}
         // scrollbar={{

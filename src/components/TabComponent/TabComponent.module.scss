@@ -74,3 +74,29 @@
       }
     }
   }
+
+
+  @media screen and (max-width: 768px) {
+    .tabContents {
+      .tabBox {
+        margin-top: 10px;
+        &.isActive{
+          li{
+            display: block;
+          }
+        }
+        li{
+          width: 100%;
+          padding: 20px 0;
+          .skillType {
+            margin-right: 15px;
+            min-width: 110px;
+          }
+          .lineWrap{
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }

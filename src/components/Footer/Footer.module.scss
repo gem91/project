@@ -1,8 +1,5 @@
 .footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   padding: 25px 25px;
   border-top: 1px solid #ddd;
   background-color: #65463b;
@@ -45,6 +42,26 @@
         letter-spacing: .5px;
         // font-family: 'Amatic SC', cursive;
         font-size: .85rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+  padding: 20px 15px;
+    .container{
+      width: 100%;
+      .content{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        .send{
+          font-size: 1.2rem;
+        }
+        .copy{
+          margin-top: 15px;
+        }
       }
     }
   }

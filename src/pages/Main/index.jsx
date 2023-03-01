@@ -8,7 +8,7 @@ import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
 import WideFlow from '../../components/FlowText/WideFlow';
 
-const Main = (props) => {
+const Main = ({isMobile}) => {
 	const skillData = [
 		{
 			type: "Lang",
@@ -68,14 +68,14 @@ const Main = (props) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.container}>
-				<BreadCrumbs text={'About'}></BreadCrumbs>
+				<BreadCrumbs text={'About'} />
 				<div className={styles.profile}>
 					<h3 className={styles.bigTitle}>
 						Who Am I ?
 					</h3>
 					<Instagram />
 				</div>
-				<WideFlow></WideFlow>
+				<WideFlow />
 				<h4 className={styles.tagTitle}>
 					<span>My Tags</span>
 				</h4>
@@ -85,12 +85,12 @@ const Main = (props) => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!
 				</p>
 				<div className={styles.tabs}>
-					<TabComponent tabData={skillData}></TabComponent>
+					<TabComponent tabData={skillData} isMobile={isMobile} />
 				</div>
 					
 				<div className={styles.companyLogo}>
-					<h4>Which Companies I Worked With..!</h4>
-					<SliderEffects imageData={companyLogos}></SliderEffects>
+					<h4>Which <br className='m-br'></br>Companies I Worked With..!</h4>
+					<SliderEffects imageData={companyLogos} />
 				</div>
 				
 			

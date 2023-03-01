@@ -5,7 +5,7 @@ import Instagram from '../../components/Instagram';
 
 import styles from './Contact.module.scss'
 
-const Contact = () => {
+const Contact = ({isMobile}) => {
   return (
     <div className={styles.contact}>
       <div className={styles.container}>
@@ -26,9 +26,13 @@ const Contact = () => {
               </div>
             </form>       
           </div>
-          <div className={styles.rightCont}>
-            <Instagram></Instagram>
-          </div>
+          {
+            !isMobile &&  
+            <div className={styles.rightCont}>
+              <Instagram></Instagram>
+            </div>
+          }
+         
         </div>
       </div>
     </div>

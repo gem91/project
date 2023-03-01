@@ -21,7 +21,18 @@ const SliderEffects = ({imageData}) => {
     <>
     { imageData && 
       <Swiper
-        slidesPerView={4}
+        breakpoints= {{
+          768: { 
+            slidesPerView: 1, 
+          },
+          960: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+        // slidesPerView={4}
         spaceBetween={15}
         freeMode={true}
         mousewheel={true}
@@ -45,13 +56,6 @@ const SliderEffects = ({imageData}) => {
             </SwiperSlide>
           ))
         }
-      </Swiper> 
-    }
-    { !imageData && 
-        <Swiper>
-          <SwiperSlide>
-             <span>test222222</span>
-          </SwiperSlide>
       </Swiper> 
     }
     </>

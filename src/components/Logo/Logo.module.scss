@@ -15,6 +15,12 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .logo{
+    line-height: 1;
+  }
+}
+
 @keyframes ani-logo {
   0% {
     opacity: 0;

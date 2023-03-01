@@ -1,16 +1,25 @@
 import React, { useRef , useState } from 'react';
 import styles from './TabComponent.module.scss';
 
-const TabComponent = ({tabData}) => {
+const TabComponent = ({tabData, isMobile}) => {
 
     // useEffect(()=>{
     //   console.log(test());
     // }, [])
   	const [currentTab, setCurrentTab] = useState(0);
-
     const handleTabMenu = (e, idx) => {
       setCurrentTab(idx)
     }
+
+  
+  //   function open_chatroom(){
+  //     const windowWidth = document.windowWidth
+  //     if(windowWidth < 500) {
+  //        //창 가로 크기가 500 미만일 경우 
+  //     } else {
+  //        //창 가로 크기가 500보다 클 경우
+  //     }
+  //  }
 
     return (
       <>
@@ -35,8 +44,17 @@ const TabComponent = ({tabData}) => {
               { subject.map(({skill, num}) => (
                 <li key={skill}>
                   <span className={styles.skillType}>{skill}</span>
-                  <div className={styles.line} style={{width: `calc(${num}% - 123px)`}}></div>
-                  <span className={styles.score}>{num}<em>%</em></span>
+                    {
+                      !isMobile
+                      ? <>
+                          <div className={styles.line} style={{width: `calc(${num}% - 123px)`}}></div>
+                          <span className={styles.score}>{num}<em>%</em></span>
+                        </>
+                      : <div className={styles.lineWrap}>
+                          <div className={styles.line} style={{width: `calc(${num}%)`}}></div>
+                          <span className={styles.score}>{num}<em>%</em></span>
+                        </div>
+                    }
                 </li>
               ))}
             </ul>
