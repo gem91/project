@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 import styles from './header.module.scss'
 
-const Header = (props) => {
+const Header = ({isMobile}) => {
   let [processBar, setProcessBar] = useState(0);
 
   useEffect(() => {
@@ -22,6 +22,9 @@ const Header = (props) => {
     //   header.style.background = 'transparent'
     // }
   };
+  const onHamburger = (e) => {
+    e.currentTarget.classList.toggle(`${styles.isOpened}`)
+  }
 
   const ScrollNavBar = (currrentY, windowH) => {
     const totalHeight = document.querySelector('body').getBoundingClientRect().height  //컨텐츠 전체 높이
@@ -33,18 +36,27 @@ const Header = (props) => {
       <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div>
       <div className={styles.container}>
         <Logo src={'/'} />
-        <ul>
-            <li>
-              <Link to="/">About</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Project</Link>  
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>  
-            </li>
-        </ul>
+        { !isMobile && 
+          <ul>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/portfolio">Project</Link>  
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>  
+              </li>
+          </ul>
+        }
       </div>
+      { isMobile && 
+        <button className={styles.hamburger} type='button' aria-label="Open menu" onClick={onHamburger}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      }
     </header>
   )
 };
