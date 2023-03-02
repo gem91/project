@@ -9,19 +9,30 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Secret from './pages/Secret';
 import LineFlow from './components/FlowText/LineFlow';
+import { useEffect, useState } from 'react';
 
 function Home() {
 
-  const windowWidth = window.outerWidth
-  const isMobile = windowWidth <= 360
-  const isPc = windowWidth > 360
+  const [winWidth, setWinWidth] = useState(0)
 
+  let isMobile = winWidth <= 768
+  let isTablet = winWidth <= 1024
+  let isPc = winWidth > 1024
+  const handleResize = () => {
+    setWinWidth(window.innerWidth)
+  }
+
+
+  useEffect(()=>{
+    window.addEventListener('resize', handleResize)
+   
+  }, [])
 
   return (
     <>
       <div className={styles.wrap}>
         <BrowserRouter>
-          <Header />
+          <Header isMobile={isMobile} />
           <LineFlow />
           <Routes>
             <Route path="/" exact element={<Main isMobile={isMobile} />}></Route>
