@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/project/static/css/main.ceb20035.css",
-    "main.js": "/project/static/js/main.39b4ea60.js",
+    "main.css": "/project/static/css/main.51b0c07c.css",
+    "main.js": "/project/static/js/main.ef656077.js",
     "static/media/ico-kakao.png": "/project/static/media/ico-kakao.08127712a2fbeaab1b96.png",
     "static/media/hyundai.png": "/project/static/media/hyundai.e736ee2462af09d66d07.png",
     "static/media/kiehls.png": "/project/static/media/kiehls.a67b9cef22ad5ad9e657.png",
     "index.html": "/project/index.html",
-    "main.ceb20035.css.map": "/project/static/css/main.ceb20035.css.map",
-    "main.39b4ea60.js.map": "/project/static/js/main.39b4ea60.js.map"
+    "main.51b0c07c.css.map": "/project/static/css/main.51b0c07c.css.map",
+    "main.ef656077.js.map": "/project/static/js/main.ef656077.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceb20035.css",
-    "static/js/main.39b4ea60.js"
+    "static/css/main.51b0c07c.css",
+    "static/js/main.ef656077.js"
   ]
 }
