@@ -5,15 +5,16 @@ import styles from './header.module.scss'
 
 const Header = ({isMobile}) => {
   let [processBar, setProcessBar] = useState(0);
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   }, []); // useEffect
+
   const handleScroll = () => {
     let currY = window.scrollY     // 현재 스크롤 위치값
     const windowH = window.innerHeight   // 윈도우 화면 높이값
     ScrollNavBar(currY, windowH) // 가로 스크롤 네비바 기능 221026
-    
     
     // const header = document.querySelector('header')
     // if(currY > 100){
@@ -23,7 +24,7 @@ const Header = ({isMobile}) => {
     // }
   };
   const onHamburger = (e) => {
-    e.currentTarget.classList.toggle(`${styles.isOpened}`)
+    setIsOpen(!isOpen)
   }
 
   const ScrollNavBar = (currrentY, windowH) => {
@@ -33,29 +34,45 @@ const Header = ({isMobile}) => {
   }
   return (
     <header>
-      <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div>
+      
+      { !isOpen && <div className={styles.processBar} style={{width: processBar + '%'}} onScroll={handleScroll} ></div> }
       <div className={styles.container}>
         <Logo src={'/'} />
         { !isMobile && 
           <ul>
-              <li>
-                <Link to="/">About</Link>
-              </li>
-              <li>
-                <Link to="/portfolio">Project</Link>  
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>  
-              </li>
-          </ul>
-        }
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Project</Link>  
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>  
+            </li>
+        </ul>
+      }
       </div>
       { isMobile && 
-        <button className={styles.hamburger} type='button' aria-label="Open menu" onClick={onHamburger}>
+        <button className={ isOpen ? `${styles.hamburger} ${styles.isOpen}` :  `${styles.hamburger}`} type='button' onClick={onHamburger}>
           <span></span>
           <span></span>
           <span></span>
         </button>
+      }
+      { isOpen &&
+        <div className={styles.fullMenus}>
+          <ul>
+            <li>
+              <Link to="/" onClick={onHamburger}>About</Link>
+            </li>
+            <li>
+              <Link to="/portfolio" onClick={onHamburger}>Project</Link>  
+            </li>
+            <li>
+              <Link to="/contact" onClick={onHamburger}>Contact</Link>  
+            </li>
+          </ul>
+        </div>
       }
     </header>
   )

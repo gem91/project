@@ -13,25 +13,27 @@ import { useEffect, useState } from 'react';
 
 function Home() {
 
-  const [winWidth, setWinWidth] = useState(0)
+  const [winWidth, setWinWidth] = useState(window.innerWidth)
 
   let isMobile = winWidth <= 768
   let isTablet = winWidth <= 1024
   let isPc = winWidth > 1024
+
   const handleResize = () => {
     setWinWidth(window.innerWidth)
   }
-
-
+  
   useEffect(()=>{
     window.addEventListener('resize', handleResize)
-   
-  }, [])
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  })
 
   return (
     <>
       <div className={styles.wrap}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Header isMobile={isMobile} />
           <LineFlow />
           <Routes>
