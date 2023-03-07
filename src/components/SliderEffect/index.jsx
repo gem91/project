@@ -1,20 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from './slider.module.scss';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/scss";
-import "swiper/scss/scrollbar";
+import "swiper/css/navigation";
 
 // import required modules
-import { Mousewheel, Scrollbar, Autoplay } from "swiper";
+import { Mousewheel, Autoplay, Navigation, } from "swiper";
 
 
-// autoplay={{
-        //   delay: 1500,
-        //   disableOnInteraction: false,
-        // }}
 const SliderEffects = ({imageData}) => {
   
   return (
@@ -32,19 +28,16 @@ const SliderEffects = ({imageData}) => {
             slidesPerView: 4,
           },
         }}
-        // slidesPerView={4}
+        navigation={true}
         spaceBetween={15}
         freeMode={true}
         mousewheel={true}
-        scrollbar={{
-        hide: false,
-        }}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
         }}
         speed={2000}
-        modules={[Scrollbar, Mousewheel, Autoplay]}
+        modules={[ Mousewheel, Autoplay, Navigation,]}
         className="mySwiper"
       >
         {
