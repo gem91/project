@@ -1,0 +1,59 @@
+.welcomeText{
+  .effects {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    background: #2128bd;
+    overflow: hidden;
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+    .effect{
+      will-change: transform;
+      position: absolute;
+      border-radius: 50%;
+      $effects: (#005ffe: 650px, #ffe5e3: 440px, #ffcc57: 270px);
+      @each $color, $size in $effects {
+        &.effect#{index($effects, ($color $size))} {
+          background: $color;
+          width: $size;
+          height: $size;
+          margin: (-$size/2) 0 0 (-$size/2);
+        }
+      }
+    }
+  }
+  .topText{
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    mix-blend-mode: screen;
+    h2{
+      font-family: 'Abril Fatface', cursive;
+      font-size: 5rem;
+      color: #2128bd;
+      &::selection {
+        color: #fff;
+        background: #2128bd;
+      }
+    }
+    .descBox{
+      margin-top: 30px;
+      p.text{
+        opacity: 0;
+        text-align: center;
+        font-size: 1rem;
+        transform: translate3d(-100px, 0, 0);
+      }
+    }
+  }
+  
+}
+

@@ -1,4 +1,9 @@
+
 .main{
+  .content{
+    width: 100%;
+    height: 100vh;
+  }
   .container{
     margin: 0 auto;
     max-width: 1280px;
@@ -60,11 +65,10 @@
       margin: 100px 0 0 0 ;
       padding-bottom: 200px;
       h4{
-        // font-family: 'El Messiri', sans-serif;
-        // font-family: 'Caveat', cursive;
         padding: 50px 0;
         font-family: 'Abril Fatface', cursive;
-        font-size: 2rem;
+        font-size: 4rem;
+        line-height: 1.2;
       }
       ul{
         overflow-x: scroll;
@@ -87,9 +91,101 @@
     .tabs{
       margin: 200px auto 0;
     }
+    
+
   }
 }
 
+.accordion {
+  margin-top: 100px;
+  $itemsNo: 5;
+  ul {
+    list-style: none;
+    -webkit-perspective: 900;
+    perspective: 900;
+
+    li {
+      position: relative;
+      border-bottom: 1px solid red;
+      background-color: #795548;
+      transition: all .5s ease;
+      animation: flipdown 0.5s ease both;
+      &:hover{
+        background-color: #47352f;
+      :before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        // background-color: #be4f4f;
+      }
+      .floatImg{
+        top: -60px;
+        right: 10%;
+        opacity: 1;
+      }
+        .thumb{
+          img{
+            opacity: .7;
+            transform: scale(1.1);
+          }
+        }
+      }
+      $delay: 0.4;
+      @for $i from 1 through $itemsNo {
+        &:nth-of-type(#{$i}) {
+            animation-delay: #{$delay}s;
+            $delay: $delay + 0.3;
+        }
+      }
+      .floatImg{
+        position: absolute;
+        top: 0;
+        right: 10%;
+        z-index: 1;
+        width: 220px;
+        height: 220px;
+        overflow: hidden;
+        opacity: 0;
+        box-shadow: 0 40px 40px -20px #00000080;
+        transition: .5s ease-in-out;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .textBox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 0;
+        width: 100%;
+        height: 100%;
+        p{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          font-size: 3rem;
+          color: #fff;
+          text-align: center;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .thumb{
+        display: block;
+        max-height: 180px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          opacity: .5;
+          transition: .5s ease-in-out;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 768px) {
   .main{
@@ -120,5 +216,30 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
   }
 }
