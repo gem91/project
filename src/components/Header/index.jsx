@@ -41,14 +41,20 @@ const Header = ({isMobile}) => {
         { !isMobile && 
           <ul>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/">About Me</Link>
             </li>
             <li>
-              <Link to="/portfolio">Project</Link>  
+              <Link to="/portfolio">Web Site</Link>  
             </li>
             <li>
+              <Link to="/portfolio">Toy Project</Link>  
+            </li>
+            <li>
+              <Link to="/portfolio">JavaScript</Link>  
+            </li>
+            {/* <li>
               <Link to="/contact">Contact</Link>  
-            </li>
+            </li> */}
         </ul>
       }
       </div>

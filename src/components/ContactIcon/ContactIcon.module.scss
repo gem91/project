@@ -1,0 +1,52 @@
+.contactIcon{
+  position: fixed;
+  right: 7%;
+  bottom: 5%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    position: relative;
+    &:hover {
+      .text{
+        color: #fff;
+        letter-spacing: 1.2px;
+      }
+      .circle{
+        .path {
+            fill: #00000050;
+            stroke-dashoffset: 635;
+          }
+      }
+    }
+    .text{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 1.2rem;
+      letter-spacing: .5px;
+      font-family: 'Caveat', cursive;
+      font-weight: bold;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: .5s 0.2s ease-in-out;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+     
+    
+        .path {
+          stroke: #111;
+          stroke-width: .8;
+          fill: #ffffff50;
+          stroke-dasharray: 635;
+          stroke-dashoffset: 0;
+          transition: stroke-dashoffset .8s .2s ease-in-out, fill .5s .6s ease-in-out;
+        }
+      }
+  }
+    
+}
