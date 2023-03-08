@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap'
 
 import styles from './Home.module.scss';
@@ -11,7 +12,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Secret from './pages/Secret';
 import LineFlow from './components/FlowText/LineFlow';
-import { useEffect, useRef, useState } from 'react';
+import ContactIcon from './components/ContactIcon';
 
 function Home() {
   const [winWidth, setWinWidth] = useState(window.innerWidth)
@@ -60,6 +61,7 @@ function Home() {
             <Route path="/secret" element={<Secret/>}></Route>
             <Route path="*" element={<NotFound /> }></Route>
           </Routes>
+          <ContactIcon />
           <Footer />
         </BrowserRouter>
       </div>
