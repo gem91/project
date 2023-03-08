@@ -1,14 +1,14 @@
 
 .wrap{
   position: relative;
-  padding: 64px 0 0 0;
+  padding: 0;
   min-height: 100vh;
   background-color: #f3efe9;
 }
 
 .cursor {
   position: fixed;
-  background: #2128bd;
+  z-index: 10000;
   width: 20px;
   height: 20px;
   margin: -10px 0 0 -10px;
@@ -16,7 +16,8 @@
   will-change: transform;
   user-select: none;
   pointer-events: none;
-  z-index: 10000;
+  background: #2128bd;
+  transition: width .5s ease-in-out, height .5s ease-in-out, background .5s ease-in-out;
 }
 
 // ::selection {

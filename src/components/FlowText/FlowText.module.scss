@@ -1,3 +1,13 @@
+@keyframes marquee-r {
+  from {transform: translateX(-100%);}
+  to {transform: translateX(0);}
+}
+
+@keyframes rollCage {
+  from {transform: rotate(0);}
+  to {transform: rotate(5turn);}
+}
+
 .animatedTitle {
   position: relative;
   z-index: 1;
@@ -29,69 +39,53 @@
  :root {
   --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
   --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.20rem);
-  --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 9.00rem);
+  --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 6.00rem);
 }
-
-@keyframes marquee-r {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes rollCage {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(5turn);
-  }
-}
-
 
 .marquee {
   position: absolute;
-  top: 820px;
   left: -120px;
   width: 120%;
-  height: calc(170px + 4rem);
-  color: #be8f8f;
+  height: 100%;
+  color: #8b6b6b;
   font-size: var(--step-0);
   overflow: hidden;
   // transform: rotate(-20deg);
    .track {
-       position: absolute;
-       padding: 2rem 0;
-       height: 100%;
-       overflow: hidden;
-       white-space: nowrap;
-       transition: background-color 300ms ease, color 300ms ease;
-   
-       & .textR {
-         display: inline-flex;
-         align-items: center;
-         animation: marquee 50000ms linear infinite;
-         will-change: transform;
-         animation-name: marquee-r;
-       }
-   
-       &:hover {
-         color: #1A1F24;
-         background-color: #efefef;
-   
-         & .green {
-           color: #BEB9A3;
+      position: absolute;
+      padding: 0 0;
+      height: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: background-color 300ms ease, color 300ms ease;
+      &:hover {
+        .text {
+          opacity: .2;
+          color: #464646;
+          //  background-color: #f1f1f1;
+          .em {
+           color: #d98ad3;
          }
        }
+      }
+      .text {
+        opacity: .3;
+        display: inline-flex;
+        align-items: center;
+        line-height: 2;
+        color: #fff;
+        font-family: 'El Messiri', sans-serif;
+        animation: marquee 50000ms linear infinite;
+        will-change: transform;
+        animation-name: marquee-r;
+        transition: .5s ease-in-out;
+        .em {
+          color: #b6eb35;
+          font-weight: 900;
+          transition: .5s ease-in-out;
+        }
+      }
      }
-            .green {
-              color: #C1FF1D;
-              font-weight: 900;
-            }
 }
 
 

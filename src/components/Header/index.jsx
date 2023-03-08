@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import LineFlow from '../FlowText/LineFlow';
 import Logo from '../Logo';
 import styles from './header.module.scss'
 
@@ -80,6 +81,7 @@ const Header = ({isMobile}) => {
           </ul>
         </div>
       }
+      <LineFlow />
     </header>
   )
 };

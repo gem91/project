@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from './FlowText.module.scss';
 
-const WideFlow = (props) => {
+const WideFlow = ({tit, em}) => {
   return (
   <div className={styles.marquee}>
     <div className={styles.track}>
-      <span className={styles.textR}>Nicolas.
-        <span className={styles.green}>Nicolas.</span>
-        </span>
-      <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span></span>
-      <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span></span>
-      <span className={styles.textR}>Nicolas.<span className={styles.green}>Nicolas.</span> 
+      <span className={styles.text}>{tit}<span className={styles.em}>{em}</span></span>
+      <span className={styles.text}>{tit}<span className={styles.em}>{em}</span></span>
+      <span className={styles.text}>{tit}<span className={styles.em}>{em}</span></span>
+      <span className={styles.text}>{tit}<span className={styles.em}>{em}</span> 
       </span>
     </div>
   </div>

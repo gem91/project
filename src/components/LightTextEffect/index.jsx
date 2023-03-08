@@ -29,11 +29,13 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
     gsap.to(textRef1.current, {
       scrollTrigger: {
         trigger: textRef1.current,
-        start: "top center",
+        start: 0,
+        // start: "top center",
         toggleActions: 'play none none reverse',
         // markers: true,
         // scrub: true,
       },
+      delay: 0.2,
       opacity: 1,
       duration: 1,
       x: 0,
@@ -43,11 +45,11 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
       scrollTrigger: {
         trigger: textRef2.current,
         markers: true,
-        start: "top center",
+        start: 0,
         toggleActions: 'play none none reverse',
       },
+      delay: 0.8,
       opacity: 1,
-      delay: 0.7,
       duration: 1,
       x: 0,
     });
@@ -55,11 +57,11 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
       scrollTrigger: {
         trigger: textRef3.current,
         markers: true,
-        start: "top center",
+        start: 0,
         toggleActions: 'play none none reverse',
       },
+      delay: 1.3,
       opacity: 1,
-      delay: 1.4,
       duration: 1,
       x: 0,
     });

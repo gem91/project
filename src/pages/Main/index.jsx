@@ -94,54 +94,50 @@ const Main = ({isMobile}) => {
 				<LightTextEffect title={'Hello there!'} text1={'안녕하세요. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'꼭 합격하고 싶습니다!'} />
 			</section>
 			<div className={styles.container}>
-				<BreadCrumbs text={'About'} />
-				<div className={styles.profile}>
-					<h3 className={styles.bigTitle}>
-						Who Am I ?
-					</h3>
+				<div className={styles.breadCrumbsBox}>
+					<BreadCrumbs text={'About'} />
+				</div>
+				<div className={styles.profileBox}>
+					<h3>Who Am I ?</h3>
 					<Instagram />
 				</div>
-			</div>
-			<WideFlow />
-			<div className={styles.container}>
-				<p className={styles.text}>
-					<em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!
-				</p>
+				<div className={styles.tagTextBox}>
+					<p className={styles.text}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br /></p>
+					<p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</p>
+				</div>
+				
 				<div className={styles.tabs}>
 					<TabComponent tabData={skillData} isMobile={isMobile} />
 				</div>
 				<div className={styles.companyLogo}>
-					<h4>Which <br className='m-br'></br>Companies I Worked With..!</h4>
+					<h3>Which <br className='m-br'></br>Companies I Worked With..!</h3>
 					<SliderEffects imageData={companyLogos} />
 				</div>
 			</div>
-			<div>
-				<div className={styles.accordion}>
-					<ul>
-						{
-							bannerData.map(({imgURL, title}, index) =>(
-							<li key={index}>
-								<div className={styles.floatImg}>
-									<img src={imgURL} alt={title} />
-								</div>
-								<div className={styles.textBox}>
-									<p>{title}</p>
-								</div>
-								<span className={styles.thumb}>
-									<img src={imgURL} alt={title} />
-								</span>
-							</li>
-							))
-						}
-					</ul>
-				</div>
+			<div className={styles.accordion}>
+				<ul>
+					{
+						bannerData.map(({imgURL, title}, index) =>(
+						<li key={index}>
+							<div className={styles.floatImg}>
+								<img src={imgURL} alt={title} />
+							</div>
+							<div className={styles.textBox}>
+								<WideFlow tit={`${title}.`} em={`${title}.`} />
+							</div>
+							<span className={styles.thumb}>
+								<img src={imgURL} alt={title} />
+							</span>
+						</li>
+						))
+					}
+				</ul>
 			</div>
 			<div className={styles.container}>
-				<h4 className={styles.tagTitle}>
-					<span>My Tags</span>
-				</h4>
-				<ImageReveal />
+				<div className={styles.imageEffectBox}>
+					<h3><span>My Tags</span></h3>
+					<ImageReveal />
+				</div>
 				{/* <ListCards /> */}
 			</div>
 		</div>
