@@ -60,7 +60,7 @@ function Home() {
           <Header isMobile={isMobile} />
           <Routes>
             <Route path="/" exact element={
-              <Main isMobile={isMobile} />}>
+              <Main isMobile={isMobile} isPc={isPc} />}>
             </Route>
             <Route path="/portfolio" element={
               <Portfolio />}>

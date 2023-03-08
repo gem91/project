@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import InfoText from './InfoText';
 import ThumbImage from './ThumbImage';
 
-const ImageReveal = (props) => {
+const ImageReveal = ({isPc}) => {
 
    const imgRef1 = useRef(null)
    const imgRef2 = useRef(null)
@@ -18,60 +18,119 @@ const ImageReveal = (props) => {
     
   useEffect(() => {      
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(imgRef1.current, {
-       scrollTrigger: {
-        trigger: imgRef1.current,
-        start: 'top 30%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-        // scrub: true,
-      },
-      delay: 0.3,
-      opacity: 1,
-      duration: 1.5,
-      Y: 100,
-    });
-
-      gsap.to(imgRef2.current, {
-       scrollTrigger: {
-        trigger: imgRef2.current,
-        start: 'top 40%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      delay: 0.3,
-      opacity: 1,
-      duration: 1.5,
-      Y: 100,
-    });
-
-      gsap.to(imgRef3.current, {
-       scrollTrigger: {
-        trigger: imgRef3.current,
-        start: 'top 75%',
-        // end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-        // scrub: true,
-      },
-      delay: 0.3,
-      opacity: 1,
-      duration: 1.5,
-      Y: 100,
-    });
-
-      gsap.to(imgRef4.current, {
-       scrollTrigger: {
-        trigger: imgRef4.current,
-        start: 'top 30%',
-        end: 'bottom 10%',
-        toggleActions: 'play none none reverse',
-        // scrub: true,
-      },
-      delay: 0.3,
-      opacity: 1,
-      duration: 1.5,
-      Y: 100,
-    });
+    if(isPc) {
+         // pc version
+         gsap.to(imgRef1.current, {
+          scrollTrigger: {
+            trigger: imgRef1.current,
+            start: 'top 30%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+            // scrub: true,
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef2.current, {
+           scrollTrigger: {
+            trigger: imgRef2.current,
+            start: 'top 40%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef3.current, {
+           scrollTrigger: {
+            trigger: imgRef3.current,
+            start: 'top 75%',
+            // end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+            // scrub: true,
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef4.current, {
+           scrollTrigger: {
+            trigger: imgRef4.current,
+            start: 'top 30%',
+            end: 'bottom 10%',
+            toggleActions: 'play none none reverse',
+            // scrub: true,
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    } else {
+         // pc version 아닐때
+         gsap.to(imgRef1.current, {
+          scrollTrigger: {
+            trigger: imgRef1.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef2.current, {
+           scrollTrigger: {
+            trigger: imgRef2.current,
+            start: 'top 40%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef3.current, {
+           scrollTrigger: {
+            trigger: imgRef3.current,
+            start: 'top 30%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    
+          gsap.to(imgRef4.current, {
+           scrollTrigger: {
+            trigger: imgRef4.current,
+            start: 'top 30%',
+            end: 'bottom 10%',
+            toggleActions: 'play none none reverse',
+            // scrub: true,
+          },
+          delay: 0.3,
+          opacity: 1,
+          duration: 1.5,
+          Y: 100,
+        });
+    }
+    
+    
   }, []);
 
 

@@ -34,19 +34,35 @@
       transition: .5s 0.2s ease-in-out;
     }
     .circle {
-        width: 125px;
-        height: 125px;
-     
-    
+      width: 125px;
+      height: 125px;
+      .path {
+        stroke: #111;
+        stroke-width: .8;
+        fill: #ffffffdd;
+        stroke-dasharray: 635;
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset .8s .2s ease-in-out, fill .5s .6s ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactIcon{
+    a{
+      .text{
+        color: #ffffff90;
+        font-size: 1.1rem;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
         .path {
-          stroke: #111;
-          stroke-width: .8;
-          fill: #ffffff50;
-          stroke-dasharray: 635;
-          stroke-dashoffset: 0;
-          transition: stroke-dashoffset .8s .2s ease-in-out, fill .5s .6s ease-in-out;
+          fill: #00000050;
+          stroke-dashoffset: 635;
         }
       }
+    }
   }
-    
 }

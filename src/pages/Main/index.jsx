@@ -92,29 +92,46 @@ const bannerData = [
 	},
 ]
 
-const Main = ({isMobile}) => {
+const Main = ({isMobile, isPc}) => {
 	const titleRef1 = useRef(null)
   useEffect(() => {      
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(titleRef1.current, {
-       scrollTrigger: {
-        trigger: titleRef1.current,
-         start: 'top 60%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 1,
-      duration: .4,
-			letterSpacing: 2,
-      x: 0,
-    });
+		if(isPc){
+			gsap.to(titleRef1.current, {
+				scrollTrigger: {
+				 trigger: titleRef1.current,
+					start: 'top 60%',
+				 end: 'bottom 20%',
+				 toggleActions: 'play none none reverse',
+				 markers: true,
+			 },
+			 opacity: 1,
+			 duration: .4,
+			 letterSpacing: 2,
+			 x: 0,
+		 });
+		} else {
+			gsap.to(titleRef1.current, {
+				scrollTrigger: {
+				 trigger: titleRef1.current,
+					start: 'top 60%',
+				 end: 'bottom 20%',
+				 toggleActions: 'play none none reverse',
+			 },
+			 opacity: 1,
+			 duration: .4,
+			 letterSpacing: 2,
+			 x: 0,
+		 })
+	}
+    
   }, []);
 
 
 	return (
 		<div className={styles.main}>
 			<section className={styles.content}>
-				<LightTextEffect title={'Hello there!'} text1={'안녕하세요. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'꼭 합격하고 싶습니다!'} />
+				<LightTextEffect title={'Hello there!'} text1={'Hi🙌. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'꼭 합격하고 싶습니다!'} />
 			</section>
 			<div className={styles.container}>
 				<div className={styles.breadCrumbsBox}>
@@ -159,7 +176,7 @@ const Main = ({isMobile}) => {
 			<div className={styles.container}>
 				<div className={styles.imageEffectBox}>
 					<h3 ref={titleRef1}>My Tags</h3>
-					<ImageReveal />
+					<ImageReveal isPc={isPc} />
 				</div>
 				{/* <ListCards /> */}
 			</div>

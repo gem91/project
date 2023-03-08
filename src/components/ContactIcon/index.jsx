@@ -24,9 +24,9 @@ const ContactIcon = ({setCursorStyle, cursorBasic}) => {
         onMouseEnter={onMouseEnter} 
         onMouseLeave={onMouseLeave} 
       >
-        <span class={styles.text}>CONTACT</span>
+        <span className={styles.text}>CONTACT</span>
         <svg className={styles.circle} viewBox="0 0 200 200">
-          <circle class={styles.path} cx="100" cy="100" r="100"></circle>
+          <circle className={styles.path} cx="100" cy="100" r="100"></circle>
         </svg>
       </Link>
     </div>

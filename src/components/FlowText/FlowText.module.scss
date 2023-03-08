@@ -8,6 +8,15 @@
   to {transform: rotate(5turn);}
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .animatedTitle {
   position: relative;
   z-index: 1;
@@ -35,20 +44,13 @@
    }
  }
 
-
- :root {
-  --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
-  --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.20rem);
-  --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 6.00rem);
-}
-
 .marquee {
   position: absolute;
   left: -120px;
   width: 120%;
   height: 100%;
   color: #8b6b6b;
-  font-size: var(--step-0);
+  font-size: 6rem;
   overflow: hidden;
   // transform: rotate(-20deg);
    .track {
@@ -88,14 +90,9 @@
      }
 }
 
-
-
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
+@media screen and (max-width: 768px) {
+  .marquee {
+    left: -40px;
+    font-size: 3rem;
   }
 }
