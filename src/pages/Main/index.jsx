@@ -91,7 +91,7 @@ const Main = ({isMobile}) => {
 	return (
 		<div className={styles.main}>
 			<section className={styles.content}>
-				<LightTextEffect title={'Hello there!'} text1={'test'} />
+				<LightTextEffect title={'Hello there!'} text1={'안녕하세요. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'꼭 합격하고 싶습니다!'} />
 			</section>
 			<div className={styles.container}>
 				<BreadCrumbs text={'About'} />
