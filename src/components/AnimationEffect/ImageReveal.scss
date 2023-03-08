@@ -35,8 +35,6 @@ $image5Height: $vertical;
 $image6Width: 83.333333%;
 $image6Height: 100%;
 
-
-
 .animaImages {
   display: flex;
   .left, .right {
@@ -242,4 +240,37 @@ $image6Height: 100%;
   margin-top:  find-margin($image3Width,$image3Height,$imageIndent,$imageIndent);
   transform: translateX(-25%);
   width: $image4Width;
+}
+
+@media screen and (max-width: 768px) {
+  .animaImages {
+    flex-direction: column;
+    .left, .right {
+      width: 100%;
+    }
+  }
+  .info {
+    width: 100%;
+    .image:hover &, .image.active & {
+     
+    }
+    .left &, .right &{
+      left: 0;
+    }
+    &-title {
+      font-size: 2rem;
+    }
+  }
+  .image-1{
+    margin-top: 30% !important;
+  }
+  .image-2{
+    margin: 0;
+  }
+  .image-3{
+    margin-top: 30%;
+  }
+  .image-4{
+    margin-top: 30%;
+  }
 }
