@@ -79,9 +79,10 @@
         margin-bottom: 220px;
         padding-left: 68px;
         width: auto;
+        letter-spacing: -25px;
         font-size: 6rem;
-        // font-family: 'El Messiri', sans-serif;
         font-family: 'Abril Fatface', cursive;
+        opacity: 0;
         &::before {
           content: '#';
           position: absolute;

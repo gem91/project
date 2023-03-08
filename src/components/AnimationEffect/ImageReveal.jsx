@@ -1,9 +1,79 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ImageReveal.scss'
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// components
 import InfoText from './InfoText';
 import ThumbImage from './ThumbImage';
 
 const ImageReveal = (props) => {
+
+   const imgRef1 = useRef(null)
+   const imgRef2 = useRef(null)
+   const imgRef3 = useRef(null)
+   const imgRef4 = useRef(null)
+
+    
+  useEffect(() => {      
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(imgRef1.current, {
+       scrollTrigger: {
+        trigger: imgRef1.current,
+        start: 'top 30%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+        // scrub: true,
+      },
+      delay: 0.3,
+      opacity: 1,
+      duration: 1.5,
+      Y: 100,
+    });
+
+      gsap.to(imgRef2.current, {
+       scrollTrigger: {
+        trigger: imgRef2.current,
+        start: 'top 40%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+      delay: 0.3,
+      opacity: 1,
+      duration: 1.5,
+      Y: 100,
+    });
+
+      gsap.to(imgRef3.current, {
+       scrollTrigger: {
+        trigger: imgRef3.current,
+        start: 'top 75%',
+        // end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+        // scrub: true,
+      },
+      delay: 0.3,
+      opacity: 1,
+      duration: 1.5,
+      Y: 100,
+    });
+
+      gsap.to(imgRef4.current, {
+       scrollTrigger: {
+        trigger: imgRef4.current,
+        start: 'top 30%',
+        end: 'bottom 10%',
+        toggleActions: 'play none none reverse',
+        // scrub: true,
+      },
+      delay: 0.3,
+      opacity: 1,
+      duration: 1.5,
+      Y: 100,
+    });
+  }, []);
+
 
   useEffect(()=>{
     window.addEventListener('scroll', setTranslate);
@@ -72,7 +142,7 @@ const setTranslate = () => {
      <div className='animaImages'>
         <div className='left'>
             <div className='image image-2'>
-              <div className='img img-vert'>
+              <div ref={imgRef1} className='img img-vert'>
                 <ThumbImage 
                   imgSrc={require('../../assets/images/my_img03.jpg')}
                   imgAlt='test'
@@ -82,7 +152,7 @@ const setTranslate = () => {
               <InfoText title='Propulsive' tag='Good Point' small='view' />
           </div>
             <div className='image image-4'>
-              <div className='img img-hor'>
+              <div ref={imgRef2} className='img img-hor'>
                 <ThumbImage 
                   imgSrc={require('../../assets/images/my_img02.jpg')} 
                   imgAlt='test'
@@ -94,7 +164,7 @@ const setTranslate = () => {
         </div>
         <div className='right'>
             <div className='image image-1'>
-              <div className='img img-hor'>
+              <div ref={imgRef3} className='img img-hor'>
                 <ThumbImage 
                   imgSrc={require('../../assets/images/my_img04.jpg')} 
                   imgAlt='test'
@@ -104,7 +174,7 @@ const setTranslate = () => {
               <InfoText title='Challenging' tag='Organization' small='view' />
           </div>
             <div className='image image-3'>
-              <div className='img img-square'>
+              <div ref={imgRef4} className='img img-square'>
               <ThumbImage 
                   imgSrc={require('../../assets/images/my_img01.jpg')} 
                   imgAlt='test'

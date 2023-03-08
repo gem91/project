@@ -29,10 +29,11 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
     gsap.to(textRef1.current, {
       scrollTrigger: {
         trigger: textRef1.current,
-        start: 0,
-        // start: "top center",
+        // start: '30%',
+        // end: '20%',
+        start: 'top 60%',
+        end: 'bottom 55%',
         toggleActions: 'play none none reverse',
-        // markers: true,
         // scrub: true,
       },
       delay: 0.2,
@@ -44,32 +45,32 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
     gsap.to(textRef2.current, {
       scrollTrigger: {
         trigger: textRef2.current,
-        markers: true,
-        start: 0,
+        start: 'top 60%',
+        end: 'bottom 50%',
         toggleActions: 'play none none reverse',
       },
-      delay: 0.8,
       opacity: 1,
-      duration: 1,
+      duration: 1.2,
       x: 0,
     });
     gsap.to(textRef3.current, {
       scrollTrigger: {
         trigger: textRef3.current,
-        markers: true,
-        start: 0,
+         start: 'top 60%',
+        end: 'bottom 50%',
         toggleActions: 'play none none reverse',
+        // markers: true
       },
-      delay: 1.3,
+      delay: 0.6,
       opacity: 1,
-      duration: 1,
+      duration: 1.2,
       x: 0,
     });
   }, []);
 
 
   return (
-   <div className={styles.welcomeText}>
+   <div className={styles.lightTextEffect}>
      <div className={styles.effects}>
         <div ref={effectRef1} className={`${styles.effect} ${styles.effect1}`}></div>
         <div ref={effectRef2} className={`${styles.effect} ${styles.effect2}`}></div>

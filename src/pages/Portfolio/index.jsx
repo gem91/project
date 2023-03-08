@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {gsap} from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import styles from './Portfolio.module.scss';
 import BreadCrumbs from '../../components/BreadCrumbs';
@@ -15,7 +13,7 @@ const Portfolio = (props) => {
       alt: '현대닷컴 홈페이지 유지보수',
       site: 'https://www.hyundai.com/kr/ko/e',
       title: 'Hyundai.com - Vue / AEM / SVN / GIT',
-      desc: '첫번째 desc 내용이다용 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores enim esse veniam pariatur inventore excepturi iste consequuntur illum mollitia placeat est exercitationem error optio, sint voluptates, commodi vitae blanditiis cumque obcaecati suscipit autem natus dignissimos. Inventore hic similique labore odit ex nostrum explicabo incidunt. Corrupti sint commodi voluptas saepe, magni non itaque voluptate corporis fuga fugiat iusto consectetur, dolorem aliquid et sit facilis est culpa delectus consequatur nisi illum velit dignissimos. Similique veniam, perspiciatis numquam aspernatur saepe dolorem vel id nulla. Sed, aut voluptatibus. Iure error rerum accusantium! Animi enim ea rem iusto eum nesciunt autem minima et accusamus sint!',
+      desc: '첫번째 desc 내용이다용 Lorem ipsum, dmi enim ea rem iusto eum nesciunt autem minima et accusamus sint!',
       client: 'Hyundai',
       date: '22-03 ~ ing',
       skill:[
@@ -139,43 +137,22 @@ const Portfolio = (props) => {
       }
     }
   ]
-
-  const myRef = useRef(null)
-
- 
-  useEffect(() => {      
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(myRef.current, {
-      scrollTrigger: {
-        trigger: myRef.current,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      duration: 1,
-      x: 100,
-    });
-}, []);
-
-  
- 
-
   
   return (
     <div className={styles.portfolio}>
       <section className={styles.content}>
-        <LightTextEffect title={'My Works'} 
-          text1={'자바스크립트를 이용하여 만든 작업물 입니다.'} 
+        <LightTextEffect title={'What I Did'} 
+          text1={'그 동안 유지보수 해왔던 사이트 모음입니다.'} 
           text2={'Vaniila Javascritpt 이용하여 만든 로또 번호추첨, 여러 종류의 미니 프로젝트와 리엑트로 구축한 양복점 홈페이지 입니다.'}
           text3={'test'} />
       </section>
       <div className={styles.container}>
-      <h1 ref={myRef}>Hello GSAP</h1>
-        <BreadCrumbs text={'Project'}></BreadCrumbs>
-        <h2>Website</h2>
-        <BlogCard imgData={imgs} />
-        <h2>js</h2>
-        <BlogCard imgData={imgs} />
+        <div className={styles.breadCrumbsBox}>
+          <BreadCrumbs text={'Web Site'}></BreadCrumbs>
+        </div>
+        <div className={styles.projectBox}>
+          <BlogCard imgData={imgs} />
+        </div>
       </div>
     </div>
   )

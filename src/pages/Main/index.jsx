@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Main.module.scss';
+
+import {gsap} from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+//components
 import Instagram from '../../components/Instagram';
 // import ListCards from '../../components/ListCards';
 import ImageReveal from '../../components/AnimationEffect/ImageReveal';
@@ -88,6 +93,24 @@ const bannerData = [
 ]
 
 const Main = ({isMobile}) => {
+	const titleRef1 = useRef(null)
+  useEffect(() => {      
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(titleRef1.current, {
+       scrollTrigger: {
+        trigger: titleRef1.current,
+         start: 'top 60%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 1,
+      duration: .4,
+			letterSpacing: 2,
+      x: 0,
+    });
+  }, []);
+
+
 	return (
 		<div className={styles.main}>
 			<section className={styles.content}>
@@ -135,7 +158,7 @@ const Main = ({isMobile}) => {
 			</div>
 			<div className={styles.container}>
 				<div className={styles.imageEffectBox}>
-					<h3><span>My Tags</span></h3>
+					<h3 ref={titleRef1}>My Tags</h3>
 					<ImageReveal />
 				</div>
 				{/* <ListCards /> */}

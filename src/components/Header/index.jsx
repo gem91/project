@@ -51,7 +51,7 @@ const Header = ({isMobile}) => {
               <Link to="/portfolio">Toy Project</Link>  
             </li>
             <li>
-              <Link to="/portfolio">JavaScript</Link>  
+              <Link to="/contact">Contact</Link>  
             </li>
             {/* <li>
               <Link to="/contact">Contact</Link>  

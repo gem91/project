@@ -7,29 +7,11 @@
   .container{
     margin: 0 auto;
     max-width: 1280px;
-  }
-}
-
-.imgLists {
-  position: absolute;
-  display: flex;
-  bottom: 0;
-  height: 105px;
-  li{
-    img {
-      width: 105px;
-      height: 105px;
-      border-radius: 10px;
-      object-fit: cover;
-      object-position: center;
-      cursor: pointer;
-      transition: 300ms;
-      &:nth-child(2) {
-        margin: 0 10px;
-      }
-      &:hover {
-        opacity: .75;
-      }
+    .breadCrumbsBox {
+      margin-top: 200px;
+    }
+    .projectBox{
+      margin: 100px 0;
     }
   }
 }
