@@ -146,22 +146,6 @@ function map(x, in_min, in_max, out_min, out_max) {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-// Event Listeners
-// onClick add clases before transition
-const items = document.getElementsByClassName('image');
-Array.prototype.forEach.call(items, function(item,i) {
-  item.addEventListener('click',function(e){
-    // For testing purposes im using toggle. Remove Later
-    console.log(i);
-    item.classList.toggle('active');
-    Array.prototype.forEach.call(items, function(otherItem,i) {
-      if(otherItem !== item) 
-        otherItem.classList.toggle('close');
-    });
-  });
-});
-
-
 // Scroll image Animation (small Y movement)
 const inners = document.getElementsByClassName('thumb');
 const maxTranslate = 30;
@@ -198,20 +182,22 @@ const setTranslate = () => {
 
   return (
     <>
-     <div className='animaImages'>
+     <div className='moveImages'>
         <div className='left'>
-            <div className='image image-2'>
-              <div ref={imgRef1} className='img img-vert'>
-                <ThumbImage 
-                  imgSrc={require('../../assets/images/my_img03.jpg')}
-                  imgAlt='test'
-                />
-                <InfoText title='Propulsive' tag='Good Point' small='view' />
-              </div>
+
+          <div className='imageBox image-2'>
+            <div ref={imgRef1} className='item item-vert'>
+              <ThumbImage 
+                imgSrc={require('../../assets/images/my_img03.jpg')}
+                imgAlt='test'
+              />
               <InfoText title='Propulsive' tag='Good Point' small='view' />
+            </div>
+            <InfoText title='Propulsive' tag='Good Point' small='view' />
           </div>
-            <div className='image image-4'>
-              <div ref={imgRef2} className='img img-hor'>
+
+          <div className='imageBox image-4'>
+              <div ref={imgRef2} className='item item-hor'>
                 <ThumbImage 
                   imgSrc={require('../../assets/images/my_img02.jpg')} 
                   imgAlt='test'
@@ -220,10 +206,11 @@ const setTranslate = () => {
               </div>
               <InfoText title='Inquisitive' tag='Design' small='view' />
           </div>
+
         </div>
         <div className='right'>
-            <div className='image image-1'>
-              <div ref={imgRef3} className='img img-hor'>
+            <div className='imageBox image-1'>
+              <div ref={imgRef3} className='item item-hor'>
                 <ThumbImage 
                   imgSrc={require('../../assets/images/my_img04.jpg')} 
                   imgAlt='test'
@@ -232,8 +219,8 @@ const setTranslate = () => {
               </div>
               <InfoText title='Challenging' tag='Organization' small='view' />
           </div>
-            <div className='image image-3'>
-              <div ref={imgRef4} className='img img-square'>
+            <div className='imageBox image-3'>
+              <div ref={imgRef4} className='item item-square'>
               <ThumbImage 
                   imgSrc={require('../../assets/images/my_img01.jpg')} 
                   imgAlt='test'

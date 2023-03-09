@@ -1,57 +1,48 @@
-//Tasks: 
-// 2 - Clean CSS, JS and HTMl from garbage
-// 3 - Then transfer to other Pen and make it interactive
-
-$imagePanelTransitionDuration: 0.5s;
-$imagePanelTransition: #{$imagePanelTransitionDuration} ease-in-out;
-
-
-$info-hover-duration: 0.25s;
-$info-initialTranslate: -30%;
-
-// Height Percentages
-$horizontal: 62.5%;
-$vertical: 125%;
-
-// Images dimensions 
-// Images need dimension variables because margin top is based on previus image height(which is based on width)
+$basic-transition: 0.5s ease-in-out;
 
 $image1Width: 100%;
-$image1Height: $horizontal;
+$image1Height: 62.5%;
 $imageIndent: $image1Height / 4;
 
 $image2Width: 66.666666%;
-$image2Height: $vertical;
+$image2Height: 125%;
 
 $image3Width: 100%;
 $image3Height: 100%;
 
 $image4Width: 133.333333%;
-$image4Height: $horizontal;
+$image4Height: 62.5%;
 
 $image5Width: 66.666666%;
-$image5Height: $vertical;
+$image5Height: 125%;
 
 $image6Width: 83.333333%;
 $image6Height: 100%;
 
-.animaImages {
+.moveImages {
   display: flex;
   .left, .right {
     display: flex;
     flex-direction: column;
     width: 50%;
-    .image {
+    .imageBox {
       position: relative;
       visibility: visible;
-      transition: visibility #{$imagePanelTransition};
+      transition: visibility $basic-transition;
       &:hover {
         cursor: pointer;
+        .item{
+          &::before {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        }
+        .info{
+          opacity: 1;
+          transform: translateY(-50%);
+          visibility: visible;
+        }
       }
-      &.close {
-        visibility: hidden;
-      }
-      .img {
+      .item {
         opacity: 0;
         position: relative;
         z-index: 10;
@@ -63,137 +54,108 @@ $image6Height: 100%;
           background-color: rgba(0,0,0,0);
           transition: background-color 0.25 ease-in-out;
         }
-        .image:hover &::before {
-          background-color: rgba(0,0,0,0.2);
-        }
-        .image.active &::before {
-          background-color: rgba(0,0,0,0);
-        }
         &-vert::before {
-          padding-bottom: $vertical;
+          padding-bottom: 125%;
         }
         &-hor::before {
-          padding-bottom: $horizontal;
+          padding-bottom: 62.5%;
         }
         &-square::before {
           padding-bottom: 100%;
         }
-        .thumb{
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .info {
+          &-title {
+            color: white;
           }
+        }
+      }
+    }
+    .info{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
+      transform: translateY(-30%);
+      top: calc(50%);
+      z-index: 2;
+      &-title {
+        margin: 0;
+        text-transform: uppercase;
+        text-align: left;
+        color: #242424;
+        font-size: 7rem;
+        font-family: 'El Messiri', sans-serif;
+        white-space: nowrap;
+        line-height: 1;
+        overflow: hidden;
+      }
+      &-tag, &-view {
+        margin: 0;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+      }
+      &-tag {
+        font-size: 18px;
+        letter-spacing: 0.5em;
+      }
+      &-view {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        letter-spacing: 0.25em;
+        color: #646464;
+
+        .line {
+          width: 50px;
+          height: 2px;
+          display: inline-block;
+          margin: 0;
+          margin-right: 10px;
+          border: none;
+          border-bottom: 1px solid #aaa;
+          border-radius: 15rem;
+        }
+      }
+    }
+  }
+  .left{
+    .info{
+      left: 66.66666%;
+      left: 100%;
+      .info-tag, .info-view{
+        margin-left: 10px;
+        text-align: left;
+      }
+      .info-title{
+        transform: translateX(-33.333333%);
+        text-align: left;
+      }
+    }
+  }
+  .right{
+    .info{
+      right: 66.66666%;
+      right: 100%;
+      &-tag, &-view{
+        margin-right: 10px;
+        text-align: right;
+      }
+      &-title{
+        transform: translateX(33.333333%);
+        text-align: right;
+      }
+      &-view {
+        justify-content: flex-end;
+        .line{
+          margin-right: 0;
         }
       }
     }
   }
 }
-
-.info {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity #{$info-hover-duration} ease-in-out, transform #{$info-hover-duration} ease-in-out, visibility #{$info-hover-duration} ease-in-out;
-  transform: translateY($info-initialTranslate);
-  top: calc(50%);
-  z-index: 2;
-  .left & {
-    left: 66.66666%;
-    left: 100%;
-  }
-  .right & {
-    right: 66.666666%;
-    right: 100%;
-  }
-  .image:hover &, .image.active & {
-    opacity: 1;
-    transform: translateY(-50%);
-    visibility: visible;
-  }
-  .image.active & {
-    // Start after panel
-    transition-delay: $imagePanelTransitionDuration;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY($info-initialTranslate);
-  }
-  &-title {
-    margin: 0;
-    text-transform: uppercase;
-    text-align: left;
-    color: #242424;
-    font-size: 7rem;
-    font-family: 'El Messiri', sans-serif;
-    white-space: nowrap;
-    line-height: 1;
-    overflow: hidden;
-    .left & {
-      transform: translateX(-33.333333%);
-      text-align: left;
-    }
-    .right & {
-      transform: translateX(33.333333%);
-      text-align: right;
-    }
-    // Text inside image
-    .img &{
-      color: white;
-    }
-  }
-  &-tagline, &-view {
-    margin: 0;
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    .left & {
-      margin-left: 10px;
-      text-align: left;
-    }
-    .right & {
-      margin-right: 10px;
-      text-align: right;
-    }
-  }
-  &-tagline{
-    font-size: 18px;
-    letter-spacing: 0.5em;
-  }
-  &-view {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    letter-spacing: 0.25em;
-    color: #646464;
-    .right & {
-      justify-content: flex-end;
-    }
-    & .line {
-      width: 50px;
-      height: 2px;
-      display: inline-block;
-      margin: 0;
-      margin-right: 10px;
-      border: none;
-      border-bottom: 1px solid #aaa;
-      border-radius: 15rem;
-      .right & {
-        // margin-left: 10px; text kinda has a margin
-        margin-right: 0;
-      }
-    }
-  }
-}
-
 
 
 // Thanks to scss variables i'm able to change height and everything will update accordingly
@@ -212,13 +174,11 @@ $image6Height: 100%;
 
 .image-1 {
   width: 100%;
-  // Use data from image-6
   margin-top: find-margin($image6Width,$image6Height,$imageIndent,0%);
   // height = 62.5%
-    & .info {
-      // Should recaulculate this to make sure
-      top: 37.5%;
-    }
+  .info {
+    top: 37.5%;
+  }
   &:nth-child(1){
     margin-top: 0%;
   }
@@ -243,22 +203,17 @@ $image6Height: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .animaImages {
+  .moveImages {
     flex-direction: column;
     .left, .right {
       width: 100%;
-    }
-  }
-  .info {
-    width: 100%;
-    .image:hover &, .image.active & {
-     
-    }
-    .left &, .right &{
-      left: 0;
-    }
-    &-title {
-      font-size: 2rem;
+      .info{
+        width: 100%;
+        left: 0;
+        &-title {
+          font-size: 2rem;
+        }
+      }
     }
   }
   .image-1{
