@@ -1,45 +1,30 @@
 $basic-transition: 0.5s ease-in-out;
 
 $image1Width: 100%;
-$image1Height: 62.5%;
-$imageIndent: $image1Height / 4;
-
+// $image1Height: 62.5%;
+// $imageIndent: $image1Height / 4;
 $image2Width: 66.666666%;
-$image2Height: 125%;
-
+// $image2Height: 125%;
 $image3Width: 100%;
-$image3Height: 100%;
-
+// $image3Height: 100%;
 $image4Width: 133.333333%;
-$image4Height: 62.5%;
+// $image4Height: 62.5%;
 
-$image5Width: 66.666666%;
-$image5Height: 125%;
 
-$image6Width: 83.333333%;
-$image6Height: 100%;
-
-.moveImages {
+.imageFade {
   display: flex;
-  .left, .right {
+  .contLeft, .contRight {
     display: flex;
     flex-direction: column;
     width: 50%;
     .imageBox {
       position: relative;
       visibility: visible;
-      transition: visibility $basic-transition;
       &:hover {
-        cursor: pointer;
         .item{
           &::before {
-            background-color: rgba(0, 0, 0, 0.2);
+            background: #00000000;
           }
-        }
-        .info{
-          opacity: 1;
-          transform: translateY(-50%);
-          visibility: visible;
         }
       }
       .item {
@@ -51,69 +36,67 @@ $image6Height: 100%;
         &::before {
           content: '';
           display: block;
-          background-color: rgba(0,0,0,0);
-          transition: background-color 0.25 ease-in-out;
+          background: #00000040;
+          transition: all 0.25s ease-in-out;
         }
-        &-vert::before {
+        &.vertical::before {
           padding-bottom: 125%;
         }
-        &-hor::before {
+
+        &.horizon::before {
           padding-bottom: 62.5%;
         }
-        &-square::before {
+
+        &.square::before {
           padding-bottom: 100%;
         }
-        .info {
-          &-title {
+        // item 안에 infoText
+        .textBox {
+          .title {
             color: white;
           }
         }
       }
     }
-    .info{
+    // left & right
+    .textBox{
       position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
-      transform: translateY(-30%);
-      top: calc(50%);
+      top: 50%;
       z-index: 2;
-      &-title {
-        margin: 0;
-        text-transform: uppercase;
-        text-align: left;
-        color: #242424;
+      opacity: 1;
+      transform: translateY(-50%);
+      transition: all 0.25s ease-in-out;
+      .title {
+        margin-top: 10px;
         font-size: 7rem;
         font-family: 'El Messiri', sans-serif;
+        text-transform: uppercase;
+        color: #242424;
+        text-align: left;
         white-space: nowrap;
         line-height: 1;
         overflow: hidden;
       }
-      &-tag, &-view {
-        margin: 0;
-        text-align: left;
+      .tag, .smText {
+        text-align: center;
         text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.5rem;
       }
-      &-tag {
-        font-size: 18px;
-        letter-spacing: 0.5em;
+      .tag {
+        font-size: 1.5rem;
       }
-      &-view {
-        font-size: 18px;
+      .smText {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        letter-spacing: 0.25em;
+        justify-content: center;
+        font-size: 1.3rem;
         color: #646464;
 
         .line {
+          display: inline-block;
+          margin: 0 10px 0 0;
           width: 50px;
           height: 2px;
-          display: inline-block;
-          margin: 0;
-          margin-right: 10px;
           border: none;
           border-bottom: 1px solid #aaa;
           border-radius: 15rem;
@@ -121,34 +104,21 @@ $image6Height: 100%;
       }
     }
   }
-  .left{
-    .info{
+  .contLeft{
+    .textBox{
       left: 66.66666%;
-      left: 100%;
-      .info-tag, .info-view{
+      .tag, .smText{
         margin-left: 10px;
-        text-align: left;
-      }
-      .info-title{
-        transform: translateX(-33.333333%);
-        text-align: left;
       }
     }
   }
-  .right{
-    .info{
+  .contRight{
+    .textBox{
       right: 66.66666%;
-      right: 100%;
-      &-tag, &-view{
+      .tag, .smText{
         margin-right: 10px;
-        text-align: right;
       }
-      &-title{
-        transform: translateX(33.333333%);
-        text-align: right;
-      }
-      &-view {
-        justify-content: flex-end;
+      .smText {
         .line{
           margin-right: 0;
         }
@@ -172,11 +142,9 @@ $image6Height: 100%;
   @return percentage($col / $max-col);
 }
 
-.image-1 {
+.image1 {
   width: 100%;
-  margin-top: find-margin($image6Width,$image6Height,$imageIndent,0%);
-  // height = 62.5%
-  .info {
+  .textBox {
     top: 37.5%;
   }
   &:nth-child(1){
@@ -184,48 +152,61 @@ $image6Height: 100%;
   }
 }
 
-.image-2 {
+.image2 {
   width: $image2Width;
-  margin-top: find-margin($image1Width,$image1Height,0%,$imageIndent);
+  margin-top: 66.8%;
 }
 
-.image-3 {
+.image3 {
   // Margin top = prevheight(vert = 125% of 66%)(82.5) - prevIdentation(1/4) - MyIdentation(1/4)
   // ($image2Height * $image2Width) / 100
-  margin-top: find-margin($image2Width,$image2Height,$imageIndent,$imageIndent);
+  margin-top: 103%;
   width: $image3Width;
   transform: translateX(#{col-to-percentage(2)});
 }
-.image-4 {
-  margin-top:  find-margin($image3Width,$image3Height,$imageIndent,$imageIndent);
+.image4 {
+  margin-top: 108%;
   transform: translateX(-25%);
   width: $image4Width;
 }
 
 @media screen and (max-width: 768px) {
-  .moveImages {
+  .imageFade {
     flex-direction: column;
-    .left, .right {
+    .contLeft, .contRight {
       width: 100%;
-      .info{
+      .imageBox{
+        margin-top: 0;
+        width: 100%;
+      }
+      .textBox{
         width: 100%;
         left: 0;
-        &-title {
-          font-size: 2rem;
+        .title, .tag, .smText{
+          color: #fff;
+        }
+        .title {
+          margin-top: 5px;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+        .tag{
+          font-size: 1rem;
+          letter-spacing: 1.5px;
+        }
+        .smText{
+          font-size: .8rem ;
         }
       }
     }
   }
-  .image-1{
-    margin-top: 30% !important;
+
+  
+  .image3{
+    transform: translateX(0);
   }
-  .image-2{
-    margin: 0;
-  }
-  .image-3{
-    margin-top: 30%;
-  }
-  .image-4{
-    margin-top: 30%;
+  .image4{
+    width: 100%;
+    transform: translateX(0);
   }
 }

@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import './ImageReveal.scss'
+import styles from './ImageFadeEffect.module.scss'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // components
 import InfoText from './InfoText';
-import ThumbImage from './ThumbImage';
+import ImageType from './ImageType';
 
-const ImageReveal = ({isPc}) => {
+const ImageFadeEffect = ({isPc}) => {
 
    const imgRef1 = useRef(null)
    const imgRef2 = useRef(null)
@@ -182,52 +182,26 @@ const setTranslate = () => {
 
   return (
     <>
-     <div className='moveImages'>
-        <div className='left'>
-
-          <div className='imageBox image-2'>
-            <div ref={imgRef1} className='item item-vert'>
-              <ThumbImage 
-                imgSrc={require('../../assets/images/my_img03.jpg')}
-                imgAlt='test'
-              />
-              <InfoText title='Propulsive' tag='Good Point' small='view' />
-            </div>
+     <div className={styles.imageFade}>
+        <div className={styles.contLeft}>
+          <div className={`${styles.imageBox} ${styles.image2}`}>
+            <ImageType imgRef={imgRef1} type={'vertical'} imgSrc={require('../../assets/images/my_img03.jpg')} />
             <InfoText title='Propulsive' tag='Good Point' small='view' />
           </div>
-
-          <div className='imageBox image-4'>
-              <div ref={imgRef2} className='item item-hor'>
-                <ThumbImage 
-                  imgSrc={require('../../assets/images/my_img02.jpg')} 
-                  imgAlt='test'
-                />
-                <InfoText title='Inquisitive' tag='Design' small='view' />
-              </div>
-              <InfoText title='Inquisitive' tag='Design' small='view' />
+          <div className={`${styles.imageBox} ${styles.image4}`}>
+            <ImageType imgRef={imgRef2} type={'horizon'} imgSrc={require('../../assets/images/my_img02.jpg')} />
+            <InfoText title='Inquisitive' tag='Design' small='view' />
           </div>
-
         </div>
-        <div className='right'>
-            <div className='imageBox image-1'>
-              <div ref={imgRef3} className='item item-hor'>
-                <ThumbImage 
-                  imgSrc={require('../../assets/images/my_img04.jpg')} 
-                  imgAlt='test'
-                />
-                <InfoText title='Challenging' tag='Organization' small='view' />
-              </div>
-              <InfoText title='Challenging' tag='Organization' small='view' />
+
+        <div className={styles.contRight}>
+          <div className={`${styles.imageBox} ${styles.image1}`}>
+            <ImageType imgRef={imgRef3} type={'horizon'} imgSrc={require('../../assets/images/my_img04.jpg')} />
+            <InfoText title='Challenging' tag='Organization' small='view' />
           </div>
-            <div className='imageBox image-3'>
-              <div ref={imgRef4} className='item item-square'>
-              <ThumbImage 
-                  imgSrc={require('../../assets/images/my_img01.jpg')} 
-                  imgAlt='test'
-                />
-                <InfoText title='Inquisitive' tag='Lettering' small='view' />
-              </div>
-              <InfoText title='Inquisitive' tag='Lettering' small='view' />
+          <div className={`${styles.imageBox} ${styles.image3}`}>
+            <ImageType imgRef={imgRef4} type={'square'} imgSrc={require('../../assets/images/my_img01.jpg')} />
+            <InfoText title='Inquisitive' tag='Lettering' small='view' />
           </div>
         </div>
       </div>
@@ -235,4 +209,4 @@ const setTranslate = () => {
   )
 };
 
-export default ImageReveal;
+export default ImageFadeEffect;

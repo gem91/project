@@ -7,13 +7,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 //components
 import Instagram from '../../components/Instagram';
 // import ListCards from '../../components/ListCards';
-import ImageReveal from '../../components/AnimationEffect/ImageReveal';
+import ImageFadeEffect from '../../components/ImageFadeEffect';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
 import WideFlow from '../../components/FlowText/WideFlow';
 import LightTextEffect from '../../components/LightTextEffect';
-
 
 const skillData = [
 	{
@@ -103,7 +102,6 @@ const Main = ({isMobile, isPc}) => {
 					start: 'top 60%',
 				 end: 'bottom 20%',
 				 toggleActions: 'play none none reverse',
-				 markers: true,
 			 },
 			 opacity: 1,
 			 duration: .4,
@@ -173,13 +171,16 @@ const Main = ({isMobile, isPc}) => {
 					}
 				</ul>
 			</div>
-			<div className={styles.container}>
-				<div className={styles.imageEffectBox}>
-					<h3 ref={titleRef1}>My Tags</h3>
-					<ImageReveal isPc={isPc} />
+			<div className={styles.imageFadeEffect}>
+				<div className={styles.container}>
+					<div className={styles.imageEffectBox}>
+						<h3 ref={titleRef1}>My Tags</h3>
+						<ImageFadeEffect isPc={isPc} />
+					</div>
+					{/* <ListCards /> */}
 				</div>
-				{/* <ListCards /> */}
 			</div>
+		
 		</div>
 	)
 };

@@ -15,9 +15,9 @@
       }
       .circle{
         .path {
-            fill: #00000050;
-            stroke-dashoffset: 635;
-          }
+          fill: #8b6b6b50;
+          stroke-dashoffset: 635;
+        }
       }
     }
     .text{
@@ -30,6 +30,7 @@
       font-family: 'Caveat', cursive;
       font-weight: bold;
       border-radius: 50%;
+      color: #8b6b6b;
       transform: translate(-50%, -50%);
       transition: .5s 0.2s ease-in-out;
     }
@@ -37,9 +38,9 @@
       width: 125px;
       height: 125px;
       .path {
-        stroke: #111;
+        stroke: #8b6b6b;
         stroke-width: .8;
-        fill: #ffffffdd;
+        fill: #ffffffbb;
         stroke-dasharray: 635;
         stroke-dashoffset: 0;
         transition: stroke-dashoffset .8s .2s ease-in-out, fill .5s .6s ease-in-out;
@@ -52,15 +53,15 @@
   .contactIcon{
     a{
       .text{
-        color: #ffffff90;
-        font-size: 1.1rem;
+        color: #72543890;
+        font-size: 1rem;
       }
       .circle {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         .path {
-          fill: #00000050;
-          stroke-dashoffset: 635;
+          stroke-dasharray: 635;
+          transition: stroke-dashoffset .8s .2s ease-in-out, fill .5s .6s ease-in-out;
         }
       }
     }

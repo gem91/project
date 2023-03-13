@@ -1,3 +1,4 @@
+@import '../../assets/scss/common/mixin';
 
 .main{
   .content{
@@ -94,7 +95,8 @@
   }
   .accordion {
     margin-top: 100px;
-    $itemsNo: 5;
+    height: 100vh;
+    $itemsNo: 4;
 
     ul {
       list-style: none;
@@ -103,8 +105,9 @@
 
       li {
         position: relative;
-        border-bottom: 1px solid red;
-        background-color: #795548;
+        height: calc(100vh / #{$itemsNo});
+        border-bottom: 1px solid #bc9b8f;
+        background-color: #424242;
         transition: all .5s ease;
         animation: flipdown 0.5s ease both;
 
@@ -155,9 +158,7 @@
           transition: .5s ease-in-out;
 
           img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include image-cover();
           }
         }
 
@@ -191,9 +192,7 @@
           transition: .5s ease-in-out;
           img {
             display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include image-cover();
             opacity: .5;
             transition: .5s ease-in-out;
           }
@@ -220,6 +219,7 @@
       }
       .tagTextBox {
         .text{
+          font-size: 0.9rem;
           em {
             font-size: 1.3rem;
           }
@@ -228,11 +228,11 @@
       .imageEffectBox{
         margin: 200px 0;
         h3{
-        margin-bottom: 100px;
-        padding-left: 40px;
+        margin-bottom: 30px;
+        padding-left: 50px;
         font-size: 3rem;
           &:before{
-            left: 0;
+            left: 15px;
           }
         }
       }
@@ -261,6 +261,11 @@
             }
           }
         }
+      }
+    }
+    .imageFadeEffect{
+      .container{
+        padding: 0;
       }
     }
   }

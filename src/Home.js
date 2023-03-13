@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Secret from './pages/Secret';
 import ContactIcon from './components/ContactIcon';
+import ToyProject from './pages/ToyProject';
 
 function Home() {
   const [winWidth, setWinWidth] = useState(window.innerWidth)
@@ -20,7 +21,7 @@ function Home() {
   const cursorBasicStyle =  {
     width: '20px',
     height: '20px',
-    background: '#2128bd'
+    background: '#c7a6a6'
   }
   const cursorRef = useRef(null)
 
@@ -57,13 +58,16 @@ function Home() {
       <div className={styles.wrap}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           {/* HEADER */}
-          <Header isMobile={isMobile} />
+          <Header isMobile={isMobile} isPc={isPc} />
           <Routes>
             <Route path="/" exact element={
               <Main isMobile={isMobile} isPc={isPc} />}>
             </Route>
             <Route path="/portfolio" element={
               <Portfolio />}>
+            </Route>
+             <Route path="/toy" element={
+              <ToyProject />}>
             </Route>
             <Route path="/contact" element={
               <Contact isMobile={isMobile} />}>
