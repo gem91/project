@@ -47,7 +47,8 @@ const Header = ({isMobile, isPc}) => {
   const ScrollNavBar = (currrentY, windowH) => {
     const totalHeight = document.querySelector('body').getBoundingClientRect().height  //컨텐츠 전체 높이
     let scrollPercent = Math.floor((currrentY / (totalHeight - windowH)) * 100);
-    setProcessBar(processBar + scrollPercent)
+    
+    setProcessBar(scrollPercent)
   }
   return (
     <header className={`${isHidden ? styles.isHidden : ''}`}>

@@ -8,10 +8,10 @@ header{
   background: linear-gradient(90deg, #ffffff00 0%, #ffffff50 10%, #ffffff50 90%, #ffffff00 100%);
   transition: all 0.5s ease-in-out;
   &.isHidden{
-    top: -63px;
+    top: -69px;
   }
  .processBar{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 1005;
