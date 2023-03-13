@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Caveat:wght@400;600&family=El+Messiri:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap');
+@import './assets/scss/common/mixin';
 /*
 #두꺼운 강약체
 font-family: 'Abril Fatface', cursive;
@@ -63,12 +64,13 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
   color: #fff;
 }
 
-.ir-hidden{
-  display: inline-block;
-  font-size: 0;
-  text-indent: -1000px;
-}
-
+ .irHidden {
+  display: block;
+   width: 0;
+   height: 0;
+   font-size: 0;
+   text-indent: -9999px;
+ }
 
 
 .swiper{

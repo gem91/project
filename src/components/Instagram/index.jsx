@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Instagram.module.scss';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHeart} from '@fortawesome/free-solid-svg-icons'
-import {faEnvelope} from '@fortawesome/free-regular-svg-icons'
-import {faInstagram} from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
+
+import InstaIcon from '../IconItems/InstaIcon';
+import KakaoIcon from '../IconItems/KakaoIcon';
+import MessageIcon from '../IconItems/MessageIcon';
+import LikeIcon from '../IconItems/LikeIcon';
 
 const Instagram = (props) => {
-  const [ count, setCount ] = useState(0)
-  const getLikstCount = () => {
-    setCount(count + 1)
-    console.log(count);
-  }
+  
   return (
     <div className={styles.profile}>
     <div className={styles.thumb}>
@@ -20,22 +16,15 @@ const Instagram = (props) => {
     <div className={styles.contents}>
       <div className={styles.utils}>
         <div className={styles.sns}>
-          <Link to="/secret"><i className={styles.instagram}><FontAwesomeIcon icon={faInstagram} /><span className='ir-hidden'>인스타그램</span></i></Link>
-          <Link to="https://open.kakao.com/o/sxXcRZ2e" target='_blank'>
-             <i className={styles.kakao}><img src={require('../../assets/images/icons/ico-kakao.png')} alt='test' /><span className='ir-hidden'>카카오톡</span></i>
-          </Link>
+          <InstaIcon />
+          <KakaoIcon />
           {/* <a href='https://open.kakao.com/o/sxXcRZ2e'>
            
           </a> */}
         </div>
         <div className={styles.ux}>
-          <Link to='/contact'>
-            <i className={styles.message}><FontAwesomeIcon icon={faEnvelope} /><span className='ir-hidden'>연락하기</span></i>
-          </Link>
-          <button type="button" onClick={getLikstCount}>
-            <i className={styles.like}><FontAwesomeIcon icon={faHeart} /><span className='ir-hidden'>좋아요</span></i>
-          </button>
-          <div className={styles.likeEffect}><i className={styles.like}><FontAwesomeIcon icon={faHeart} /><span>{count}</span></i></div>
+          <MessageIcon />
+          <LikeIcon />
         </div>					
       </div>
       <p className={styles.text}>

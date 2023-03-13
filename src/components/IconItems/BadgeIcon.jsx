@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './IconSkills.module.scss'
+import styles from './BadgeIcon.module.scss'
 
-const IconSkills = ({iconName}) => {
+const BadgeIcon = ({iconName}) => {
   let bkColor 
   switch (iconName){
     case 'REACT' :
@@ -35,4 +35,4 @@ const IconSkills = ({iconName}) => {
 
 };
 
-export default IconSkills;
+export default BadgeIcon;
