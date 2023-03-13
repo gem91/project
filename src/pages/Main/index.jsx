@@ -140,8 +140,9 @@ const Main = ({isMobile, isPc}) => {
 					<Instagram />
 				</div>
 				<div className={styles.tagTextBox}>
-					<p className={styles.text}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br /></p>
-					<p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</p>
+					<p className={styles.tagText}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br /></p>
+					<p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</p>
+					<p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis!</p>
 				</div>
 				
 				<div className={styles.tabs}>

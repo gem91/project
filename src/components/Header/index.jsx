@@ -4,9 +4,6 @@ import LineFlow from '../FlowText/LineFlow';
 import Logo from '../Logo';
 import styles from './header.module.scss'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faEnvelope} from '@fortawesome/free-regular-svg-icons'
-import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 import InstaIcon from '../IconItems/InstaIcon';
 import KakaoIcon from '../IconItems/KakaoIcon';
 import MessageIcon from '../IconItems/MessageIcon';
@@ -96,6 +93,9 @@ const Header = ({isMobile, isPc}) => {
             </li>
             <li>
               <Link to="/portfolio" onClick={onHamburger}>Project</Link>  
+            </li>
+              <li>
+              <Link to="/toy" onClick={onHamburger}>Toy.P</Link>  
             </li>
             <li>
               <Link to="/contact" onClick={onHamburger}>Contact</Link>  

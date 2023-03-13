@@ -57,9 +57,16 @@
         align-items: flex-start;
         .send{
           font-size: 1.2rem;
+          line-height: .6;
+          a{
+            &:before {
+              bottom: -5px;
+            }
+          }
         }
         .copy{
           margin-top: 15px;
+          font-size: .7rem;
         }
       }
     }

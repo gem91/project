@@ -1,5 +1,5 @@
 import React from 'react';
-import IconSkills from '../IconSkills';
+import BadgeIcon from '../IconItems/BadgeIcon';
 import styles from './popup.module.scss'
 
 const Popup = ({imgs, title, desc, mainImg, mainAlt, isToggle, setIsToggle}) => {
@@ -25,9 +25,9 @@ const Popup = ({imgs, title, desc, mainImg, mainAlt, isToggle, setIsToggle}) => 
               <dd>HYUNDAI</dd>
               <dt>SKILL :</dt>
               <dd>
-                <IconSkills iconName={'REACT'} />
-                <IconSkills iconName={'SCSS'} />
-                <IconSkills iconName={'HTML'} />
+                <BadgeIcon iconName={'REACT'} />
+                <BadgeIcon iconName={'SCSS'} />
+                <BadgeIcon iconName={'HTML'} />
               </dd>
               <dt>DATE :</dt>
               <dd>22.05 ~ing</dd>

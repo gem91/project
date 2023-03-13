@@ -1,19 +1,18 @@
 .lightTextEffect{
   .effects {
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    top: 0;
     height: 100vh;
     width: 100vw;
     background: #2128bd;
-    overflow: hidden;
     will-change: transform;
-    position: absolute;
     border-radius: 50%;
     .effect{
       will-change: transform;
       position: absolute;
       border-radius: 50%;
-      $effects: (#005ffe: 650px, #ffe5e3: 440px, #ffcc57: 270px);
+      $effects: (#005ffe: 650px, #47f32d: 440px, #ae3383: 270px);
       @each $color, $size in $effects {
         &.effect#{index($effects, ($color $size))} {
           background: $color;
@@ -83,14 +82,14 @@
       h2{
         margin: 0 auto;
         width: 90%;
-        font-size: 4.7rem;
+        font-size: 3.8rem;
         line-height: 1;
       }
       .descBox{
         width: 90%;
-        margin: 0 auto;
+        margin: 20px auto 0;
         p.text{
-          font-size: 1.2rem;
+          font-size: 1rem;
           word-break: keep-all;
         }
       }

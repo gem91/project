@@ -1,36 +1,35 @@
 
+@import '../../assets/scss/common/mixin';
+
 .blogWrap{
   position: relative;
   display: flex;
   margin: 30px auto 0;
   padding: 30px;
+  height: 55vh;
   min-height: 470px;
-  border-radius: 10px;
   background-color: #ffffff80;
   .mainImg {
     position: relative;
-    width: 300px;
-    height: 405px;
-    border-radius: 10px;
+    width: 30vw;
+    height: 49vh;
     overflow: hidden;
     background-color: #f6f6f6;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @include image-cover();
       object-position: center;
     }
   }
   
   .blogContent {
     position: relative;
-    width: calc(100% - 300px);
-    height: auto;
+    width: calc(100% - 30vw);
     padding-left: 35px;
 
     .btnWrap {
       position: absolute;
+      top: 0;
       right: 0;
       display: flex;
       border-radius: 10px;
@@ -49,6 +48,7 @@
 
     .textBox {
       margin-top: 60px;
+      min-height: 300px;
       .title {
         font-size: 2rem;
         font-weight: bold;
@@ -61,20 +61,18 @@
     }
     .imgLists {
       position: absolute;
-      bottom: 0;
+      bottom: 3px;
       padding: 0 30px 0 0;
       width: 100%;
       overflow: hidden;
       .thumb{
         display: block;
-          width: 180px;
-          height: 120px;
-          overflow: hidden;
-          border-radius: 8px;
+        width: 7.8vw;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 5px;
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          @include image-cover();
           object-position: center;
           cursor: pointer;
           transition: 300ms;
@@ -100,7 +98,7 @@
   .blogWrap {
     flex-direction: column;
     padding: 30px;
-    min-height: auto;
+    min-height: 70vh;
     .mainImg {
       width: 100%;
       height: 100%;
@@ -108,7 +106,7 @@
     .blogContent {
       width: 100%;
       height: auto;
-      padding: 145px 0 0;
+      padding: 120px 0 0;
       .btnWrap{
         position: relative;
       }

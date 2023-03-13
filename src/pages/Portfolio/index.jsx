@@ -140,18 +140,20 @@ const Portfolio = (props) => {
   
   return (
     <div className={styles.portfolio}>
-      <section className={styles.content}>
+      <section className={styles.topContent}>
         <LightTextEffect title={'What I Did'} 
           text1={'그 동안 유지보수 해왔던 사이트 모음입니다.'} 
           text2={'Vaniila Javascritpt 이용하여 만든 로또 번호추첨, 여러 종류의 미니 프로젝트와 리엑트로 구축한 양복점 홈페이지 입니다.'}
           text3={'test'} />
       </section>
-      <div className={styles.container}>
-        <div className={styles.breadCrumbsBox}>
-          <BreadCrumbs text={'Web Site'}></BreadCrumbs>
-        </div>
-        <div className={styles.projectBox}>
-          <BlogCard imgData={imgs} />
+      <div className={styles.content}>
+        <div className={styles.container}>
+          <div className={styles.breadCrumbsBox}>
+            <BreadCrumbs text={'Web Site'}></BreadCrumbs>
+          </div>
+          <div className={styles.projectBox}>
+            <BlogCard imgData={imgs} />
+          </div>
         </div>
       </div>
     </div>

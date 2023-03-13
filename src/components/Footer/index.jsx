@@ -13,7 +13,7 @@ const Footer = () => {
           <Logo />
           <p className={styles.send}>
             Are U Interested In My Work? =&gt;
-            <a href="/Contact">Contact Me!</a>
+            <Link to="/contact">Contact Me!</Link>
           </p>
           <p className={styles.copy}>©{thisYear} Chloe-Kim. All Rights Reserved.</p>
         </div>

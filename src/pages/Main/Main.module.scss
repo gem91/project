@@ -27,17 +27,17 @@
 
     .tagTextBox {
       margin-top: 160px;
-      .text{
-        font-size: 1rem;
-        line-height: 1.7;
-        font-family: 'Noto Sans KR', sans-serif;
-        em {
-          display: inline-block;
-          margin-right: 8px;
-          font-weight: bold;
-          font-size: 1.6rem;
+      text-align: center;
+      .tagText{
+        display: inline-block;
+        margin-right: 8px;
+        font-weight: bold;
+        font-size: 2rem;
+        position: relative;
+        font-style: normal;
+        line-height: 2;
+        em{
           position: relative;
-          font-style: normal;
           &:before {
             content: '';
             position: absolute;
@@ -48,6 +48,11 @@
             background-color: #82a75e50;
           }
         }
+      }
+      .desc{
+        font-size: 1rem;
+        line-height: 1.7;
+        font-family: 'Noto Sans KR', sans-serif;
       }
     }
 

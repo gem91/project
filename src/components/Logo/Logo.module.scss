@@ -1,3 +1,5 @@
+@import '../../assets/scss/common/var';
+
 .logo{
   width: 10%;
   a, span{
@@ -7,7 +9,7 @@
     line-height: 1.2;
   }
   a{
-    color: #8b6b6b;
+    color: $color-basic;
     animation:ani-logo 1s;
   }
   span{
@@ -18,7 +20,10 @@
 
 @media screen and (max-width: 768px) {
   .logo{
-    line-height: 1;
+    line-height: .8;
+    a, span{
+      font-size: 1.5rem;
+    }
   }
 }
 

@@ -54,7 +54,7 @@
   font-size: 1.5rem;
   opacity: 0;
   color: #f1b7b7;
-  animation: floatingIcon 3s ease-in-out infinite;
+  animation: floatingHeart 3s ease-in-out infinite;
 
   span {
     display: block;
@@ -68,7 +68,7 @@
 }
 
 
-@keyframes floatingIcon {
+@keyframes floatingHeart {
   0% {
     top: 0;
     color: #f1b7b7;
@@ -100,24 +100,3 @@
   }
 }
 
-@keyframes ballon {
-  0% {
-    transform: translateY(0);
-  }
-
-  25% {
-    transform: translateY(25px);
-  }
-
-  50% {
-    transform: translateY(0px);
-  }
-
-  75% {
-    transform: translateY(25px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
