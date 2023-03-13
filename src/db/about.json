@@ -1,0 +1,50 @@
+{
+ "about" : {
+  "profile":  {
+    "nameKor" : "김민정",
+    "nameEng" : "Min Jeong, Kim",
+    "birthYear" : 1991,
+    "birthMonth" : 11,
+    "birthDay" : 3,
+    "mail" : "91gem@naver.com"
+  },
+  "contact" : {
+    "mail" : "91gem@naver.com",
+    "insta" : "https://instagram.com/m._.days?igshid=ZDdkNTZiNTM=",
+    "kakao" : "https://open.kakao.com/o/sxXcRZ2e",
+    "github" : "https://github.com/gem91",
+    "tStory" : "https://chlolisher.tistory.com/"
+  },
+  "skill" : [
+    { "subject" : "Language",
+      "type" : {
+      "HTML" : 95,
+      "css" : 80,
+      "scss" : 60
+      }
+    },
+    {
+      "subject" : "Front",
+      "type" : {
+        "js" : 70,
+        "react" : 60,
+        "vue" : 60
+      }
+    },
+    {
+      "subject" : "Deployment",
+      "type" : {
+        
+      }
+    },
+    {
+      "subject" : "Design",
+      "type" : {
+        "photoshop" : 100,
+        "illust" : 80,
+        "figma" : 60
+      }
+    }
+  ]
+ }
+}
