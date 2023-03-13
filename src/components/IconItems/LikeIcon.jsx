@@ -13,16 +13,18 @@ const LikeIcon = (props) => {
 
   return (
     <>
+      <div className={styles.iconBox}>
         <button type="button" onClick={getLikstCount}>
-            <i className={styles.like}><FontAwesomeIcon icon={faHeart} />
+          <i className={styles.like}><FontAwesomeIcon icon={faHeart} />
             <span className='irHidden'>좋아요</span>
-            </i>
-          </button>
-          <div className={styles.likeEffect}>
-            <i className={styles.like}><FontAwesomeIcon icon={faHeart} />
-            <span>{count}</span>
-            </i>
-          </div>
+          </i>
+        </button>
+      </div>
+      <div className={styles.likeEffect}>
+          <i className={styles.like}><FontAwesomeIcon icon={faHeart} />
+          <span>{count}</span>
+          </i>
+      </div>
     </>
   )
 };

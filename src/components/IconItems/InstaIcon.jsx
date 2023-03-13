@@ -7,12 +7,14 @@ import { Link } from 'react-router-dom';
 
 const InstaIcon = (props) => {
   return (
-    <Link to="/secret">
-      <i className={styles.instagram}>
-        <FontAwesomeIcon icon={faInstagram} />
-        <span className='irHidden'>인스타그램</span>
-      </i>
-    </Link>
+    <div className={styles.iconBox}>
+       <Link to="/secret">
+        <i className={styles.instagram}>
+          <FontAwesomeIcon icon={faInstagram} />
+          <span className='irHidden'>인스타그램</span>
+        </i>
+      </Link>
+    </div>
   )
 };
 

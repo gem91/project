@@ -7,12 +7,14 @@ import { Link } from 'react-router-dom';
 
 const MessageIcon = (props) => {
   return (
-    <Link to='/contact'>
-      <i className={styles.message}>
-        <FontAwesomeIcon icon={faEnvelope} />
-        <span className='irHidden'>연락하기</span>
-      </i>
-    </Link>
+    <div className={styles.iconBox}>
+      <Link to='/contact'>
+        <i className={styles.message}>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <span className='irHidden'>연락하기</span>
+        </i>
+      </Link>
+    </div>
   )
 };
 

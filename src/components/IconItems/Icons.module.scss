@@ -1,67 +1,71 @@
  @import '../../assets/scss/common/mixin';
 
-
- a, button {
-  display: flex;
-  margin-right: 10px;
-  width: 28px;
-  height: 28px;
-   i {
-     display: flex;
-     justify-content: center;
-     font-size: 1.5rem;
-     color: #888;
-     transition: .3s ease-in-out;
-
-    &.instagram {
-      &:hover {
-        color: #c23b3b;
+.iconBox{
+  a,
+    button {
+      display: flex;
+      margin-right: 10px;
+      width: 28px;
+      height: 28px;
+  
+      i {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #888;
+        transition: .3s ease-in-out;
+  
+        &.instagram {
+          &:hover {
+            color: #c23b3b;
+          }
+        }
+  
+        &.kakao {
+          img {
+            @include image-cover();
+            transform: scale(.9);
+          }
+  
+          &:hover {
+            color: #dc8a25;
+          }
+        }
+  
+        &.message {
+          &:hover {
+            color: #b07eef;
+          }
+        }
+  
+        &.like {
+          &:hover {
+            color: #f1b7b7;
+          }
+        }
       }
     }
+}
 
-    &.kakao {
-      img {
-        @include image-cover();
-        transform: scale(.9);
-      }
+.likeEffect {
+  position: absolute;
+  top: -20px;
+  right: 17px;
+  font-size: 1.5rem;
+  opacity: 0;
+  color: #f1b7b7;
+  animation: floatingIcon 3s ease-in-out infinite;
 
-      &:hover {
-        color: #dc8a25;
-      }
-    }
-    &.message {
-      &:hover {
-        color: #b07eef;
-      }
-    }
-    &.like {
-      &:hover {
-        color: #f1b7b7;
-      }
-    }
-  }
- }
-
-
-  .likeEffect {
+  span {
+    display: block;
     position: absolute;
-    top: -20px;
-    right: 17px;
-    font-size: 1.5rem;
-    opacity: 0;
-    color: #f1b7b7;
-    animation: floatingIcon 3s ease-in-out infinite;
-
-    span {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #fff;
-      font-size: .5rem;
-      transform: translate(-50%, -50%);
-    }
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-size: .5rem;
+    transform: translate(-50%, -50%);
   }
+}
 
 
 @keyframes floatingIcon {
