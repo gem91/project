@@ -1,0 +1,35 @@
+.subject{
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  font-size: 1.8rem;
+  font-family: 'Caveat', cursive;
+  letter-spacing: .5px;
+  // font-family: 'Abril Fatface', cursive;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    width: 77%;
+    height: 5px;
+    background-color: #82a75e50;
+    transform: rotate(5deg);
+  }
+  // &:after{
+  //   content: '';
+  //     position: absolute;
+  //     right: -30px;
+  //     bottom: -60px;
+  //     width: 90px;
+  //     height: 90px;
+  //     background-color: #f1b7b766;
+  // }
+}
+
+
+@media screen and (max-width: 768px) {
+  .subject{
+    padding-left: 20px;
+  }
+}
