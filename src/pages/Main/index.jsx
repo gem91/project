@@ -6,12 +6,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //components
 import Instagram from '../../components/Instagram';
-// import ListCards from '../../components/ListCards';
 import ImageFadeEffect from '../../components/ImageFadeEffect';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
-import WideFlow from '../../components/FlowText/WideFlow';
+import TwoTypeFlow from '../../components/FlowText/TwoTypeFlow';
 import LightTextEffect from '../../components/LightTextEffect';
 
 const skillData = [
@@ -140,9 +139,11 @@ const Main = ({isMobile, isPc}) => {
 					<Instagram />
 				</div>
 				<div className={styles.tagTextBox}>
-					<p className={styles.tagText}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em><br /></p>
-					<p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</p>
-					<p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis!</p>
+					<p className={styles.tagText}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em></p>
+					<p className={styles.desc}>
+						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</span>
+						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis!</span>
+					</p>
 				</div>
 				
 				<div className={styles.tabs}>
@@ -162,7 +163,7 @@ const Main = ({isMobile, isPc}) => {
 								<img src={imgURL} alt={title} />
 							</div>
 							<div className={styles.textBox}>
-								<WideFlow tit={`${title}.`} em={`${title}.`} />
+								<TwoTypeFlow tit={`${title}.`} em={`${title}.`} />
 							</div>
 							<span className={styles.thumb}>
 								<img src={imgURL} alt={title} />

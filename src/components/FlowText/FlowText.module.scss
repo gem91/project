@@ -1,13 +1,11 @@
 @import '../../assets/scss/common/var';
+@import '../../assets/scss/common/mixin';
+
+$flow-speed: .5s ease-in-out;
 
 @keyframes marquee-r {
   from {transform: translateX(-100%);}
   to {transform: translateX(0);}
-}
-
-@keyframes rollCage {
-  from {transform: rotate(0);}
-  to {transform: rotate(5turn);}
 }
 
 @keyframes marquee {
@@ -19,100 +17,84 @@
   }
 }
 
-.animatedTitle {
+
+// one Line Flow
+.marquee {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: transparent;
+  overflow: hidden;
   border-top: 1px solid $color-basic;
   border-bottom: 1px solid $color-basic;
+  background-color: transparent;
   .track{
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 18s linear infinite;
-
+    display: flex;
+    height: 100%;
+    @include animationFlow(marquee, 30s);
+    &:hover{
+      animation-play-state: paused;
+      p {
+        color: #bc9b8f;
+      }
+    }
     p{
       font-family: 'Noto Sans KR', sans-serif;
       line-height: 2.3;
       font-size: 1rem;
       color: $color-basic;
       letter-spacing: 2px;
-      transition: .4s ease-in-out;
-      &:hover {
-        color: #bc9b8f;
-      }
+      transition: $flow-speed;
     }
    }
  }
 
-.marquee {
-  position: absolute;
+ // tow type flow
+.marqueeR {
+  position: relative;
   left: -120px;
   width: 120%;
   height: 100%;
   color: $color-basic;
   font-size: 6rem;
-  overflow: hidden;
-  // transform: rotate(-20deg);
    .track {
-      position: absolute;
       display: flex;
       height: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: background-color 300ms ease, color 300ms ease;
+      @include animationFlow(marquee-r, 50s);
       &:hover {
+        animation-play-state: paused;
         .text {
           opacity: .2;
           color: #464646;
-          //  background-color: #f1f1f1;
           .em {
            color: #d98ad3;
          }
        }
       }
       .text {
-        opacity: .3;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         line-height: 2;
         color: #fff;
         font-family: 'El Messiri', sans-serif;
-        animation: marquee 50000ms linear infinite;
-        will-change: transform;
-        animation-name: marquee-r;
-        transition: .5s ease-in-out;
+        opacity: .3;
+        transition: $flow-speed;
         .em {
           color: #b6eb35;
-          font-weight: 900;
-          transition: .5s ease-in-out;
+          transition: $flow-speed;
         }
       }
      }
 }
 
 @media screen and (max-width: 768px) {
-  .animatedTitle {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      background-color: transparent;
-      border-top: 1px solid $color-basic;
-      border-bottom: 1px solid $color-basic;
-  
+  .marquee {
       .track {
         p {
           font-size: .9rem;
         }
       }
     }
-  .marquee {
+  .marqueeR {
     left: -40px;
     font-size: 3rem;
   }

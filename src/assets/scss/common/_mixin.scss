@@ -12,6 +12,12 @@
    object-fit: cover;
 }
 
+@mixin animationFlow($name, $duration) {
+   white-space: nowrap;
+   will-change: transform;
+   animation: $name $duration linear infinite;
+}
+
 // only PC
 @mixin pc-gnb {
 	@media screen and (min-width: #{$tablet-s-width + 1}) {

@@ -29,15 +29,17 @@
       margin-top: 160px;
       text-align: center;
       .tagText{
-        display: inline-block;
-        margin-right: 8px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         font-weight: bold;
         font-size: 2rem;
-        position: relative;
-        font-style: normal;
         line-height: 2;
         em{
           position: relative;
+          margin-right: 10px;
+          // font-style: normal;
           &:before {
             content: '';
             position: absolute;
@@ -50,9 +52,13 @@
         }
       }
       .desc{
+        margin-top: 20px;
         font-size: 1rem;
         line-height: 1.7;
         font-family: 'Noto Sans KR', sans-serif;
+        span{
+          display: block;
+        }
       }
     }
 
@@ -172,7 +178,6 @@
           top: 0;
           left: 0;
           z-index: 1;
-          padding: 0;
           width: 100%;
           height: 100%;
           overflow: hidden;
@@ -223,10 +228,13 @@
         }
       }
       .tagTextBox {
-        .text{
-          font-size: 0.9rem;
+        .tagText{
+          flex-direction: column;
           em {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
+            &::before{
+             display: none;
+            }
           }
         }
       }
