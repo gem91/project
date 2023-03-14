@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Icons.module.scss';
-import icon from '../../assets/images/icons/ico-kakao.png'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faKickstarter} from '@fortawesome/free-brands-svg-icons'
 
 import { Link } from 'react-router-dom';
 
@@ -10,7 +12,8 @@ const KakaoIcon = (props) => {
     <div className={styles.iconBox}>
       <Link to="https://open.kakao.com/o/sxXcRZ2e" target='_blank'>
         <i className={styles.kakao}>
-          <img src={icon} alt='test' /><span className='irHidden'>카카오톡</span>
+          <FontAwesomeIcon icon={faKickstarter} />
+          <span className='irHidden'>인스타그램</span>
         </i>
       </Link>
     </div>

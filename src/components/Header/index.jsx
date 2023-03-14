@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import LineFlow from '../FlowText/LineFlow';
+import OneLineFlow from '../FlowText/OneLineFlow';
 import Logo from '../Logo';
 import styles from './header.module.scss'
 
 import InstaIcon from '../IconItems/InstaIcon';
+import GitIcon from '../IconItems/GitIcon';
+import BlogIcon from '../IconItems/BlogIcon';
 import KakaoIcon from '../IconItems/KakaoIcon';
-import MessageIcon from '../IconItems/MessageIcon';
 
 const Header = ({isMobile, isPc}) => {
   let [processBar, setProcessBar] = useState(0);
@@ -59,7 +60,7 @@ const Header = ({isMobile, isPc}) => {
                 <Link to="/">About Me</Link>
               </li>
               <li>
-                <Link to="/portfolio">Web Site</Link>  
+                <Link to="/web">Web Site</Link>  
               </li>
               <li>
                 <Link to="/toy">Toy Project</Link>  
@@ -73,7 +74,8 @@ const Header = ({isMobile, isPc}) => {
           <ul className={styles.sns}>
             <li><InstaIcon /></li>
             <li><KakaoIcon /></li>
-            <li><MessageIcon /></li>
+            <li><GitIcon /></li>
+            <li><BlogIcon /></li>
           </ul>
         }
         </nav>
@@ -92,7 +94,7 @@ const Header = ({isMobile, isPc}) => {
               <Link to="/" onClick={onHamburger}>About</Link>
             </li>
             <li>
-              <Link to="/portfolio" onClick={onHamburger}>Project</Link>  
+              <Link to="/web" onClick={onHamburger}>Project</Link>  
             </li>
               <li>
               <Link to="/toy" onClick={onHamburger}>Toy.P</Link>  
@@ -103,7 +105,7 @@ const Header = ({isMobile, isPc}) => {
           </ul>
         </div>
       }
-      <LineFlow />
+      <OneLineFlow />
     </header>
   )
 };

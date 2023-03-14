@@ -12,7 +12,7 @@
         display: flex;
         justify-content: center;
         font-size: 1.5rem;
-        color: #888;
+        color: #aaa;
         transition: .3s ease-in-out;
   
         &.instagram {
@@ -20,24 +20,27 @@
             color: #c23b3b;
           }
         }
-  
-        &.kakao {
-          img {
-            @include image-cover();
-            transform: scale(.9);
+        &.git {
+          &:hover {
+            color: #329257;
           }
-  
+        }
+        &.blog {
+          font-size: 1.35rem;
+          &:hover {
+            color: #ff8623;
+          }
+        }
+        &.kakao {
           &:hover {
             color: #dc8a25;
           }
         }
-  
         &.message {
           &:hover {
             color: #b07eef;
           }
         }
-  
         &.like {
           &:hover {
             color: #f1b7b7;
