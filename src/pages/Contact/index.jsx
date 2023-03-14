@@ -7,6 +7,7 @@ import DefaultButton from '../../components/Button/DefaultButton';
 import Instagram from '../../components/Instagram';
 
 import styles from './Contact.module.scss'
+import PageNav from '../../components/PageNav';
 
 const Contact = ({isMobile}) => {
   const form = useRef();
@@ -53,6 +54,7 @@ const Contact = ({isMobile}) => {
           }
         </div>
       </div>
+      <PageNav nextName={''} nextLink={''} prevLink={'/toy'} prevName={'toy project'} />
     </div>
   );
 };

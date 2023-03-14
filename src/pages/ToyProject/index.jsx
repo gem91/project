@@ -1,11 +1,12 @@
 
 import React, { useEffect, useRef } from 'react';
-import './ToyProject.scss'
+import styles from './ToyProject.module.scss'
 
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import BadgeIcon from '../../components/IconItems/BadgeIcon';
+import PageNav from '../../components/PageNav';
 
 const ToyProject = (props) => {
 
@@ -32,22 +33,22 @@ const ToyProject = (props) => {
   }, []);
 
   return (
-    <div className="toyProject">
-      <section className="intro">
+    <div className={styles.toyProject}>
+      <section className={styles.intro}>
         <h1>Hero</h1>
       </section>
 
-      <section ref={panelsRef} className="panels">
-        <div ref={containRef} className="container" style={{width: '500%'}}>
-          <article className="panel">
-            <div className="item-container">
-              <div className="item-image">
+      <section ref={panelsRef} className={styles.panels}>
+        <div ref={containRef} className={styles.panelPath} style={{width: '500%'}}>
+          <article className={`${styles.panel} panel`}>
+            <div className={styles.itemContent}>
+              <div className={styles.itemImage}>
                 <img src="https://images.unsplash.com/photo-1510154328089-bdd27fc4ff66?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a8096fff6bf58a9b503f2d01cede364c&amp;auto=format&amp;fit=crop&amp;w=1936&amp;q=80"alt="" />
               </div>
-              <div className="item-body">
-                <h2 className="item-title">Grand Hotel</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
-                <ul className="tags">
+              <div className={styles.itemBody}>
+                <h2 className={styles.title}>Grand Hotel</h2>
+                <p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
+                <ul className={styles.tags}>
                   <li><BadgeIcon iconName={'SCSS'} /></li>
                   <li><BadgeIcon iconName={'HTML'} /></li>
                   <li><BadgeIcon iconName={'REACT'} /></li>
@@ -55,15 +56,15 @@ const ToyProject = (props) => {
               </div>
             </div>
           </article>
-          <article className="panel">
-              <div className="item-container">
-              <div className="item-image">
+          <article className={`${styles.panel} panel`}>
+              <div className={styles.itemContent}>
+              <div className={styles.itemImage}>
                 <img src="https://images.unsplash.com/photo-1510154328089-bdd27fc4ff66?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a8096fff6bf58a9b503f2d01cede364c&amp;auto=format&amp;fit=crop&amp;w=1936&amp;q=80"alt="" />
               </div>
-              <div className="item-body">
-                <h2 className="item-title">Grand Hotel</h2>
+              <div className={styles.itemBody}>
+                <h2 className={styles.itemTitle}>Grand Hotel</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
-                <ul className="tags">
+                <ul className={styles.tags}>
                   <li>Hotel</li>
                   <li>Colorful</li>
                   <li>Symetric</li>
@@ -71,15 +72,15 @@ const ToyProject = (props) => {
               </div>
             </div>
           </article>
-          <article className="panel">
-             <div className="item-container">
-              <div className="item-image">
+          <article className={`${styles.panel} panel`}>
+             <div className={styles.itemContent}>
+              <div className={styles.itemImage}>
                 <img src="https://images.unsplash.com/photo-1510154328089-bdd27fc4ff66?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a8096fff6bf58a9b503f2d01cede364c&amp;auto=format&amp;fit=crop&amp;w=1936&amp;q=80"alt="" />
               </div>
-              <div className="item-body">
-                <h2 className="item-title">Grand Hotel</h2>
+              <div className={styles.itemBody}>
+                <h2 className={styles.itemTitle}>Grand Hotel</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
-                <ul className="tags">
+                <ul className={styles.tags}>
                   <li>Hotel</li>
                   <li>Colorful</li>
                   <li>Symetric</li>
@@ -87,15 +88,15 @@ const ToyProject = (props) => {
               </div>
             </div>
           </article>
-          <article className="panel">
-              <div className="item-container">
-              <div className="item-image">
+          <article className={`${styles.panel} panel`}>
+              <div className={styles.itemContent}>
+              <div className={styles.itemImage}>
                 <img src="https://images.unsplash.com/photo-1510154328089-bdd27fc4ff66?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a8096fff6bf58a9b503f2d01cede364c&amp;auto=format&amp;fit=crop&amp;w=1936&amp;q=80"alt="" />
               </div>
-              <div className="item-body">
-                <h2 className="item-title">Grand Hotel</h2>
+              <div className={styles.itemBody}>
+                <h2 className={styles.itemTitle}>Grand Hotel</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
-                <ul className="tags">
+                <ul className={styles.tags}>
                   <li>Hotel</li>
                   <li>Colorful</li>
                   <li>Symetric</li>
@@ -103,15 +104,15 @@ const ToyProject = (props) => {
               </div>
             </div>
           </article>
-          <article className="panel">
-              <div className="item-container">
-              <div className="item-image">
+          <article className={`${styles.panel} panel`}>
+              <div className={styles.itemContent}>
+              <div className={styles.itemImage}>
                 <img src="https://images.unsplash.com/photo-1510154328089-bdd27fc4ff66?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a8096fff6bf58a9b503f2d01cede364c&amp;auto=format&amp;fit=crop&amp;w=1936&amp;q=80"alt="" />
               </div>
-              <div className="item-body">
-                <h2 className="item-title">Grand Hotel</h2>
+              <div className={styles.itemBody}>
+                <h2 className={styles.itemTitle}>Grand Hotel</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem error mollitia provident.</p>
-                <ul className="tags">
+                <ul className={styles.tags}>
                   <li>Hotel</li>
                   <li>Colorful</li>
                   <li>Symetric</li>
@@ -122,9 +123,10 @@ const ToyProject = (props) => {
         </div>
       </section>
 
-      <section className="extra">
+      <section className={styles.extra}>
         <h1>Another section</h1>
       </section>
+      <PageNav nextName={'contact'} nextLink={'/contact'} prevLink={'/web'} prevName={'web site'} />
     </div>
   )
 };

@@ -1,0 +1,88 @@
+
+@import '../../assets/scss/common/mixin';
+
+.toyProject{
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  section {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    &.intro, &.extra {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: aquamarine;
+    }
+  }
+  .panels {
+    .panelPath {
+      height: 100vh;
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0;
+      overflow: hidden;
+      background-color: #ddd;
+
+      article.panel {
+        position: relative;
+        /* overflow: hidden; */
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+        color: #333;
+        text-align: left;
+        background-color: #5e5951;
+
+        .itemContent {
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex: 1 0 75vw;
+          max-width: 75vw;
+
+          
+
+          .itemImage {
+            width: 58vw;
+            overflow: hidden;
+            img {
+              @include image-cover();
+            }
+          }
+
+          .itemBody {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 43%;
+            color: #fff;
+            transform: translate(-38%, -50%);
+            .title {
+                font-size: 4vw;
+                font-weight: bold;
+                line-height: 1;
+            }
+            .desc{
+              margin-top: 10px;
+              font-size: 1rem;
+            }
+            .tags{
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

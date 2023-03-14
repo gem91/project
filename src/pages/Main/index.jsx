@@ -6,12 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //components
 import Instagram from '../../components/Instagram';
-import ImageFadeEffect from '../../components/ImageFadeEffect';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import TabComponent from '../../components/TabComponent';
 import SliderEffects from '../../components/SliderEffect';
-import TwoTypeFlow from '../../components/FlowText/TwoTypeFlow';
 import LightTextEffect from '../../components/LightTextEffect';
+import PageNav from '../../components/PageNav';
+import ImgScaleEffect from '../../components/ImageEffect/ImgScaleEffect';
+import ItemFadeEffect from '../../components/ImageEffect/ItemFadeEffect';
 
 const skillData = [
 	{
@@ -121,14 +122,13 @@ const Main = ({isMobile, isPc}) => {
 			 x: 0,
 		 })
 	}
-    
   }, []);
 
 
 	return (
 		<div className={styles.main}>
 			<section className={styles.content}>
-				<LightTextEffect title={'Hello there!'} text1={'Hi🙌. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'꼭 합격하고 싶습니다!'} />
+				<LightTextEffect title={'Hello there!'} text1={'Hi🙌. 클로이 월드에 놀러오신걸 환영합니다.'} text2={'REACT를 이용해서 만든 포트폴리오!'} />
 			</section>
 			<div className={styles.container}>
 				<div className={styles.breadCrumbsBox}>
@@ -139,7 +139,7 @@ const Main = ({isMobile, isPc}) => {
 					<Instagram />
 				</div>
 				<div className={styles.tagTextBox}>
-					<p className={styles.tagText}><em>#도전적인</em> <em>#변함없는</em> <em>#추진력 있는</em> <em>#탐구심이 많은</em></p>
+					<p className={styles.tagText}><em>#도전적인</em> <em>#에너지 충만</em> <em>#책임감 넘치는</em> <em>#새로운 창의력</em></p>
 					<p className={styles.desc}>
 						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit aperiam suscipit. Placeat, quas. Repudiandae blanditiis ipsam rerum!</span>
 						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis!</span>
@@ -155,34 +155,18 @@ const Main = ({isMobile, isPc}) => {
 				</div>
 			</div>
 			<div className={styles.accordion}>
-				<ul>
-					{
-						bannerData.map(({imgURL, title}, index) =>(
-						<li key={index}>
-							<div className={styles.floatImg}>
-								<img src={imgURL} alt={title} />
-							</div>
-							<div className={styles.textBox}>
-								<TwoTypeFlow tit={`${title}.`} em={`${title}.`} />
-							</div>
-							<span className={styles.thumb}>
-								<img src={imgURL} alt={title} />
-							</span>
-						</li>
-						))
-					}
-				</ul>
+				<ImgScaleEffect data={bannerData}  />
 			</div>
 			<div className={styles.imageFadeEffect}>
 				<div className={styles.container}>
 					<div className={styles.imageEffectBox}>
 						<h3 ref={titleRef1}>My Tags</h3>
-						<ImageFadeEffect isPc={isPc} />
+						<ItemFadeEffect isPc={isPc} />
 					</div>
 					{/* <ListCards /> */}
 				</div>
 			</div>
-		
+			<PageNav nextName={'web site'} nextLink={'/web'} prevLink={''} prevName={''} />
 		</div>
 	)
 };

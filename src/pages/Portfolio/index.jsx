@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
 import styles from './Portfolio.module.scss';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import BlogCard from '../../components/BlogCard';
 import LightTextEffect from '../../components/LightTextEffect';
+import PageNav from '../../components/PageNav';
 
 const Portfolio = (props) => {
  
@@ -156,6 +157,7 @@ const Portfolio = (props) => {
           </div>
         </div>
       </div>
+      <PageNav nextName={'toy project'} nextLink={'/toy'} prevLink={'/'} prevName={'about me'} />
     </div>
   )
 };
