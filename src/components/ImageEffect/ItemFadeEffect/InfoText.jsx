@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ImageFadeEffect.module.scss'
+import styles from './ItemFadeEffect.module.scss'
 
 const InfoText = ({title, tag, small}) => (
   <div className={styles.textBox}>

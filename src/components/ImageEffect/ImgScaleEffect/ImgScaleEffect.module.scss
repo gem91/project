@@ -1,0 +1,110 @@
+  @import '../../../assets/scss/common/mixin';
+  @import '../../../assets/scss/common/var';
+
+  $itemsNo: 4;
+  $delay: 0.4;
+
+  @for $i from 1 through $itemsNo {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$delay}s;
+      $delay: $delay +0.3;
+    }
+  }
+
+  ul.imgScaleLists {
+    list-style: none;
+    -webkit-perspective: 900;
+    perspective: 900;
+    li {
+        position: relative;
+        height: calc(100vh / #{$itemsNo});
+        border-bottom: 1px solid #bc9b8f;
+        background-color: #424242;
+        transition: all .5s ease;
+        animation: flipdown 0.5s ease both;
+
+        &:hover {
+          height: 40vh;
+          background-color: #47352f;
+          &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            // background-color: #be4f4f;
+          }
+          .floatImg {
+            top: -60px;
+            right: 10%;
+            opacity: 1;
+          }
+          .thumb {
+            img {
+              opacity: .7;
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .floatImg {
+          position: absolute;
+          top: 0;
+          right: 10%;
+          z-index: 2;
+          width: 220px;
+          height: 220px;
+          overflow: hidden;
+          opacity: 0;
+          box-shadow: 0 40px 40px -20px #00000080;
+          transition: $default-speed;
+
+          img {
+            @include image-cover();
+          }
+        }
+
+        .textBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        .thumb {
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: .5;
+          overflow: hidden;
+          transition: $default-speed;
+
+          img {
+            display: block;
+            @include image-cover();
+            opacity: .5;
+            transition: $default-speed;
+          }
+        }
+      }
+  }
+  
+
+
+@media screen and (max-width: 768px) {
+  li {
+    .floatImg {
+      transform: scale(0.8);
+    }
+
+    &:hover {
+      .floatImg {
+        top: -135px;
+      }
+    }
+  }
+}
+
+
