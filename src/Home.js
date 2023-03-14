@@ -12,8 +12,8 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Secret from './pages/Secret';
-import ContactIcon from './components/ContactIcon';
 import ToyProject from './pages/ToyProject';
+import ContactIcon from './components/IconItems/ContactIcon';
 
 function Home() {
   const [winWidth, setWinWidth] = useState(window.innerWidth)
@@ -63,7 +63,7 @@ function Home() {
             <Route path="/" exact element={
               <Main isMobile={isMobile} isPc={isPc} />}>
             </Route>
-            <Route path="/portfolio" element={
+            <Route path="/web" element={
               <Portfolio />}>
             </Route>
              <Route path="/toy" element={

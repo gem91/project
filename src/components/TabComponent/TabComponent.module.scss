@@ -1,3 +1,5 @@
+  @import '../../assets/scss/common/var';
+  
   .tabMenu {
     display: table;
     table-layout: fixed;
@@ -28,7 +30,7 @@
         font-size: .9rem;
         text-align: center;
         letter-spacing: .5px;
-        transition: .5s ease-in-out;
+        transition: $default-speed;
     
         &:hover{
           color: #fff;
@@ -70,8 +72,8 @@
         align-items: center;
         justify-content: flex-start;
         margin: 0 auto;
-        width: 70%;
-        padding: 20px 5%;
+        width: 80%;
+        padding: 30px 5%;
         border-bottom: 1px solid #ddd;
         &:last-child{
           border-bottom: 0;
@@ -90,10 +92,8 @@
             width: 0%;
             height: 8px;
             border-radius: 10px;
-            // border-top-left-radius: 5px;
-            // border-bottom-right-radius: 5px;
             background-color: #82a75e;
-            transition: .5s ease-in-out;
+            transition:$default-speed;
           }
         
           .score {

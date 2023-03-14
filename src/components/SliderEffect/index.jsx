@@ -21,7 +21,7 @@ const SliderEffects = ({imageData}) => {
           768: { 
             slidesPerView: 1, 
           },
-          960: {
+          769: {
             slidesPerView: 3,
           },
           1024: {

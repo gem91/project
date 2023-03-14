@@ -1,4 +1,5 @@
 @import '../../assets/scss/common/mixin';
+@import '../../assets/scss/common/var';
 
 .listCards{
   margin-top: 30px;
@@ -15,7 +16,7 @@
       overflow: hidden;
       border-radius: 10px;
       background-color: transparent;
-      transition: .5s ease-in-out;
+      transition: $default-speed;
       &:hover{
         // box-shadow: 0 20px 35px #00000030;
         background-color: #be8f8f;
@@ -48,7 +49,7 @@
         border-radius: 10px;
         img {
           @include image-cover();
-          transition: .5s ease-in-out;
+          transition: $default-speed;
         }
       }
     }

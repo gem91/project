@@ -1,7 +1,6 @@
 @import '../../assets/scss/common/var';
 @import '../../assets/scss/common/mixin';
 
-$flow-speed: .5s ease-in-out;
 
 @keyframes marquee-r {
   from {transform: translateX(-100%);}
@@ -43,7 +42,7 @@ $flow-speed: .5s ease-in-out;
       font-size: 1rem;
       color: $color-basic;
       letter-spacing: 2px;
-      transition: $flow-speed;
+      transition: $default-speed;
     }
    }
  }
@@ -77,10 +76,10 @@ $flow-speed: .5s ease-in-out;
         color: #fff;
         font-family: 'El Messiri', sans-serif;
         opacity: .3;
-        transition: $flow-speed;
+        transition: $default-speed;
         .em {
           color: #b6eb35;
-          transition: $flow-speed;
+          transition: $default-speed;
         }
       }
      }
