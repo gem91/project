@@ -20,6 +20,9 @@ $image4Width: 133.333333%;
     .imageBox {
       position: relative;
       visibility: visible;
+      .horizon + .textBox, .horizon .textBox{
+        left: 78%
+      }
       &:hover {
         .item{
           &::before {
@@ -64,6 +67,7 @@ $image4Width: 133.333333%;
       top: 50%;
       z-index: 2;
       opacity: 1;
+      letter-spacing: -3px;
       transform: translateY(-50%);
       transition: all 0.25s ease-in-out;
       .title {
@@ -105,16 +109,33 @@ $image4Width: 133.333333%;
     }
   }
   .contLeft{
+    .imageBox{
+      .horizon + .textBox, .horizon .textBox{
+        left: 78%
+      }
+      .vertical + .textBox, .vertical .textBox{
+        left: 69.222%;
+      }
+    }
     .textBox{
-      left: 66.66666%;
       .tag, .smText{
         margin-left: 10px;
       }
     }
   }
   .contRight{
+    .imageBox{
+      .horizon + .textBox, .horizon .textBox{
+        left: -87.5%
+      }
+      .square + .textBox, .square .textBox{
+        left: -69.5%;
+      }
+      // .vertical + .textBox, .vertical .textBox{
+      //   left: -69.222%;
+      // }
+    }
     .textBox{
-      right: 66.66666%;
       .tag, .smText{
         margin-right: 10px;
       }

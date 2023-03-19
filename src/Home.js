@@ -52,6 +52,7 @@ function Home() {
     }
   }, [])
 
+
   return (
     <>
       <div ref={cursorRef} className={styles.cursor} style={cursorStyle}></div>

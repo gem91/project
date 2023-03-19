@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const InstaIcon = (props) => {
   return (
     <div className={styles.iconBox}>
-       <Link to="/secret">
+       <Link to="/secret" target={'_blank'}>
         <i className={styles.instagram}>
           <FontAwesomeIcon icon={faInstagram} />
           <span className='irHidden'>인스타그램</span>

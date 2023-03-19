@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Main.module.scss';
 
+// data
+import skillData from '../../db/skills.json'
+import companyLogos from '../../db/projectLogo.json'
+import bannerData from '../../db/testData.json';
+
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -14,82 +19,6 @@ import PageNav from '../../components/PageNav';
 import ImgScaleEffect from '../../components/ImageEffect/ImgScaleEffect';
 import ItemFadeEffect from '../../components/ImageEffect/ItemFadeEffect';
 
-const skillData = [
-	{
-		type: "Lang",
-		subject : [
-			{ skill : 'html', num : 95 }, 
-			{ skill: "css", num : 90 }, 
-			{ skill: "scss", num : 80 }
-		]
-	},
-	{
-		type: "Front",
-		subject : [
-			{ skill : 'js', num : 80 }, 
-			{ skill: "react", num : 65 }, 
-			{ skill: "vue", num : 80 },
-			{ skill: "git", num : 70 },
-			{ skill: "yarn", num : 70 },
-		]
-	},
-	{
-		type: "Design",
-		subject : [
-			{ skill : 'photoshop', num : 90 }, { skill: "Illust", num : 80 }, { skill: "Zeplin", num : 90 }
-		]
-	},
-]
-const companyLogos = [
-	{
-		id: 0,
-		company : '현대모터스',
-		imgURL: require('../../assets/images/logo/hyundai.png')
-	},
-	{
-		id: 1,
-		company : '기아',
-		imgURL: require('../../assets/images/logo/kia-b.png')
-	},
-	{
-		id: 2,
-		company : '키즈현대',
-		imgURL: require('../../assets/images/logo/kids.png')
-	},
-	{
-		id: 3,
-		company : '키즈현대',
-		imgURL: require('../../assets/images/logo/young.png')
-	},
-	{
-		id: 4,
-		company : '키엘',
-		imgURL: require('../../assets/images/logo/kiehls.png')
-	},
-	{
-		id: 5,
-		company : '미디어PR',
-		imgURL: require('../../assets/images/logo/media-pr.png')
-	},
-]
-const bannerData = [
-	{
-		title : 'Hyundai-Dotcom',
-		imgURL: require('../../assets/images/hyundai-car.jpg')
-	},
-	{
-		title : 'Kids-Hyundai',
-		imgURL: require('../../assets/images/kids-hyundai.jpg')
-	},
-	{
-		title : 'KODEX',
-		imgURL: require('../../assets/images/kodex.jpg')
-	},
-	{
-		title : 'Young-Hyundai',
-		imgURL: require('../../assets/images/young-hyundai.jpg')
-	},
-]
 
 const Main = ({isMobile, isPc}) => {
 	const titleRef1 = useRef(null)
@@ -155,7 +84,14 @@ const Main = ({isMobile, isPc}) => {
 				</div>
 			</div>
 			<div className={styles.accordion}>
-				<ImgScaleEffect data={bannerData}  />
+				<ul className={styles.imgScaleLists}>
+					{
+						bannerData.map(({imgURL, title}) => (
+							<ImgScaleEffect imgURL={imgURL} title={title} />
+						))
+					}
+				</ul>
+				
 			</div>
 			<div className={styles.imageFadeEffect}>
 				<div className={styles.container}>

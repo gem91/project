@@ -8,18 +8,18 @@ const Popup = ({imgs, title, desc, mainImg, mainAlt, isToggle, setIsToggle}) => 
   }
   return (
   <aside className={styles.popupLayer}>
-    <div className={styles.popupContent}>
+    <div className={styles.popupContainer}>
       <h3 className={styles.toptitle}>{title}</h3>
       <div className={styles.scrollWrap}>
         <div className={styles.topImage}>
           <span className={styles.thumb}><img src={mainImg} alt={mainAlt} /></span>
         </div>
-        <div className={styles.textWrap}>
-          <div className={styles.textLeft}>
+        <div className={styles.contentWrap}>
+          <div className={styles.left}>
             <span className={styles.subTitle}>Creative <br />I Stand</span>
             <p className={styles.desc}>{desc}</p>
           </div>
-          <div className={styles.textRight}>
+          <div className={styles.right}>
             <dl className={styles.log}>
               <dt>CLIENT :</dt>
               <dd>HYUNDAI</dd>

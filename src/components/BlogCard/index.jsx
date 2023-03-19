@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import BlogCardLists from './BlogCardLists';
-import DefaultButton from '../Button/DefaultButton';
+import Mbutton from '../Button/Mbutton';
 import Popup from '../Popup';
 
 import styles from './BlogImage.module.scss';
@@ -30,14 +30,24 @@ const BlogCard = ({imgData}) => {
     <button className={styles.mainImg} onClick={openPopup}><img ref={fullImgRef} src={mainImg} alt={mainAlt} /></button>
     <div className={styles.blogContent}>
       <div className={styles.btnWrap}>
-        <DefaultButton onClick={openPopup} type={'More Detail'} setIsToggle={setIsToggle} />
+        <Mbutton onClick={openPopup} innerText={'More Detail'} setIsToggle={setIsToggle} />
         <Link ref={linkRef} to={link} target="_blank">Go To Site</Link>
       </div>
       <div className={styles.textBox}>
         <h3 ref={fullTitleRef} className={styles.title}>{title}</h3>
         <p ref={fullDescRef} className={styles.desc}>{desc}</p>
       </div>
-      <BlogCardLists imgData={imgData} setMainImg={setMainImg} mainImg={mainImg} setMainAlt={setMainAlt} fullImgRef={fullImgRef} setTitle={setTitle} setDesc={setDesc} setLink={setLink} />
+      <BlogCardLists
+        imgData={imgData}
+        setMainImg={setMainImg}
+        mainImg={mainImg}
+        setMainAlt={setMainAlt}
+        fullImgRef={fullImgRef}
+        setTitle={setTitle}
+        setDesc={setDesc}
+        setLink={setLink}
+        onPopup={openPopup}
+       />
     </div>
   </div>
   {/* popup */}

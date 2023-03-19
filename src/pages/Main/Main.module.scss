@@ -107,8 +107,11 @@
   .accordion {
     margin-top: 100px;
     height: 100vh;
-
-  
+    ul.imgScaleLists {
+      list-style: none;
+      -webkit-perspective: 900;
+      perspective: 900;
+    }
   }
 }
 

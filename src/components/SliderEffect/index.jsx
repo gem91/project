@@ -41,10 +41,10 @@ const SliderEffects = ({imageData}) => {
         className="mySwiper"
       >
         {
-          imageData.map( ({id, company, imgURL},idx) => (
-            <SwiperSlide key={idx} >
+          imageData.map( ({id, company, imgURL}) => (
+            <SwiperSlide key={id} >
               <span className={styles.imgThumb}>
-                <img src={imgURL} alt={`${company} 로고이미지`} />
+                <img src={require(`../../assets${imgURL}`)} alt={`${company} 로고이미지`} />
               </span>
             </SwiperSlide>
           ))

@@ -81,7 +81,7 @@ const Header = ({isMobile, isPc}) => {
         </nav>
       </div>
       { isMobile && 
-        <button className={ isOpen ? `${styles.hamburger} ${styles.isOpen}` :  `${styles.hamburger}`} type='button' onClick={onHamburger}>
+        <button className={ isOpen ? `${styles.hamburger} ${styles.disable}` :  `${styles.hamburger}`} type='button' onClick={onHamburger}>
           <span></span>
           <span></span>
           <span></span>
@@ -89,6 +89,11 @@ const Header = ({isMobile, isPc}) => {
       }
       { isOpen &&
         <div className={styles.fullMenus}>
+          <button className={ isOpen ? `${styles.hamburger} ${styles.isOpen}` :  `${styles.hamburger}`} type='button' onClick={onHamburger}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul>
             <li>
               <Link to="/" onClick={onHamburger}>About</Link>

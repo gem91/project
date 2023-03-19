@@ -1,16 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 //components
 import BreadCrumbs from '../../components/BreadCrumbs';
-import DefaultButton from '../../components/Button/DefaultButton';
+import Mbutton from '../../components/Button/Mbutton';
 import Instagram from '../../components/Instagram';
 
 import styles from './Contact.module.scss'
 import PageNav from '../../components/PageNav';
 
 const Contact = ({isMobile}) => {
-  const form = useRef();
+  const formRef = useRef();
+  const textArea = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +28,16 @@ const Contact = ({isMobile}) => {
     })
   }
 
+
+  // const onChange = (e) => {
+  //   let text = e.target.value
+  //   setMail(text)
+  //   if(mail.indexOf('@') === -1) // 'Bye'라는 문자가 없을때
+  //   {
+  //     alert('@메일주소가 있어야합니다.')
+  //   }
+  // }
+
   return (
     <div className={styles.contact}>
       <div className={styles.container}>
@@ -37,13 +48,13 @@ const Contact = ({isMobile}) => {
             <p>
               I can help design and build you next website. Let me know what you need by filling in this quick 
             </p>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={formRef} onSubmit={sendEmail}>
               <input  className={styles.formText} id="name" type="text" placeholder='이름' />
-              <input className={styles.formText} id="email" type="text" placeholder='abc@gmail.com' />
+              <input ref={textArea} className={styles.formText} id="email" type="text" placeholder='abc@gmail.com' />
               <textarea className={styles.formTextarea} id="message" cols="50" rows="10" placeholder='Enter Your Message'></textarea>
               <div className={styles.btnArea}>
-                <DefaultButton innerText={'Re-Write'} role={'cancel'} />
-                 <button type="submit" value="send">send</button>
+                <Mbutton innerText={'Re-Write'} type={'button'} role={'cancel'} />
+                <Mbutton innerText={'Send'} type={'submit'} role={'send'} />
               </div>
             </form>       
           </div>

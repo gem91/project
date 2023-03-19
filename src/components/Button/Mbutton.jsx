@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Button.module.scss'
 
 
-const DefaultButton = ({innerText = 'button', role = 'button', setIsToggle} ) => {
+const Mbutton = ({innerText = 'button', type = 'button', role, setIsToggle} ) => {
 
    const handleToggle = (e) => {
       setIsToggle(true)
@@ -14,17 +14,17 @@ const DefaultButton = ({innerText = 'button', role = 'button', setIsToggle} ) =>
     <>
     { setIsToggle && 
       <button 
-        className={`${styles.defaultButton} ${styles[role]}`} 
-        type={role} 
+        className={`${styles.mButton} ${styles[role]}`} 
+        type={type} 
         onClick={handleToggle}
       >
-          {innerText}
+        {innerText}
       </button>
     }
     { !setIsToggle &&
       <button 
-        className={`${styles.defaultButton} ${styles[role]}`} 
-        type={role} 
+        className={`${styles.mButton} ${styles[role]}`} 
+        type={type} 
         onClick={test}
       >
         {innerText}
@@ -34,4 +34,4 @@ const DefaultButton = ({innerText = 'button', role = 'button', setIsToggle} ) =>
   )
 };
 
-export default DefaultButton;
+export default Mbutton;

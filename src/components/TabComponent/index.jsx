@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './TabComponent.module.scss';
 
 const TabComponent = ({tabData, isMobile}) => {
-
   	const [currentTab, setCurrentTab] = useState(0);
     const handleTabMenu = (e, idx) => {
       setCurrentTab(idx)
