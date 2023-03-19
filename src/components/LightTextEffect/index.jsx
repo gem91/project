@@ -29,38 +29,32 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
     gsap.to(textRef1.current, {
       scrollTrigger: {
         trigger: textRef1.current,
-        // start: '30%',
-        // end: '20%',
-        start: 'top 60%',
-        end: 'bottom 55%',
+        start: 'top 70%',
         toggleActions: 'play none none reverse',
-        // scrub: true,
       },
       delay: 0.2,
       opacity: 1,
       duration: 1,
       x: 0,
     });
-
     gsap.to(textRef2.current, {
       scrollTrigger: {
         trigger: textRef2.current,
-        start: 'top 60%',
-        end: 'bottom 50%',
+        start: 'top 70%',
         toggleActions: 'play none none reverse',
       },
       opacity: 1,
+      delay: 0.8,
       duration: 1.2,
       x: 0,
     });
     gsap.to(textRef3.current, {
       scrollTrigger: {
         trigger: textRef3.current,
-         start: 'top 60%',
-        end: 'bottom 50%',
+        start: 'top 70%',
         toggleActions: 'play none none reverse',
       },
-      delay: 0.6,
+      delay: 1.6,
       opacity: 1,
       duration: 1.2,
       x: 0,

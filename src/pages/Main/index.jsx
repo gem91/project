@@ -86,8 +86,8 @@ const Main = ({isMobile, isPc}) => {
 			<div className={styles.accordion}>
 				<ul className={styles.imgScaleLists}>
 					{
-						bannerData.map(({imgURL, title}) => (
-							<ImgScaleEffect imgURL={imgURL} title={title} />
+						bannerData.map(({imgURL, title, id}) => (
+							<ImgScaleEffect key={id} imgURL={imgURL} title={title} />
 						))
 					}
 				</ul>

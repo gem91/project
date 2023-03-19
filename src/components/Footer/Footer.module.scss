@@ -64,8 +64,9 @@
         flex-direction: column;
         align-items: flex-start;
         .send{
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           line-height: .6;
+          letter-spacing: .5px;
           a{
             &:before {
               bottom: -5px;
