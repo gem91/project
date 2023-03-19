@@ -6,8 +6,12 @@
 .toyProject{
   overflow-y: scroll;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
+  // overflow-scrolling: touch;
+  -ms-overflow-style: none; // scroll 숨기기
+  &::-webkit-scrollbar {
+    display: none;
+  }
   section {
     display: block;
     width: 100%;
@@ -57,7 +61,7 @@
             display: block;
             font-size: 1.2rem;
             color: #fff;
-            background-color: #15f4f0;
+            background-color: #cddc39;
             border-radius: 20px;
            
           }
@@ -65,7 +69,7 @@
             content: "";
             top: -1px;
             right: 20px;
-            border-top: 10px solid #15f4f0;
+            border-top: 10px solid #cddc39;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 0px solid transparent;
@@ -185,7 +189,58 @@
   }
 }
 
+@keyframes ani {
+  0%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-
-
-
+@media screen and (max-width: 1024px) {
+  .toyProject{
+    section{
+      .container{
+        padding: 200px 20px;
+        max-width: 100%;
+      
+      }
+      &.intro{
+        .container{
+          padding: 200px 20px 300px;
+        }
+      }
+      &.extra{
+        .title{
+          &:before, &:after{
+            opacity: 0;
+            animation: ani 5s infinite;
+          }
+        }
+      }
+    }
+    .panels {
+      .panelPath{
+         .panel{
+          .itemContent {
+            .itemImage {
+              width: 70%;
+            }
+            .itemBody {
+              left: 15%;
+              .title {
+                font-size: 3rem;
+              }
+              .desc{
+              font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

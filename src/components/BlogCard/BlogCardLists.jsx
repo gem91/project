@@ -56,7 +56,7 @@ const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, set
       >
       { imgData.map(({srcURL, alt}, idx) => (
         <SwiperSlide key={idx} >
-          <span className={styles.thumb} onClick={ isMobile && onPopup}>
+          <span className={styles.thumb} onClick={ isMobile ? onPopup : undefined}>
             <img src={srcURL}alt={alt} onClick={handleCardImg} />
           </span>
         </SwiperSlide>

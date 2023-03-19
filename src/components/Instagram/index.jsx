@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Instagram.module.scss';
+
+import myProfile from '../../assets/images/profile.jpg'
 
 import InstaIcon from '../IconItems/InstaIcon';
 import KakaoIcon from '../IconItems/KakaoIcon';
@@ -11,16 +13,13 @@ const Instagram = (props) => {
   return (
     <div className={styles.profile}>
     <div className={styles.thumb}>
-      <img src={`http://placeimg.com/600/700/any`} alt='민정이 사진' />
+      <img src={myProfile} alt='민정이 사진' />
     </div>
     <div className={styles.contents}>
       <div className={styles.utils}>
         <div className={styles.sns}>
           <InstaIcon />
           <KakaoIcon />
-          {/* <a href='https://open.kakao.com/o/sxXcRZ2e'>
-           
-          </a> */}
         </div>
         <div className={styles.ux}>
           <MessageIcon />

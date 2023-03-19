@@ -131,52 +131,6 @@ const ItemFadeEffect = ({isPc}) => {
   }
   }, []);
 
-  useEffect(()=>{
-    window.addEventListener('scroll', setTranslate);
-    return () => {
-      window.removeEventListener('scroll', setTranslate);
-    }
-  })
-
-// Util functions
-function map(x, in_min, in_max, out_min, out_max) {
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
-// Scroll image Animation (small Y movement)
-const inners = document.getElementsByClassName('thumb');
-const maxTranslate = 30;
-
-const setTranslate = () => {
-  Array.prototype.forEach.call(inners, function(item, i){
-    const rect = item.getBoundingClientRect();
-    const top = Math.min(0, Math.max(-100, (rect.top * 100) / rect.height));
-    const bottom = Math.min(100,Math.max(0, ((rect.bottom - window.innerHeight) *100) / rect.height));
-    
-    let minAbsValue = 0;
-    // If bot values are 0 it means the image is inside viewport
-    
-    // Always get biggest value
-    if(Math.abs(top) > Math.abs(bottom)) {
-      minAbsValue = top;
-    }
-    if(Math.abs(bottom) > Math.abs(top)) {
-      minAbsValue = bottom;
-    }
-    // If image is smaller that viewport
-    // Caculate closest percentage.
-    // If the image extends to the top and the bottom the same height
-    // then value will be 0
-    if(top !== 0 && bottom!== 0) {
-      minAbsValue = top + bottom;
-    }
-    // Then map it to a number between MaxTranslate negative and positive
-    const mapped = map(minAbsValue,-100,100,-maxTranslate,maxTranslate).toFixed(6);
-    item.style.transform = `translateY(${mapped*-1}%)`;
-  });
-  
-}
-
   return (
     <>
      <div className={styles.imageFade}>
@@ -185,23 +139,23 @@ const setTranslate = () => {
             <ImageType
               imgRef={imgRef1}
               type={'vertical'}
-              imgURL={require('../../../assets/images/my_img04.jpg')}
-              title='Propulsive'
+              imgURL={require('../../../assets/images/my_img01.jpg')}
+              title='Propulsion'
               tag='Good Point'
-              small='view'
+              small='생각을 행동으로 추진'
              />
-            <InfoText title={'Propulsive'} tag='Good Point' small='view' />
+            <InfoText title={'Propulsion'} tag='Good Point' small='생각을 행동으로 추진' />
           </div>
           <div className={`${styles.imageBox} ${styles.image2}`}>
             <ImageType
               imgRef={imgRef2}
               type={'horizon'}
-              imgURL={require('../../../assets/images/my_img04.jpg')} 
-              title='Inquisitive'
+              imgURL={require('../../../assets/images/my_img02.jpg')} 
+              title='Inquisitivity'
               tag='UX • UI'
-              small='view'
+              small='호기심이 많은'
             />
-            <InfoText title='Inquisitive' tag='UX • UI' small='view' />
+            <InfoText title='Inquisitivity' tag='UX • UI' small='호기심이 많은' />
           </div>
         </div>
 
@@ -210,23 +164,23 @@ const setTranslate = () => {
             <ImageType
               imgRef={imgRef3}
               type={'horizon'}
-              imgURL={require('../../../assets/images/my_img04.jpg')}
+              imgURL={require('../../../assets/images/my_img03.jpg')}
               title='Challenging'
-              tag='Organization'
-              small='view'
+              tag='Strength'
+              small='도전적인 나'
             />
-            <InfoText title='Challenging' tag='Organization' small='view' />
+            <InfoText title='Challenging' tag='Strength' small='도전적인 나' />
           </div>
           <div className={`${styles.imageBox} ${styles.image4}`}>
             <ImageType
               imgRef={imgRef4}
               type={'square'}
               imgURL={require('../../../assets/images/my_img04.jpg')}
-              title='Inquisitive'
-              tag='Lettering'
-              small='view'
+              title='Receptive'
+              tag='ORGANIZATION'
+              small='수용적인 넓은 생각'
             />
-            <InfoText title='Inquisitive' tag='Lettering' small='view' />
+            <InfoText title='Receptive' tag='ORGANIZATION' small='수용적인 넓은 생각' />
           </div>
         </div>
       </div>

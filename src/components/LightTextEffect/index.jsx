@@ -59,7 +59,6 @@ const LightTextEffect = ({title, text1, text2, text3}) => {
          start: 'top 60%',
         end: 'bottom 50%',
         toggleActions: 'play none none reverse',
-        // markers: true
       },
       delay: 0.6,
       opacity: 1,

@@ -17,6 +17,18 @@
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+  .portfolio{
+    .content{
+      .container {
+        padding: 0 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .portfolio{
     .content{

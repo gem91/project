@@ -8,7 +8,6 @@ import toyData from '../../db/toyData.json'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// import BadgeIcon from '../../components/IconItems/BadgeIcon';
 import PageNav from '../../components/PageNav';
 import ArticleTemplete from './ArticleTemplete';
 import BreadCrumbs from '../../components/BreadCrumbs';
@@ -38,7 +37,6 @@ const ToyProject = (props) => {
         scrub: 1,
         snap: 1 / (panels.length - 1),
         end: () => "+=" + containRef.current.offsetWidth - panels.innerWidth,
-        markers: true
       }
     })
     return () => content.revert();
@@ -52,7 +50,6 @@ const ToyProject = (props) => {
        trigger: topTitleRef.current,
         start: 'top 80%',
        toggleActions: 'play none none reverse',
-       markers: true,
       },
       opacity: 1,
       duration: 1,

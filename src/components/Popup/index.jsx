@@ -6,7 +6,6 @@ const Popup = ({title, desc, mainImg, mainAlt, setIsPopup, tags, date, client}) 
   const closePopup = (e) => {
     setIsPopup(false)
   }
-console.log(tags);
   return (
   <aside className={styles.popupLayer}>
     <div className={styles.popupContainer}>
@@ -30,7 +29,7 @@ console.log(tags);
               <dd>{date}</dd>
               <dt>SKILL :</dt>
               <dd>
-                { tags.map( item => <BadgeIcon iconName={item} />) }
+                { tags.map( item => <BadgeIcon key={item} iconName={item} />) }
               </dd>
             </dl>
           </div>

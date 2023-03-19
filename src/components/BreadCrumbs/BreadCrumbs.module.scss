@@ -27,6 +27,11 @@
   // }
 }
 
+@media screen and (max-width: 1024px) {
+  .subject{
+    padding-left: 0;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .subject{

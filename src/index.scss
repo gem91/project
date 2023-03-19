@@ -27,10 +27,11 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #4e2d21;
   -ms-overflow-style: none; // scroll 숨기기
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
 h1, h2, h3, h4, h5, h6{
   font-weight: normal;
 }

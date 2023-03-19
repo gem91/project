@@ -3,9 +3,9 @@
     "id": 1,
     "type" : "vertical",
     "imgURL": "/images/my_img04.jpg",
-    "title" : "Propulsive",
+    "title" : "propulsion",
     "tag" : "Good Point",
-    "small" : "VIEW"
+    "small" : "추진"
   },
   {
     "id": 2,

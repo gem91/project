@@ -133,6 +133,17 @@ header{
   }
 }
 
+@media screen and (max-width: 1024px) {
+  header{
+    .container{
+      max-width: 100%;
+      // nav{
+      //   height: 50px;
+      // }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   header{
     &.isHidden{
