@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "title" : "Lotto JSX",
+    "desc" : "REACT를 이용해서 만든 Lotto",
+    "imgURL": "/images/logo/hyundai.png",
+    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  },
+  {
+    "id": 1,
+    "title" : "Calculator JSX",
+    "desc": "REACT로 만든 계산기",
+    "imgURL": "/images/logo/kia-b.png",
+    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  },
+  {
+    "id": 2,
+    "title" : "키즈현대",
+    "desc": "REACT로 만든 계산기",
+    "imgURL": "/images/logo/kids.png",
+     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  },
+  {
+    "id": 3,
+    "title" : "키즈현대",
+    "desc": "REACT로 만든 계산기",
+    "imgURL": "/images/logo/young.png",
+     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  },
+  {
+    "id": 4,
+    "title" : "키엘",
+    "desc": "REACT로 만든 계산기",
+    "imgURL": "/images/logo/kiehls.png",
+     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  },
+  {
+    "id": 5,
+    "title" : "미디어PR",
+    "desc": "REACT로 만든 계산기",
+    "imgURL": "/images/logo/media-pr.png",
+     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+  }
+]

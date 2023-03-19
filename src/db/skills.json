@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Lang",
+    "subject" : [
+      { "skill" : "html", "num" : 95 }, 
+      { "skill": "css", "num" : 90 }, 
+      { "skill": "scss", "num" : 80 }
+    ]
+  },
+  {
+    "type": "Front",
+    "subject" : [
+      { "skill" : "js", "num" : 80 }, 
+      { "skill": "react", "num" : 65 }, 
+      { "skill": "vue", "num" : 80 },
+      { "skill": "git", "num" : 70 },
+      { "skill": "yarn", "num" : 70 }
+    ]
+  },
+  {
+    "type": "Design",
+    "subject" : [
+      { "skill" : "photoshop", "num" : 90 }, { "skill": "Illust", "num" : 80 }, { "skill": "Zeplin", "num" : 90 }
+    ]
+  }
+]

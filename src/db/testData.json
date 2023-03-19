@@ -1,0 +1,18 @@
+[
+	{
+		"title" : "Hyundai-Dotcom",
+		"imgURL": "/images/hyundai-car.jpg"
+	},
+	{
+		"title" : "Kids-Hyundai",
+		"imgURL": "/images/kids-hyundai.jpg"
+	},
+	{
+		"title" : "KODEX",
+		"imgURL": "/images/kodex.jpg"
+	},
+	{
+		"title" : "Young-Hyundai",
+		"imgURL": "/images/young-hyundai.jpg"
+	}
+]

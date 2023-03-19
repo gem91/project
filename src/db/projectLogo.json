@@ -2,31 +2,31 @@
   {
     "id": 0,
     "company" : "현대모터스",
-    "imgURL": "../../assets/images/logo/hyundai.png"
+    "imgURL": "/images/logo/hyundai.png"
   },
   {
     "id": 1,
     "company" : "기아",
-    "imgURL": "../../assets/images/logo/kia-b.png"
+    "imgURL": "/images/logo/kia-b.png"
   },
   {
     "id": 2,
     "company" : "키즈현대",
-    "imgURL": "../../assets/images/logo/kids.png"
+    "imgURL": "/images/logo/kids.png"
   },
   {
     "id": 3,
     "company" : "키즈현대",
-    "imgURL": "../../assets/images/logo/young.png"
+    "imgURL": "/images/logo/young.png"
   },
   {
     "id": 4,
     "company" : "키엘",
-    "imgURL": "../../assets/images/logo/kiehls.png"
+    "imgURL": "/images/logo/kiehls.png"
   },
   {
     "id": 5,
     "company" : "미디어PR",
-    "imgURL": "../../assets/images/logo/media-pr.png"
+    "imgURL": "/images/logo/media-pr.png"
   }
 ]
