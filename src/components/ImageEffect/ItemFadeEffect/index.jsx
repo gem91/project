@@ -185,7 +185,7 @@ const setTranslate = () => {
             <ImageType
               imgRef={imgRef1}
               type={'vertical'}
-              imgSrc={require('../../../assets/images/my_img03.jpg')}
+              imgSrc={require('../../../assets/images/my_img04.jpg')}
               title='Propulsive'
               tag='Good Point'
               small='view'
@@ -196,7 +196,7 @@ const setTranslate = () => {
             <ImageType
               imgRef={imgRef2}
               type={'horizon'}
-              imgSrc={require('../../../assets/images/my_img02.jpg')} 
+              imgSrc={require('../../../assets/images/my_img04.jpg')} 
               title='Inquisitive'
               tag='UX • UI'
               small='view'
@@ -221,7 +221,7 @@ const setTranslate = () => {
             <ImageType
               imgRef={imgRef4}
               type={'square'}
-              imgSrc={require('../../../assets/images/my_img01.jpg')}
+              imgSrc={require('../../../assets/images/my_img04.jpg')}
               title='Inquisitive'
               tag='Lettering'
               small='view'
