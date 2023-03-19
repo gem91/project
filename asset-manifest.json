@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/project/static/css/main.fb2c1c1e.css",
-    "main.js": "/project/static/js/main.7a7c07d4.js",
+    "main.css": "/project/static/css/main.b5f1d0b0.css",
+    "main.js": "/project/static/js/main.8503aa71.js",
     "static/media/bg-texture.jpg": "/project/static/media/bg-texture.3de7f0c415fde2b09d4f.jpg",
-    "static/media/my_img01.jpg": "/project/static/media/my_img01.9258b6277f4ec193215d.jpg",
-    "static/media/my_img02.jpg": "/project/static/media/my_img02.872fbad308bdaf336002.jpg",
+    "static/media/my_img02.jpg": "/project/static/media/my_img02.a0db711cd8763a5ca827.jpg",
     "static/media/kodex.jpg": "/project/static/media/kodex.cf8bcefc3316794f2a9c.jpg",
+    "static/media/my_img01.jpg": "/project/static/media/my_img01.28b1a0524a54f8055897.jpg",
+    "static/media/my_img04.jpg": "/project/static/media/my_img04.fa4eeea7e8ecc4bf024e.jpg",
     "static/media/hyundai-car.jpg": "/project/static/media/hyundai-car.186f5c00e802a0690357.jpg",
-    "static/media/my_img04.jpg": "/project/static/media/my_img04.cfba0b3ea3047024f83e.jpg",
-    "static/media/my_img03.jpg": "/project/static/media/my_img03.df39294c3b836b87100a.jpg",
+    "static/media/my_img03.jpg": "/project/static/media/my_img03.cfba0b3ea3047024f83e.jpg",
+    "static/media/profile.jpg": "/project/static/media/profile.82923ab2188cdbb9fb3e.jpg",
     "static/media/kids-hyundai.jpg": "/project/static/media/kids-hyundai.6d5f2ff4a6b9cc45fa22.jpg",
     "static/media/young-hyundai.jpg": "/project/static/media/young-hyundai.0613769ed5042c714eb6.jpg",
     "static/media/ico-kakao.png": "/project/static/media/ico-kakao.08127712a2fbeaab1b96.png",
@@ -16,11 +17,11 @@
     "static/media/hyundai.png": "/project/static/media/hyundai.e736ee2462af09d66d07.png",
     "static/media/kiehls.png": "/project/static/media/kiehls.a67b9cef22ad5ad9e657.png",
     "index.html": "/project/index.html",
-    "main.fb2c1c1e.css.map": "/project/static/css/main.fb2c1c1e.css.map",
-    "main.7a7c07d4.js.map": "/project/static/js/main.7a7c07d4.js.map"
+    "main.b5f1d0b0.css.map": "/project/static/css/main.b5f1d0b0.css.map",
+    "main.8503aa71.js.map": "/project/static/js/main.8503aa71.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb2c1c1e.css",
-    "static/js/main.7a7c07d4.js"
+    "static/css/main.b5f1d0b0.css",
+    "static/js/main.8503aa71.js"
   ]
 }
