@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/project/static/css/main.ad3f88b5.css",
-    "main.js": "/project/static/js/main.9e1d6289.js",
+    "main.css": "/project/static/css/main.fb2c1c1e.css",
+    "main.js": "/project/static/js/main.7a7c07d4.js",
     "static/media/bg-texture.jpg": "/project/static/media/bg-texture.3de7f0c415fde2b09d4f.jpg",
     "static/media/my_img01.jpg": "/project/static/media/my_img01.9258b6277f4ec193215d.jpg",
     "static/media/my_img02.jpg": "/project/static/media/my_img02.872fbad308bdaf336002.jpg",
@@ -11,14 +11,16 @@
     "static/media/my_img03.jpg": "/project/static/media/my_img03.df39294c3b836b87100a.jpg",
     "static/media/kids-hyundai.jpg": "/project/static/media/kids-hyundai.6d5f2ff4a6b9cc45fa22.jpg",
     "static/media/young-hyundai.jpg": "/project/static/media/young-hyundai.0613769ed5042c714eb6.jpg",
+    "static/media/ico-kakao.png": "/project/static/media/ico-kakao.08127712a2fbeaab1b96.png",
+    "static/media/ico-kakao_hover.png": "/project/static/media/ico-kakao_hover.82e05a59ab49ef503aea.png",
     "static/media/hyundai.png": "/project/static/media/hyundai.e736ee2462af09d66d07.png",
     "static/media/kiehls.png": "/project/static/media/kiehls.a67b9cef22ad5ad9e657.png",
     "index.html": "/project/index.html",
-    "main.ad3f88b5.css.map": "/project/static/css/main.ad3f88b5.css.map",
-    "main.9e1d6289.js.map": "/project/static/js/main.9e1d6289.js.map"
+    "main.fb2c1c1e.css.map": "/project/static/css/main.fb2c1c1e.css.map",
+    "main.7a7c07d4.js.map": "/project/static/js/main.7a7c07d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad3f88b5.css",
-    "static/js/main.9e1d6289.js"
+    "static/css/main.fb2c1c1e.css",
+    "static/js/main.7a7c07d4.js"
   ]
 }
