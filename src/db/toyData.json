@@ -4,27 +4,30 @@
     "title" : "Lotto JSX",
     "desc" : "REACT를 이용해서 만든 Lotto",
     "imgURL": "/images/logo/hyundai.png",
-    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN", "HTML" ],
+    "url" : "https://gem91.github.io/react-create-lotto/"
   },
   {
     "id": 1,
-    "title" : "Calculator JSX",
+    "title" : "YOUTUBE APP API",
     "desc": "REACT로 만든 계산기",
     "imgURL": "/images/logo/kia-b.png",
-    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+    "tags" : [ "REACT", "CSS", "JAVASCRIPT", "HTML" ],
+    "url" : "https://gem91.github.io/react-youtube/"
   },
   {
     "id": 2,
-    "title" : "키즈현대",
+    "title" : "Calculator JSX",
     "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/kids.png",
-     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+    "imgURL": "/images/logo/kia-b.png",
+    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ],
+    "url" : "https://gem91.github.io/react-create-lotto/"
   },
   {
     "id": 3,
     "title" : "키즈현대",
     "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/young.png",
+    "imgURL": "/images/logo/kids.png",
      "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
   },
   {

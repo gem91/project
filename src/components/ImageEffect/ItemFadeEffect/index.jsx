@@ -181,22 +181,22 @@ const setTranslate = () => {
     <>
      <div className={styles.imageFade}>
         <div className={styles.contLeft}>
-          <div className={`${styles.imageBox} ${styles.image2}`}>
+          <div className={`${styles.imageBox} ${styles.image1}`}>
             <ImageType
               imgRef={imgRef1}
               type={'vertical'}
-              imgSrc={require('../../../assets/images/my_img04.jpg')}
+              imgURL={require('../../../assets/images/my_img04.jpg')}
               title='Propulsive'
               tag='Good Point'
               small='view'
              />
             <InfoText title={'Propulsive'} tag='Good Point' small='view' />
           </div>
-          <div className={`${styles.imageBox} ${styles.image4}`}>
+          <div className={`${styles.imageBox} ${styles.image2}`}>
             <ImageType
               imgRef={imgRef2}
               type={'horizon'}
-              imgSrc={require('../../../assets/images/my_img04.jpg')} 
+              imgURL={require('../../../assets/images/my_img04.jpg')} 
               title='Inquisitive'
               tag='UX • UI'
               small='view'
@@ -206,22 +206,22 @@ const setTranslate = () => {
         </div>
 
         <div className={styles.contRight}>
-          <div className={`${styles.imageBox} ${styles.image1}`}>
+          <div className={`${styles.imageBox} ${styles.image3}`}>
             <ImageType
               imgRef={imgRef3}
               type={'horizon'}
-              imgSrc={require('../../../assets/images/my_img04.jpg')}
+              imgURL={require('../../../assets/images/my_img04.jpg')}
               title='Challenging'
               tag='Organization'
               small='view'
             />
             <InfoText title='Challenging' tag='Organization' small='view' />
           </div>
-          <div className={`${styles.imageBox} ${styles.image3}`}>
+          <div className={`${styles.imageBox} ${styles.image4}`}>
             <ImageType
               imgRef={imgRef4}
               type={'square'}
-              imgSrc={require('../../../assets/images/my_img04.jpg')}
+              imgURL={require('../../../assets/images/my_img04.jpg')}
               title='Inquisitive'
               tag='Lettering'
               small='view'

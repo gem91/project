@@ -7,20 +7,26 @@ const BadgeIcon = ({iconName}) => {
     case 'REACT' :
       bkColor = "#09e9cb";
       break;
-    case 'Vue' :
-      bkColor = "#29d84c";
+    case 'VUE' :
+      bkColor = "#1fb310";
       break;
     case 'SCSS' :
-      bkColor = "#ec0f6b";
+      bkColor = "#fa1458";
       break;
     case 'CSS' :
       bkColor = "#4c44c6";
+      break;
+    case 'JAVASCRIPT' :
+      bkColor = "#edc00b";
+      break;
+    case 'YARN' :
+      bkColor = "#0b8eed";
       break;
     case 'HTML' :
       bkColor = "#ed650b";
       break;
     case 'GIT' :
-      bkColor = "#1ce52a";
+      bkColor = "#1f9214";
       break;
     default : 
       bkColor = "#868686";

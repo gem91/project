@@ -1,14 +1,14 @@
 @import '../../../assets/scss/common/var';
 
-$image1Width: 100%;
-// $image1Height: 62.5%;
-// $imageIndent: $image1Height / 4;
-$image2Width: 66.666666%;
-// $image2Height: 125%;
 $image3Width: 100%;
-// $image3Height: 100%;
-$image4Width: 133.333333%;
-// $image4Height: 62.5%;
+// $image3Height: 62.5%;
+// $imageIndent: $image3Height / 4;
+$image1Width: 66.666666%;
+// $image1Height: 125%;
+$image4Width: 100%;
+// $image4Height: 100%;
+$image2Width: 133.333333%;
+// $image2Height: 62.5%;
 
 
 .imageFade {
@@ -69,6 +69,7 @@ $image4Width: 133.333333%;
       opacity: 1;
       letter-spacing: -3px;
       transform: translateY(-50%);
+      opacity: 0;
       transition: all 0.25s ease-in-out;
       .title {
         margin-top: 10px;
@@ -163,7 +164,7 @@ $image4Width: 133.333333%;
   @return percentage($col / $max-col);
 }
 
-.image1 {
+.image3 {
   width: 100%;
   .textBox {
     top: 37.5%;
@@ -173,22 +174,22 @@ $image4Width: 133.333333%;
   }
 }
 
-.image2 {
-  width: $image2Width;
+.image1 {
+  width: $image1Width;
   margin-top: 66.8%;
 }
 
-.image3 {
+.image4 {
   // Margin top = prevheight(vert = 125% of 66%)(82.5) - prevIdentation(1/4) - MyIdentation(1/4)
-  // ($image2Height * $image2Width) / 100
+  // ($image1Height * $image1Width) / 100
   margin-top: 103%;
-  width: $image3Width;
+  width: $image4Width;
   transform: translateX(#{col-to-percentage(2)});
 }
-.image4 {
+.image2 {
   margin-top: 108%;
   transform: translateX(-25%);
-  width: $image4Width;
+  width: $image2Width;
 }
 
 @media screen and (max-width: 768px) {
@@ -199,10 +200,22 @@ $image4Width: 133.333333%;
       .imageBox{
         margin-top: 0;
         width: 100%;
+        .horizon + .textBox, .horizon .textBox{
+          left: 0;
+        }
+        &:hover {
+          .item{
+            &::before {
+              background: #00000040;
+            }
+          }
+        }
       }
       .textBox{
         width: 100%;
         left: 0;
+        letter-spacing: 0;
+     
         .title, .tag, .smText{
           color: #fff;
         }
@@ -220,13 +233,33 @@ $image4Width: 133.333333%;
         }
       }
     }
+    .contLeft{
+      .imageBox{
+        .horizon + .textBox, .horizon .textBox{
+          left: 0;
+        }
+        .vertical + .textBox, .vertical .textBox{
+          left: 0;
+        }
+      }
+    }
+    .contRight{
+      .imageBox{
+        .horizon + .textBox, .horizon .textBox{
+          left: 0%
+        }
+        .square + .textBox, .square .textBox{
+          left: 0%;
+        }
+      }
+    }
   }
 
   
-  .image3{
+  .image4{
     transform: translateX(0);
   }
-  .image4{
+  .image2{
     width: 100%;
     transform: translateX(0);
   }

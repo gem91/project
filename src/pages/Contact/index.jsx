@@ -10,6 +10,10 @@ import styles from './Contact.module.scss'
 import PageNav from '../../components/PageNav';
 
 const Contact = ({isMobile}) => {
+  const [ name, setName ] = useState('');
+  const [ mail, setMail ] = useState('');
+  const [ context, setContext ] = useState('');
+
   const formRef = useRef();
   const textArea = useRef();
 
@@ -28,7 +32,10 @@ const Contact = ({isMobile}) => {
     })
   }
 
-
+ const handleCancel = (e) => {
+  // const target = e.target.value
+  console.log(textArea);
+ }
   // const onChange = (e) => {
   //   let text = e.target.value
   //   setMail(text)
@@ -45,15 +52,16 @@ const Contact = ({isMobile}) => {
         <div className={styles.content}>
           <div className={styles.leftCont}>
             <h3 className={styles.title}>Hello</h3>
-            <p>
-              I can help design and build you next website. Let me know what you need by filling in this quick 
+            <p className={styles.desc}>
+              어머나😍 여기까지 와주셔서 감사합니다.<br />
+              저와 함께 &lsquo;<span>무</span>&rsquo;에서 &lsquo;<span>유</span>&rsquo;를 함께 창조하고싶으신 분들은 아래 내용을 채워서 메일을 보내주세요.
             </p>
             <form ref={formRef} onSubmit={sendEmail}>
               <input  className={styles.formText} id="name" type="text" placeholder='이름' />
               <input ref={textArea} className={styles.formText} id="email" type="text" placeholder='abc@gmail.com' />
               <textarea className={styles.formTextarea} id="message" cols="50" rows="10" placeholder='Enter Your Message'></textarea>
               <div className={styles.btnArea}>
-                <Mbutton innerText={'Re-Write'} type={'button'} role={'cancel'} />
+                <Mbutton innerText={'Re-Write'} type={'button'} role={'cancel'} onClick={handleCancel} />
                 <Mbutton innerText={'Send'} type={'submit'} role={'send'} />
               </div>
             </form>       

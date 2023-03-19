@@ -13,7 +13,7 @@ import { Mousewheel, Navigation } from "swiper";
 
 
 
-const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setLink, onPopup}) => {
+const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setLink, onPopup, isMobile}) => {
   const handleCardImg = (e) => {
     const target = e.currentTarget;
     const { src, alt } = target
@@ -29,6 +29,7 @@ const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, set
       }
     })
   }
+
 
   return (
     <div className={styles.imgLists}>
@@ -55,7 +56,7 @@ const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, set
       >
       { imgData.map(({srcURL, alt}, idx) => (
         <SwiperSlide key={idx} >
-          <span className={styles.thumb} onClick={onPopup}>
+          <span className={styles.thumb} onClick={ isMobile && onPopup}>
             <img src={srcURL}alt={alt} onClick={handleCardImg} />
           </span>
         </SwiperSlide>

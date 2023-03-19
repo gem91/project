@@ -15,8 +15,8 @@
     position: relative;
     height: calc(100vh / #{$itemsNo});
     border-bottom: 1px solid #bc9b8f;
-    background-color: #424242;
-    transition: all .5s ease;
+    background-color: #000;
+    transition: all $default-speed;
     animation: flipdown 0.5s ease both;
 
     &:hover {

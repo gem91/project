@@ -7,21 +7,24 @@ import Popup from '../Popup';
 
 import styles from './BlogImage.module.scss';
 
-const BlogCard = ({imgData}) => {
+const BlogCard = ({data, isMobile}) => {
   const fullImgRef = useRef(null)
   const fullTitleRef = useRef(null)
   const fullDescRef = useRef(null)
   const linkRef = useRef(null)
 
-  const [ mainImg, setMainImg ] = useState(imgData[0].srcURL);
-  const [ mainAlt, setMainAlt ] = useState(imgData[0].alt)
-  const [ title, setTitle ] = useState(imgData[0].title)
-  const [ desc, setDesc ] = useState(imgData[0].desc)
-  const [ link , setLink ] = useState(imgData[0].site)
-  const [ isToggle, setIsToggle] = useState(false);
+  const [ mainImg, setMainImg ] = useState(data[0].srcURL);
+  const [ mainAlt, setMainAlt ] = useState(data[0].alt)
+  const [ title, setTitle ] = useState(data[0].title)
+  const [ desc, setDesc ] = useState(data[0].desc)
+  const [ link , setLink ] = useState(data[0].site)
+  const [ tags , setTags ] = useState(data[0].skill)
+  const [ client , setClient ] = useState(data[0].client)
+  const [ date , setDate ] = useState(data[0].date)
+  const [ isPopup, setIsPopup] = useState(false);
 
  const openPopup = (e) => {
-  setIsToggle(true)
+  setIsPopup(true)
  }
 
   return (
@@ -30,7 +33,7 @@ const BlogCard = ({imgData}) => {
     <button className={styles.mainImg} onClick={openPopup}><img ref={fullImgRef} src={mainImg} alt={mainAlt} /></button>
     <div className={styles.blogContent}>
       <div className={styles.btnWrap}>
-        <Mbutton onClick={openPopup} innerText={'More Detail'} setIsToggle={setIsToggle} />
+        <Mbutton onClick={openPopup} innerText={'More Detail'} setIsPopup={setIsPopup} />
         <Link ref={linkRef} to={link} target="_blank">Go To Site</Link>
       </div>
       <div className={styles.textBox}>
@@ -38,7 +41,7 @@ const BlogCard = ({imgData}) => {
         <p ref={fullDescRef} className={styles.desc}>{desc}</p>
       </div>
       <BlogCardLists
-        imgData={imgData}
+        imgData={data}
         setMainImg={setMainImg}
         mainImg={mainImg}
         setMainAlt={setMainAlt}
@@ -47,19 +50,21 @@ const BlogCard = ({imgData}) => {
         setDesc={setDesc}
         setLink={setLink}
         onPopup={openPopup}
+        isMobile={isMobile}
        />
     </div>
   </div>
   {/* popup */}
-  { isToggle &&
+  { isPopup &&
     <Popup 
-      imgs={imgData}
       title={title} 
       desc={desc} 
       mainImg={mainImg} 
       mainAlt={mainAlt} 
-      isToggle={isToggle}
-      setIsToggle={setIsToggle}
+      tags={tags}
+      client={client}
+      date={date}
+      setIsPopup={setIsPopup}
     />
   }
   </>

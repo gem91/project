@@ -2,17 +2,17 @@ import React from 'react';
 import styles from './Button.module.scss'
 
 
-const Mbutton = ({innerText = 'button', type = 'button', role, setIsToggle} ) => {
+const Mbutton = ({innerText = 'button', type = 'button', role, setIsPopup} ) => {
 
    const handleToggle = (e) => {
-      setIsToggle(true)
+      setIsPopup(true)
     }
     const test = (e) => {
       console.log('test');
     }
   return (
     <>
-    { setIsToggle && 
+    { setIsPopup && 
       <button 
         className={`${styles.mButton} ${styles[role]}`} 
         type={type} 
@@ -21,7 +21,7 @@ const Mbutton = ({innerText = 'button', type = 'button', role, setIsToggle} ) =>
         {innerText}
       </button>
     }
-    { !setIsToggle &&
+    { !setIsPopup &&
       <button 
         className={`${styles.mButton} ${styles[role]}`} 
         type={type} 

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './ThumbImg.module.scss';
 
-const ThumbImg = ({imgSrc, imgAlt, width, height}) => (
+const ThumbImg = ({imgURL, imgAlt, width, height}) => (
   <div className={styles.thumb} style={{width: `${width}%`, height: `${height}%`}}>
-    <img src={imgSrc} alt={imgAlt}  />
+    <img src={imgURL} alt={imgAlt}  />
   </div>
   );
 

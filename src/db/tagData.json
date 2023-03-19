@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "type" : "vertical",
+    "imgURL": "/images/my_img04.jpg",
+    "title" : "Propulsive",
+    "tag" : "Good Point",
+    "small" : "VIEW"
+  },
+  {
+    "id": 2,
+    "type" : "horizon",
+    "imgURL": "/images/my_img04.jpg",
+    "title" : "Inquisitive",
+    "tag" : "UX • UI",
+    "small" : "VIEW"
+  },
+  {
+    "id": 3,
+    "type" : "vertical",
+    "imgURL": "/images/my_img04.jpg",
+    "title" : "Challenging",
+    "tag" : "Organization",
+    "small" : "VIEW"
+  },
+  {
+    "type" : "vertical",
+    "imgURL": "/images/my_img04.jpg",
+    "title" : "Inquisitive",
+    "tag" : "Lettering",
+    "small" : "VIEW"
+  }
+]

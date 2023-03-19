@@ -65,7 +65,7 @@ function Home() {
               <Main isMobile={isMobile} isPc={isPc} />}>
             </Route>
             <Route path="/web" element={
-              <Portfolio />}>
+              <Portfolio isMobile={isMobile} />}>
             </Route>
              <Route path="/toy" element={
               <ToyProject />}>

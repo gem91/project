@@ -1,5 +1,7 @@
 
 @import '../../assets/scss/common/mixin';
+@import '../../assets/scss/common/var';
+
 
 .toyProject{
   overflow-y: scroll;
@@ -9,13 +11,78 @@
   section {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
-    &.intro, &.extra {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: aquamarine;
+    .container{
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 200px 0;
+    }
+    &.intro{
+      .container{
+        padding: 200px 0 300px;
+        .title{
+          margin-top: 100px;
+          font-size: 4rem;
+          font-family: 'Abril Fatface', cursive;
+          opacity: 0;
+          transform: translate3d(-20px, 0, 0);
+        }
+        p{
+          font-size: 1.5rem;
+          opacity: 0;
+          transform: translate3d(-20px, 0, 0);
+        }
+      }
+    }
+    &.extra {
+      .container{
+        .title{
+          position: relative;
+          display: inline-block;
+          font-size: 4rem;
+          font-family: 'Abril Fatface', cursive;
+          opacity: 0;
+          transform: translate3d(-20px, 0, 0);
+          &:before, &:after{
+            position: absolute;
+            opacity: 0;
+            transition: all $default-speed;
+          }
+          &:before{
+            content: "I'm Always Waiting You";
+            top: -35px;
+            right: -10px;
+            padding: 5px 10px;
+            display: block;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #15f4f0;
+            border-radius: 20px;
+           
+          }
+          &:after{
+            content: "";
+            top: -1px;
+            right: 20px;
+            border-top: 10px solid #15f4f0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 0px solid transparent;
+          }
+          &:hover{
+            &:before, &:after{
+             opacity: 1;
+            }
+          }
+        }
+         p{
+          margin-top: 20px;
+          font-size: 2rem;
+          opacity: 0;
+          transform: translate3d(-20px, 0, 0);
+        }
+      }
     }
   }
   .panels {
@@ -25,7 +92,7 @@
       flex-wrap: nowrap;
       padding: 0;
       overflow: hidden;
-      background-color: #ddd;
+      background-color: #5e5951;
 
       .panel {
         position: relative;
@@ -48,10 +115,29 @@
           max-width: 70vw;
 
           .itemImage {
+            position: relative;
             width: 60%;
-            overflow: hidden;
+          
+            &::before{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 100%;
+              border: 1px solid $basic-pale-color;
+              transform: scale(1.03);
+            }
             img {
               @include image-cover();
+              opacity: .7;
+              filter: blur(2px);
+              transition: $default-speed;
+              &:hover{
+                filter: blur(0);
+                opacity: 1
+              }
             }
           }
 
@@ -63,9 +149,9 @@
             color: #fff;
             transform: translate(0, -50%);
             .title {
-                font-size: 4.5rem;
-                font-weight: bold;
-                line-height: 1;
+              font-size: 4.5rem;
+              font-weight: bold;
+              line-height: 1;
             }
             .desc{
               margin-top: 10px;
@@ -74,12 +160,23 @@
             .tags{
               margin-top: 20px;
               display: flex;
+              flex-wrap: wrap;
               & li{
                 margin-right: 2px;
               }
             }
             .btnWrap{
               margin-top: 15px;
+              > a {
+                padding: 3px 8px;
+                font-size: .8rem;
+                border-radius: 2px;
+                background-color: $color-basic-light;
+                transition: $default-speed;
+                &:hover{
+                  background-color: $color-basic;
+                }
+              }
             }
           }
         }
