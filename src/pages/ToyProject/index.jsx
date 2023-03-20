@@ -11,6 +11,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PageNav from '../../components/PageNav';
 import ArticleTemplete from './ArticleTemplete';
 import BreadCrumbs from '../../components/BreadCrumbs';
+import ScrollSign from '../../components/ScrollSign';
 
 
 const ToyProject = (props) => {
@@ -130,6 +131,7 @@ const ToyProject = (props) => {
         </div>
       </section>
       <PageNav nextName={'contact'} nextLink={'/contact'} prevLink={'/web'} prevName={'web site'} />
+      <ScrollSign />
     </div>
   )
 };
