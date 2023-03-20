@@ -156,10 +156,12 @@
               font-size: 4.5rem;
               font-weight: bold;
               line-height: 1;
+              text-shadow: -1px 3px 6px #414141;
             }
             .desc{
               margin-top: 10px;
               font-size: 1.2rem;
+              text-shadow: -1px 3px 6px #414141;
             }
             .tags{
               margin-top: 20px;
@@ -170,10 +172,10 @@
               }
             }
             .btnWrap{
-              margin-top: 15px;
+              margin-top: 18px;
               > a {
-                padding: 3px 8px;
-                font-size: .8rem;
+                padding: 6px 18px;
+                font-size: .9rem;
                 border-radius: 2px;
                 background-color: $color-basic-light;
                 transition: $default-speed;
@@ -313,6 +315,7 @@
               bottom: 0;
               width: 90%;
               height: 40%;
+              
               .title {
                 font-size: 2rem;
               }

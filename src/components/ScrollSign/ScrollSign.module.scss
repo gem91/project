@@ -1,12 +1,35 @@
 @import '../../assets/scss/common/var';
 
+@keyframes arrowAni {
+  0%{
+    opacity: 0;
+    top: 14px;
+  }
+  100%{
+    opacity: 1;
+    top: 20px;
+  }
+}
+
+@keyframes textAni {
+  0%{
+    opacity: 0;
+    bottom: 7%;
+  }
+  100%{
+    opacity: 1;
+    bottom: 5%;
+  }
+}
+
+
 .scroll{
   position: fixed;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   color: $basic-pale-color;
-  animation: ani2 1.5s infinite ease-in;
+  animation: textAni 1.5s infinite ease-in;
   &:after{
     content: '';
     position: absolute;
@@ -18,32 +41,18 @@
     border-top: 1px solid $basic-pale-color;
     border-right: 1px solid $basic-pale-color;
     transform: translateX(-50%) rotate(135deg);
-    animation: ani 1.5s infinite ease-in;
+    animation: arrowAni 1.5s infinite ease-in;
   }
 
   .text{
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
-@keyframes ani {
-  0%{
-    opacity: 0;
-    top: 14px;
-  }
-  100%{
-    opacity: 1;
-    top: 20px;
-  }
-}
-
-@keyframes ani2 {
-  0%{
-    opacity: 0;
-    bottom: 7%;
-  }
-  100%{
-    opacity: 1;
-    bottom: 5%;
+@media screen and (max-width: 1024px) {
+  .scroll{
+    .text{
+      font-size: .8rem;
+    }
   }
 }

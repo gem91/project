@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './ToyProject.module.scss'
 
 // data
@@ -117,7 +117,7 @@ const ToyProject = (props) => {
       </section>
 
       <section ref={panelsRef} className={styles.panels}>
-        <div ref={containRef} className={styles.panelPath} style={{width: '500%'}}>
+        <div ref={containRef} className={styles.panelPath} style={{width: `${toyData.length}00%`}}>
         { toyData.map((data)=> (
             <ArticleTemplete data={data} />
           ))}

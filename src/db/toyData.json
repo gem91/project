@@ -1,17 +1,17 @@
 [
   {
     "id": 0,
-    "title" : "Lotto JSX",
-    "desc" : "REACT를 이용해서 만든 Lotto",
-    "imgURL": "/images/logo/hyundai.png",
+    "title" : "인생은 한방 Lotto APP",
+    "desc" : "REACT 프레임워크로 만든 인생한방 Lotto",
+    "imgURL": "/images/works/lotto.jpg",
     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN", "HTML" ],
     "url" : "https://gem91.github.io/react-create-lotto/"
   },
   {
     "id": 1,
-    "title" : "YOUTUBE APP API",
-    "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/kia-b.png",
+    "title" : "YOUTUBE API APP",
+    "desc": "유튜브 API 호출해서 만든 어플리케이션",
+    "imgURL": "/images/works/youtube.jpg",
     "tags" : [ "REACT", "CSS", "JAVASCRIPT", "HTML" ],
     "url" : "https://gem91.github.io/react-youtube/"
   },
@@ -20,28 +20,7 @@
     "title" : "Calculator JSX",
     "desc": "REACT로 만든 계산기",
     "imgURL": "/images/logo/kia-b.png",
-    "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ],
-    "url" : "https://gem91.github.io/react-create-lotto/"
-  },
-  {
-    "id": 3,
-    "title" : "키즈현대",
-    "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/kids.png",
-     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
-  },
-  {
-    "id": 4,
-    "title" : "키엘",
-    "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/kiehls.png",
-     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
-  },
-  {
-    "id": 5,
-    "title" : "미디어PR",
-    "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/media-pr.png",
-     "tags" : [ "REACT", "SCSS", "JAVASCRIPT", "YARN" ]
+    "tags" : [ "REACT", "CSS", "JAVASCRIPT", "YARN" ],
+    "url" : "https://gem91.github.io/react-calc-mission/"
   }
 ]
