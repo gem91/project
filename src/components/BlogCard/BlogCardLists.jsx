@@ -13,19 +13,20 @@ import { Mousewheel, Navigation } from "swiper";
 
 
 
-const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setLink, onPopup, isMobile}) => {
+const BlogCardLists = ({imgData, mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setLink, onPopup, isMobile}) => {
   const handleCardImg = (e) => {
+    e.preventDefault();
     const target = e.currentTarget;
     const { src, alt } = target
     if (src === mainImg) return;
     fullImgRef.current.setAttribute('src', setMainImg(src))
     fullImgRef.current.setAttribute('alt', setMainAlt(alt))
 
-    imgData.map(({title,desc, srcURL, site}) => {
-      if( src === srcURL ){
+    imgData.map(({title, desc, imgURL, link}) => {
+      if( src === imgURL ){
         setTitle(title)
         setDesc(desc)
-        setLink(site)
+        setLink(link)
       }
     })
   }
@@ -54,17 +55,15 @@ const BlogCardLists = ({imgData,mainImg, setMainImg, setMainAlt, fullImgRef, set
         speed={2000}
         modules={[ Mousewheel, Navigation ]}
       >
-      { imgData.map(({srcURL, alt}, idx) => (
-        <SwiperSlide key={idx} >
+      { imgData.map(({imgURL, alt, id}) => (
+        <SwiperSlide key={id}>
           <span className={styles.thumb} onClick={ isMobile ? onPopup : undefined}>
-            <img src={srcURL}alt={alt} onClick={handleCardImg} />
+            <img src={imgURL} alt={alt} onClick={handleCardImg} />
           </span>
         </SwiperSlide>
       ))}
       </Swiper> 
     </div>
-
-  
   )
 };
 

@@ -19,8 +19,56 @@
     "id": 2,
     "title" : "Calculator JSX",
     "desc": "REACT로 만든 계산기",
-    "imgURL": "/images/logo/kia-b.png",
+    "imgURL": "/images/works/calculator.jpg",
     "tags" : [ "REACT", "CSS", "JAVASCRIPT", "YARN" ],
     "url" : "https://gem91.github.io/react-calc-mission/"
+  },
+  {
+    "id": 3,
+    "title" : "REACT 체크리스트 APP",
+    "desc": "HTML, CSS로 만든 Responsible Homepage",
+    "imgURL": "/images/works/coding1.jpg",
+    "tags" : [ "REACT", "CSS", "JAVASCRIPT", "HTML", "YARN" ],
+    "url" : "https://gem91.github.io/react-habit-tracker/"
+  },
+  {
+    "id": 4,
+    "title" : "Hyundai 반응형 연습페이지",
+    "desc": "HTML, CSS로 만든 Responsible Homepage",
+    "imgURL": "/images/works/coding1.jpg",
+    "tags" : [ "HTML", "CSS", "JAVASCRIPT" ],
+    "url" : "https://gem91.github.io/hyundai_recruit_test/"
+  },
+  {
+    "id": 5,
+    "title" : "Interaction Color Change",
+    "desc": "옵션 컬러칩에 맞는 색상으로 변하는 효과",
+    "imgURL": "/images/works/car-color-change.gif",
+    "tags" : [ "CSS", "JAVASCRIPT", "HTML" ],
+    "url" : "https://gem91.github.io/ex_interaction/car_slider/index.html"
+  },
+  {
+    "id": 6,
+    "title" : "Interaction 모션 이펙트",
+    "desc": "마우스가 움직이면 포지션값에 의해 변화하는 화면 이펙트 사이트",
+    "imgURL": "/images/works/sequence-motion.gif",
+    "tags" : [ "HTML", "JAVASCRIPT", "CSS" ],
+    "url" : "https://gem91.github.io/ex_interaction/imgs_sequence_motion/index.html"
+  },
+  {
+    "id": 7,
+    "title" : "파라노마 UI 모션 이펙트",
+    "desc": "무한회전으로 돌아가는 UI 인터렉터 디자인 사이트",
+    "imgURL": "/images/works/panorama-ui.gif",
+    "tags" : [ "HTML", "JAVASCRIPT", "CSS" ],
+    "url" : "https://gem91.github.io/ex_interaction/panorama_UI/index.html"
+  },
+  {
+    "id": 8,
+    "title" : "API 뉴스기사 with VUE",
+    "desc": "HTML, CSS로 만든 Responsible Homepage",
+    "imgURL": "/images/works/api-news-list.jpg",
+    "tags" : [ "VUE", "CSS", "HTML" ],
+    "url" : "https://gem91.github.io/index.html"
   }
 ]

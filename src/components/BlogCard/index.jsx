@@ -13,16 +13,16 @@ const BlogCard = ({data, isMobile}) => {
   const fullDescRef = useRef(null)
   const linkRef = useRef(null)
 
-  const [ mainImg, setMainImg ] = useState(data[0].srcURL);
+  const [ mainImg, setMainImg ] = useState(data[0].imgURL);
   const [ mainAlt, setMainAlt ] = useState(data[0].alt)
   const [ title, setTitle ] = useState(data[0].title)
   const [ desc, setDesc ] = useState(data[0].desc)
-  const [ link , setLink ] = useState(data[0].site)
+  const [ link , setLink ] = useState(data[0].link)
   const [ tags , setTags ] = useState(data[0].skill)
   const [ client , setClient ] = useState(data[0].client)
   const [ date , setDate ] = useState(data[0].date)
   const [ isPopup, setIsPopup] = useState(false);
-
+  
  const openPopup = (e) => {
   setIsPopup(true)
  }
