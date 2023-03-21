@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './Portfolio.module.scss';
 
 // data
-import webData from '../../db/webData.json'
+import webData from 'db/webData.json'
 
-import BreadCrumbs from '../../components/BreadCrumbs';
-import BlogCard from '../../components/BlogCard';
-import PageNav from '../../components/PageNav';
+import BreadCrumbs from 'components/BreadCrumbs';
+import BlogCard from 'components/BlogCard';
+import PageNav from 'components/PageNav';
 
 const Portfolio = ({isMobile}) => {
  

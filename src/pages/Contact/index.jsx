@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 //components
-import BreadCrumbs from '../../components/BreadCrumbs';
-import Mbutton from '../../components/Button/Mbutton';
-import Instagram from '../../components/Instagram';
+import BreadCrumbs from 'components/BreadCrumbs';
+import Mbutton from 'components/Button/Mbutton';
+import Instagram from 'components/Instagram';
 
 import styles from './Contact.module.scss'
-import PageNav from '../../components/PageNav';
+import PageNav from 'components/PageNav';
 
 const Contact = ({isMobile}) => {
   const [ name, setName ] = useState('');

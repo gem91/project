@@ -1,17 +1,17 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './ToyProject.module.scss'
 
 // data
-import toyData from '../../db/toyData.json'
+import toyData from 'db/toyData.json'
 
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import PageNav from '../../components/PageNav';
+import PageNav from 'components/PageNav';
 import ArticleTemplete from './ArticleTemplete';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import ScrollSign from '../../components/ScrollSign';
+import BreadCrumbs from 'components/BreadCrumbs';
+import ScrollSign from 'components/ScrollSign';
 
 
 const ToyProject = (props) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PageNav.module.scss'
-import bgImg from '../../assets/images/bg-texture.jpg';
+import bgImg from 'assets/images/bg-texture.jpg';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronRight, faChevronLeft} from '@fortawesome/free-solid-svg-icons'

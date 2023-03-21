@@ -2,22 +2,22 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Main.module.scss';
 
 // data
-import skillData from '../../db/skills.json'
-import companyLogos from '../../db/projectLogo.json'
-import bannerData from '../../db/testData.json';
+import skillData from 'db/skills.json'
+import companyLogos from 'db/projectLogo.json'
+import bannerData from 'db/testData.json';
 
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //components
-import Instagram from '../../components/Instagram';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import TabComponent from '../../components/TabComponent';
-import SliderEffects from '../../components/SliderEffect';
-import LightTextEffect from '../../components/LightTextEffect';
-import PageNav from '../../components/PageNav';
-import ImgScaleEffect from '../../components/ImageEffect/ImgScaleEffect';
-import ItemFadeEffect from '../../components/ImageEffect/ItemFadeEffect';
+import Instagram from 'components/Instagram';
+import BreadCrumbs from 'components/BreadCrumbs';
+import TabComponent from 'components/TabComponent';
+import SliderEffects from 'components/SliderEffect';
+import LightTextEffect from 'components/LightTextEffect';
+import PageNav from 'components/PageNav';
+import ImgScaleEffect from 'components/ImageEffect/ImgScaleEffect';
+import ItemFadeEffect from 'components/ImageEffect/ItemFadeEffect';
 
 
 const Main = ({isMobile, isPc}) => {

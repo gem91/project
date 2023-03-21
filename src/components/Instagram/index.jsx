@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Instagram.module.scss';
 
-import myProfile from '../../assets/images/profile.jpg'
+import myProfile from 'assets/images/profile.jpg'
 
+//components
 import InstaIcon from '../IconItems/InstaIcon';
 import KakaoIcon from '../IconItems/KakaoIcon';
 import MessageIcon from '../IconItems/MessageIcon';

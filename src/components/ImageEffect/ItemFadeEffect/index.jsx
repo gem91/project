@@ -139,7 +139,7 @@ const ItemFadeEffect = ({isPc}) => {
             <ImageType
               imgRef={imgRef1}
               type={'vertical'}
-              imgURL={require('../../../assets/images/my_img01.jpg')}
+              imgURL={require('assets/images/my_img01.jpg')}
               title='Propulsion'
               tag='Good Point'
               small='생각을 행동으로 추진'
@@ -150,7 +150,7 @@ const ItemFadeEffect = ({isPc}) => {
             <ImageType
               imgRef={imgRef2}
               type={'horizon'}
-              imgURL={require('../../../assets/images/my_img02.jpg')} 
+              imgURL={require('assets/images/my_img02.jpg')} 
               title='Inquisitivity'
               tag='UX • UI'
               small='호기심이 많은'
@@ -164,7 +164,7 @@ const ItemFadeEffect = ({isPc}) => {
             <ImageType
               imgRef={imgRef3}
               type={'horizon'}
-              imgURL={require('../../../assets/images/my_img03.jpg')}
+              imgURL={require('assets/images/my_img03.jpg')}
               title='Challenging'
               tag='Strength'
               small='도전적인 나'
@@ -175,7 +175,7 @@ const ItemFadeEffect = ({isPc}) => {
             <ImageType
               imgRef={imgRef4}
               type={'square'}
-              imgURL={require('../../../assets/images/my_img04.jpg')}
+              imgURL={require('assets/images/my_img04.jpg')}
               title='Receptive'
               tag='ORGANIZATION'
               small='수용적인 넓은 생각'
