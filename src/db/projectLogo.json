@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "company" : "키즈현대",
-    "imgURL": "/images/logo/kids.png"
+    "company" : "N 브랜드",
+    "imgURL": "/images/logo/n-brand.png"
   },
   {
     "id": 3,
     "company" : "키즈현대",
-    "imgURL": "/images/logo/young.png"
+    "imgURL": "/images/logo/kids.png"
   },
   {
     "id": 4,
@@ -28,5 +28,20 @@
     "id": 5,
     "company" : "미디어PR",
     "imgURL": "/images/logo/media-pr.png"
+  },
+  {
+    "id": 6,
+    "company" : "영현대",
+    "imgURL": "/images/logo/young.png"
+  },
+  {
+    "id": 7,
+    "company" : "KODEX",
+    "imgURL": "/images/logo/kodex.png"
+  },
+  {
+    "id": 8,
+    "company" : "타시모",
+    "imgURL": "/images/logo/tassimo.png"
   }
 ]
