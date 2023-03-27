@@ -2,10 +2,11 @@ import React from 'react';
 import BadgeIcon from '../IconItems/BadgeIcon';
 import styles from './popup.module.scss'
 
-const Popup = ({title, desc, mainImg, mainAlt, setIsPopup, tags, date, client}) => {
-  const closePopup = (e) => {
-    setIsPopup(false)
-  }
+const Popup = ({ images, title, stringArr, tags, date, client, mainImg, mainAlt, setIsPopup}) => {
+  
+  // const stringArr = desc.split('.')
+  const closePopup = (e) => setIsPopup(false)
+
   return (
   <aside className={styles.popupLayer}>
     <div className={styles.popupContainer}>
@@ -13,13 +14,17 @@ const Popup = ({title, desc, mainImg, mainAlt, setIsPopup, tags, date, client}) 
       <div className={styles.scrollWrap}>
         <div className={styles.topImage}>
           <span className={styles.thumb}>
-            <img src={mainImg} alt={mainAlt} />
+            <img src={process.env.PUBLIC_URL + mainImg} alt={mainAlt} />
           </span>
         </div>
         <div className={styles.contentWrap}>
           <div className={styles.left}>
             <span className={styles.subTitle}>Creative <br />I Stand</span>
-            <p className={styles.desc}>{desc}</p>
+            <p className={styles.desc}>
+            { stringArr.map((sentence, index) => (
+              <span key={index}>{sentence}.</span>
+            ))}
+            </p>
           </div>
           <div className={styles.right}>
             <dl className={styles.log}>
@@ -28,11 +33,16 @@ const Popup = ({title, desc, mainImg, mainAlt, setIsPopup, tags, date, client}) 
               <dt>DATE :</dt>
               <dd>{date}</dd>
               <dt>SKILL :</dt>
-              <dd>
+              <dd className={styles.tag}>
                 { tags.map( item => <BadgeIcon key={item} iconName={item} />) }
               </dd>
             </dl>
           </div>
+          <div className={styles.projectImages}>
+              {images.map( img => (
+                <img src={require(`../../assets/images${img}`)} alt={mainAlt} />
+              ))}
+            </div>
         </div>
       </div>
     </div>

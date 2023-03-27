@@ -28,7 +28,10 @@ const Instagram = (props) => {
         </div>					
       </div>
       <p className={styles.text}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eius architecto rem delectus! Suscipit, fuga eum eligendi placeat nemo vel!
+        디자이너 감각으로 UX·UI 고려하는 #Technician!<br />
+        클라이언트 입장에서 편리하고 만족할 서비스가 어떤건지 상상하는 나는야 아이디어 뱅크! <br />
+        나는 오늘도 어제보다 더 성장했다..!
+        <br />
       </p>
     </div>
   </div>

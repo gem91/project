@@ -9,7 +9,7 @@ const ContactIcon = ({setCursorStyle, cursorBasic}) => {
     const hoverStyle = {
       width: '40px',
       height: '40px',
-      background: 'red'
+      background: '#927aff',
     };
     setCursorStyle(hoverStyle)
   }

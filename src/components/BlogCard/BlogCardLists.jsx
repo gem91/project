@@ -11,26 +11,26 @@ import "swiper/css/navigation";
 // import required modules
 import { Mousewheel, Navigation } from "swiper";
 
+const BlogCardLists = ({imgData, mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setId, setLink, onPopup, isMobile}) => {
 
-
-const BlogCardLists = ({imgData, mainImg, setMainImg, setMainAlt, fullImgRef, setTitle, setDesc, setLink, onPopup, isMobile}) => {
-  const handleCardImg = (e) => {
+  const handleCardImg = (id, e) => {
     e.preventDefault();
     const target = e.currentTarget;
     const { src, alt } = target
-    if (src === mainImg) return;
-    fullImgRef.current.setAttribute('src', setMainImg(src))
+
+    let getTextPosition = src.indexOf('/works');
+    let srcString = src.substr(getTextPosition);
+    if ( srcString === mainImg ) return;
+
+    // 큰 이미지에 정보값 넣기
+    fullImgRef.current.setAttribute('src', setMainImg(srcString))
     fullImgRef.current.setAttribute('alt', setMainAlt(alt))
 
-    imgData.map(({title, desc, imgURL, link}) => {
-      if( src === imgURL ){
-        setTitle(title)
-        setDesc(desc)
-        setLink(link)
-      }
-    })
+    setId(id)
+    setDesc(imgData[id].desc)
+    setTitle(imgData[id].title)
+    setLink(imgData[id].link)
   }
-
 
   return (
     <div className={styles.imgLists}>
@@ -58,7 +58,7 @@ const BlogCardLists = ({imgData, mainImg, setMainImg, setMainAlt, fullImgRef, se
       { imgData.map(({imgURL, alt, id}) => (
         <SwiperSlide key={id}>
           <span className={styles.thumb} onClick={ isMobile ? onPopup : undefined}>
-            <img src={imgURL} alt={alt} onClick={handleCardImg} />
+            <img src={process.env.PUBLIC_URL + imgURL} alt={alt} onClick={ e => handleCardImg(id, e)} />
           </span>
         </SwiperSlide>
       ))}

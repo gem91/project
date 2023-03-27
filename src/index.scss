@@ -79,21 +79,23 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
     // padding: 25px 0;
   }
   .swiper-button-next, .swiper-button-prev{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-size: 25px;
+    border-radius: 50%;
+    background-color: #8b6b6ba3;
     &:after{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
   .swiper-button-prev{
     &:after{
-      color: #bbb;
+      color: #efe4e4;
       transition: .5s ease-in-out;
     }
     &:hover{
       &:after{
-        color: #b674ab;
+        color: #fff;
       }
     }
   }
@@ -104,7 +106,7 @@ p::selection, h1::selection, h2::selection, h3::selection, h4::selection {
     }
     &:hover{
       &:after{
-        color: #b674ab;
+        color: #fff;
       }
     }
   }
