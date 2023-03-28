@@ -52,7 +52,7 @@ const BlogCardLists = ({imgData, mainImg, setMainImg, setMainAlt, fullImgRef, se
         // scrollbar={{
         // hide: false,
         // }}
-        speed={2000}
+        speed={800}
         modules={[ Mousewheel, Navigation ]}
       >
       { imgData.map(({imgURL, alt, id}) => (

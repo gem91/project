@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 //components
@@ -10,9 +10,6 @@ import styles from './Contact.module.scss'
 import PageNav from 'components/PageNav';
 
 const Contact = ({isMobile}) => {
-  const [ name, setName ] = useState('');
-  const [ mail, setMail ] = useState('');
-  const [ context, setContext ] = useState('');
 
   const formRef = useRef();
   const textArea = useRef();

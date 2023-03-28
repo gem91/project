@@ -27,7 +27,7 @@ function App() {
   const cursorRef = useRef(null)
 
   let isMobile = winWidth <= 768
-  let isTablet = winWidth <= 1024
+  // let isTablet = winWidth <= 1024
   let isPc = winWidth > 1024
 
   const handleResize = () => setWinWidth(window.innerWidth)

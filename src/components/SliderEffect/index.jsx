@@ -36,7 +36,7 @@ const SliderEffects = ({imageData}) => {
           delay: 1500,
           disableOnInteraction: false,
         }}
-        speed={2000}
+        speed={1000}
         modules={[ Mousewheel, Autoplay, Navigation,]}
         className="mySwiper"
       >
