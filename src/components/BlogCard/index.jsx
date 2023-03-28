@@ -24,8 +24,8 @@ const BlogCard = ({data, isMobile}) => {
   const [ date , setDate ] = useState(data[id].date)
   const [ isPopup, setIsPopup] = useState(false);
   
+  console.log(desc);
   const stringArr = desc.split('.')
-
 
   const openPopup = () => {
     setImages(data[id].images)

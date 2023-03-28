@@ -47,6 +47,7 @@ const Popup = ({ images, title, stringArr, tags, date, client, mainImg, mainAlt,
       </div>
     </div>
     <button className={styles.btnClose} onClick={closePopup}><span>close</span></button>
+    <div className={styles.dimme} onClick={closePopup}></div>
   </aside>
   )
 };
