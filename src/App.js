@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import styles from './Home.module.scss';
+import styles from './App.module.scss';
 
 import { gsap } from 'gsap'
 
@@ -15,7 +15,8 @@ import Secret from './pages/Secret';
 import ToyProject from './pages/ToyProject';
 import ContactIcon from './components/IconItems/ContactIcon';
 
-function Home() {
+
+function App() {
   const [winWidth, setWinWidth] = useState(window.innerWidth)
   const [cursorStyle, setCursorStyle] = useState(null)
   const cursorBasicStyle =  {
@@ -90,4 +91,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default App;
