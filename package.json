@@ -17,7 +17,6 @@
     "emailjs-com": "^3.2.0",
     "gsap": "^3.11.4",
     "install": "^0.13.0",
-    "nginx": "^1.0.8",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,7 +28,7 @@
   },
   "scripts": {
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run build",
+    "predeploy": "CI=npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
