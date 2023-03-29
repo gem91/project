@@ -40,11 +40,9 @@ const BlogCard = ({data, isMobile}) => {
   return (
   <>
   <div className={styles.blogWrap}>
-    { !isMobile && 
-      <button className={styles.mainImg} onClick={openPopup}>
-        <img ref={fullImgRef} src={process.env.PUBLIC_URL + mainImg} alt={mainAlt} />
-      </button>
-    }
+    <button className={styles.mainImg} onClick={openPopup}>
+      <img ref={fullImgRef} src={process.env.PUBLIC_URL + mainImg} alt={mainAlt} />
+    </button>
     <div className={styles.blogContent}>
       <div className={styles.btnWrap}>
         <Mbutton onClick={openPopup} innerText={'More Detail'} setIsPopup={setIsPopup} />
