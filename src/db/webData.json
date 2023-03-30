@@ -6,7 +6,7 @@
     "alt": "현대닷컴 홈페이지",
     "link": "https://www.hyundai.com/kr/ko/e",
     "title": "Hyundai Dotcom - GNB Improve",
-    "desc": "- Vue.js로 데이터값에 따른 GNB 메뉴 리스트 작업.- lifecycle을 통해 작동되는 js 관리.- SCSS 사용으로 스타일을 컴포넌트화 작업.- Git으로 작업내역 관리.- GitLap과 Jenkins로 배포 관리.- AEM으로 관리되는 GNB 메뉴 리스트 작업.- SVN을 이용해서 작업내역 관리",
+    "desc": "- Vue로 데이터값에 따른 GNB 메뉴 리스트 작업.- lifecycle을 통해 작동되는 js 관리.- SCSS 사용으로 스타일을 컴포넌트화 작업.- Git으로 작업내역 관리.- GitLap과 Jenkins로 배포 관리.- AEM으로 관리되는 GNB 메뉴 리스트 작업.- SVN을 이용해서 작업내역 관리",
     "client": "HYUNDAI",
     "date": "22-03 ~ ing",
     "skill":[ "VUE", "JAVASCRIPT", "YARN", "SVN", "HTML", "SCSS", "AEM", "GIT"]
@@ -28,7 +28,7 @@
     "alt": "KWCMS - 오너스 프로젝트",
     "link": "https://org-www.kia.com:8000/gt/main.html",
     "title": "KWCMS - Owner Coponents Project",
-    "desc": "- AEM기반으로 만들어진 사이트에서 새로운 컨텐츠 영상, 탭메뉴, 이미지 등 컴포넌트화 작업 진행.- Javascript, JQuery, HTML, CSS",
+    "desc": "- AEM 기반으로 만들어진 다국어 사이트에서 새로운 컨텐츠인 영상, 탭메뉴, 이미지 등 컴포넌트화 작업 진행.- Javascript, JQuery, HTML, CSS",
     "client": "KIA",
     "date": "22-08 ~ 22-09",
     "skill":[ "HTML", "JAVASCRIPT", "CSS" ]
