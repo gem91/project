@@ -58,7 +58,7 @@ function App() {
     <>
       <div ref={cursorRef} className={styles.cursor} style={cursorStyle}></div>
       <div className={styles.wrap}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           {/* HEADER */}
           <Header isMobile={isMobile} isPc={isPc} />
           <Routes>
